@@ -47,6 +47,7 @@ import IndexRapat from './views/sekretaris/rapat/IndexRapat'
 import IndexEvent from './views/sekretaris/event/IndexEvent'
 import IndexAbsen from './views/sekretaris/absen/IndexAbsen'
 import TambahAbsen from './views/sekretaris/absen/TambahAbsen'
+import TambahInventaris from './views/sekretaris/inventaris/TambahInventaris'
 import IndexInventaris from './views/sekretaris/inventaris/IndexInventaris'
 
 /**
@@ -206,6 +207,11 @@ export default new Router({
                     path: 'sekretaris/absen/tambah/:id',
                     component: TambahAbsen,
                     name: 'sekretaris_absen_create'
+                },
+                {
+                    path: 'sekretaris/inventaris/tambah-inventaris',
+                    component: TambahInventaris,
+                    name: 'sekretaris_inventaris_tambah'
                 },
                 {
                     path: 'sekretaris/inventaris',

@@ -117,6 +117,12 @@ Route::group(['middleware' => 'api', 'namespace' => 'Sekretaris'], function ($ro
     Route::get('event/edit/{id}', 'EventController@editEvent');
     Route::put('event/edit/{id}', 'EventController@updateEvent');
     Route::delete('event/{id}', 'EventController@deleteEvent');
+
+    Route::get('inventaris', 'InventarisController@getInventaris');
+    Route::post('inventaris/tambah-inventaris/', 'InventarisController@createInventaris');
+    Route::get('inventaris/edit/{id}', 'InventarisController@editInventaris');
+    Route::put('inventaris/edit/{id}', 'InventarisController@updateInventaris');
+    Route::delete('inventaris/{id}', 'InventarisController@deleteInventaris');
 });
 
 Route::group(['middleware' => 'api', 'namespace' => 'Bendahara'], function ($router){

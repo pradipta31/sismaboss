@@ -85,4 +85,8 @@ class User extends Authenticatable implements JWTSubject
     public function Absen(){
         return $this->belongsTo('app\Absen');
     }
+
+    public function Inventory(){
+        return $this->belongsTo('app\Inventory');
+    }
 }

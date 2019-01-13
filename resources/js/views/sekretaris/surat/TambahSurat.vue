@@ -49,7 +49,7 @@
                                             <input type="date" class="form-control" v-model="data.tanggal">
                                         </div>
                                     </div>
-                                    <div class="form-group" style="margin-bottom: 10px" v-if="data.jenis == 'Surat Keluar'">
+                                    <div class="form-group" style="margin-bottom: 10px">
                                         <div class="col-md-12">
                                             <div class="input-group">
                                                 <label class="input-group-btn">
@@ -63,7 +63,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group" v-else>
+                                    <div class="form-group">
                                         <div class="col-md-12" style="margin-bottom: 10px; margin-top: 10px;">
                                             <div class="input-group">
                                                 <label class="input-group-btn">

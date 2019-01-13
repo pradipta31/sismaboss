@@ -30,6 +30,9 @@ class Periode extends Model
     public function Absen(){
         return $this->belongsTo('app\Absen');
     }
+    public function Inventory(){
+        return $this->belongsTo('app\Inventory');
+    }
 
     public static function boot() {
         parent::boot();

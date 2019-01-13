@@ -52,7 +52,6 @@ class KeuanganController extends Controller
             'nominal' => 'required',
             'keterangan' => 'required'
         ]);
-
         $funds = Fund::create([
             'periode_id' => auth()->user()->periode_id,
             'user_id' => auth()->user()->id,
