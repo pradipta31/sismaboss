@@ -91940,7 +91940,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -91951,6 +91951,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -92144,179 +92146,203 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.admin, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.name))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.nim))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.email))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.role))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          item.status
-                            ? _c(
-                                "span",
-                                { staticClass: "label label-success" },
-                                [_vm._v("Aktif")]
-                              )
-                            : _c(
-                                "span",
-                                { staticClass: "label label-warning" },
-                                [_vm._v("Non Aktif")]
-                              )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showModal(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.admin, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.editPengurus(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-pencil" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.name))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.deletePengurus(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-trash" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "exampleModal",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "exampleModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                          _c("td", [_vm._v(_vm._s(item.nim))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.email))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.role))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            item.status
+                              ? _c(
+                                  "span",
+                                  { staticClass: "label label-success" },
+                                  [_vm._v("Aktif")]
+                                )
+                              : _c(
+                                  "span",
+                                  { staticClass: "label label-warning" },
+                                  [_vm._v("Non Aktif")]
+                                )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "exampleModalLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Data : " + _vm._s(_vm.modal.name)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(2, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _c("h4", [
-                                        _vm._v(
-                                          "Jabatan : " + _vm._s(_vm.modal.role)
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("h4", [
-                                        _vm._v(
-                                          "Nama :" + _vm._s(_vm.modal.name)
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("h4", [
-                                        _vm._v(
-                                          "Username : " +
-                                            _vm._s(_vm.modal.username)
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("h4", [
-                                        _vm._v(
-                                          "Email : " + _vm._s(_vm.modal.email)
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("h4", [
-                                        _vm._v("NIM : " + _vm._s(_vm.modal.nim))
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("h4", [
-                                        _vm._v(
-                                          "Status : \n                                                    "
+                                on: {
+                                  click: function($event) {
+                                    _vm.showModal(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.editPengurus(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-pencil" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deletePengurus(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-trash" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "exampleModal",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "exampleModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: {
+                                                  id: "exampleModalLabel"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Data : " +
+                                                    _vm._s(_vm.modal.name)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(2, true)
+                                          ]
                                         ),
-                                        _vm.modal.status
-                                          ? _c("b", [_vm._v("Aktif")])
-                                          : _c("b", [_vm._v("Tidak Aktif")])
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(3, true)
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-body" },
+                                          [
+                                            _c("h4", [
+                                              _vm._v(
+                                                "Jabatan : " +
+                                                  _vm._s(_vm.modal.role)
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("h4", [
+                                              _vm._v(
+                                                "Nama :" +
+                                                  _vm._s(_vm.modal.name)
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("h4", [
+                                              _vm._v(
+                                                "Username : " +
+                                                  _vm._s(_vm.modal.username)
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("h4", [
+                                              _vm._v(
+                                                "Email : " +
+                                                  _vm._s(_vm.modal.email)
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("h4", [
+                                              _vm._v(
+                                                "NIM : " + _vm._s(_vm.modal.nim)
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("h4", [
+                                              _vm._v(
+                                                "Status : \n                                                            "
+                                              ),
+                                              _vm.modal.status
+                                                ? _c("b", [_vm._v("Aktif")])
+                                                : _c("b", [
+                                                    _vm._v("Tidak Aktif")
+                                                  ])
+                                            ])
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(3, true)
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              )
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])

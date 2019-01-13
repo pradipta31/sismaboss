@@ -15,68 +15,70 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th width="5px">No</th>
-                                <th>Nama</th>
-                                <th>Username</th>
-                                <th>NIM</th>
-                                <th>Email</th>
-                                <th>Jabatan</th>
-                                <th width="15px">Status</th>
-                                <th width="100px">Opsi</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(item, index) in admin" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td>{{item.name}}</td>
-                                    <td>{{item.username}}</td>
-                                    <td>{{item.nim}}</td>
-                                    <td>{{item.email}}</td>
-                                    <td>{{item.role}}</td>
-                                    <td>
-                                        <span class="label label-success" v-if="item.status">Aktif</span>
-                                        <span class="label label-warning" v-else>Non Aktif</span>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
-                                        <button class="btn btn-warning btn-sm" @click="editPengurus(item.id)"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-danger btn-sm" @click="deletePengurus(item.id)">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th width="5px">No</th>
+                                        <th>Nama</th>
+                                        <th>Username</th>
+                                        <th>NIM</th>
+                                        <th>Email</th>
+                                        <th>Jabatan</th>
+                                        <th width="15px">Status</th>
+                                        <th width="100px">Opsi</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(item, index) in admin" :key="index">
+                                            <td>{{index+1}}</td>
+                                            <td>{{item.name}}</td>
+                                            <td>{{item.username}}</td>
+                                            <td>{{item.nim}}</td>
+                                            <td>{{item.email}}</td>
+                                            <td>{{item.role}}</td>
+                                            <td>
+                                                <span class="label label-success" v-if="item.status">Aktif</span>
+                                                <span class="label label-warning" v-else>Non Aktif</span>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
+                                                <button class="btn btn-warning btn-sm" @click="editPengurus(item.id)"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-danger btn-sm" @click="deletePengurus(item.id)">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
 
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.name}}</h3>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.name}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h4>Jabatan : {{modal.role}}</h4>
+                                                            <h4>Nama :{{modal.name}}</h4>
+                                                            <h4>Username : {{modal.username}}</h4>
+                                                            <h4>Email : {{modal.email}}</h4>
+                                                            <h4>NIM : {{modal.nim}}</h4>
+                                                            <h4>Status : 
+                                                                <b v-if="modal.status">Aktif</b>
+                                                                <b v-else>Tidak Aktif</b>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <h4>Jabatan : {{modal.role}}</h4>
-                                                    <h4>Nama :{{modal.name}}</h4>
-                                                    <h4>Username : {{modal.username}}</h4>
-                                                    <h4>Email : {{modal.email}}</h4>
-                                                    <h4>NIM : {{modal.nim}}</h4>
-                                                    <h4>Status : 
-                                                        <b v-if="modal.status">Aktif</b>
-                                                        <b v-else>Tidak Aktif</b>
-                                                    </h4>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
