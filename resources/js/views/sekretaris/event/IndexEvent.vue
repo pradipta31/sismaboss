@@ -68,123 +68,125 @@
                                     </div>
                                 </div>
                             </div>
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Periode</th>
-                                <th>PJ</th>
-                                <th>Nama Event</th>
-                                <th>Ketua Panitia</th>
-                                <th>Tanggal Event</th>
-                                <th>Opsi</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(e, index) in event" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td>{{e.periode}}</td>
-                                    <td>{{e.username}}</td>
-                                    <td>{{e.nama_event}}</td>
-                                    <td>{{e.ketua_panitia}}</td>
-                                    <td v-if="e.tgl_akhir">
-                                        {{tglMulai(e.tgl_mulai)}} s/d {{tglAkhir(e.tgl_akhir)}}
-                                    </td>
-                                    <td v-else>
-                                        {{tglAkhir(e.tgl_mulai)}}
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showEvent" @click="showEvent(e.id)"><i class="fa fa-eye"></i></button>
-                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editEvent" @click="editEvent(e.id)"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-danger btn-sm" @click="deleteEvent(e.id)">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Periode</th>
+                                    <th>PJ</th>
+                                    <th>Nama Event</th>
+                                    <th>Ketua Panitia</th>
+                                    <th>Tanggal Event</th>
+                                    <th>Opsi</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(e, index) in event" :key="index">
+                                        <td>{{index+1}}</td>
+                                        <td>{{e.periode}}</td>
+                                        <td>{{e.username}}</td>
+                                        <td>{{e.nama_event}}</td>
+                                        <td>{{e.ketua_panitia}}</td>
+                                        <td v-if="e.tgl_akhir">
+                                            {{tglMulai(e.tgl_mulai)}} s/d {{tglAkhir(e.tgl_akhir)}}
+                                        </td>
+                                        <td v-else>
+                                            {{tglAkhir(e.tgl_mulai)}}
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showEvent" @click="showEvent(e.id)"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editEvent" @click="editEvent(e.id)"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" @click="deleteEvent(e.id)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
 
-                                        <div class="modal fade" id="showEvent" tabindex="-1" role="dialog" aria-labelledby="showEventLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="showEventLabel">Nama Event : {{show.nama_event}}</h3>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="col-md-6">
-                                                            <h4>Tanggal Event </h4>
-                                                            <h4>Nama Ketua Panitia </h4>
-                                                            <h4>Deskripsi Event </h4>
+                                            <div class="modal fade" id="showEvent" tabindex="-1" role="dialog" aria-labelledby="showEventLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="showEventLabel">Nama Event : {{show.nama_event}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <h4 v-if="show.tgl_akhir">: 
-                                                                {{tglMulai(show.tgl_mulai)}} s/d {{tglAkhir(show.tgl_akhir)}}
-                                                            </h4>
-                                                            <h4 v-else>: 
-                                                                {{tglAkhir(show.tgl_mulai)}}
-                                                            </h4>
-                                                            <h4>: {{show.ketua_panitia}}</h4>
+                                                        <div class="modal-body">
+                                                            <div class="col-md-6">
+                                                                <h4>Tanggal Event </h4>
+                                                                <h4>Nama Ketua Panitia </h4>
+                                                                <h4>Deskripsi Event </h4>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h4 v-if="show.tgl_akhir">: 
+                                                                    {{tglMulai(show.tgl_mulai)}} s/d {{tglAkhir(show.tgl_akhir)}}
+                                                                </h4>
+                                                                <h4 v-else>: 
+                                                                    {{tglAkhir(show.tgl_mulai)}}
+                                                                </h4>
+                                                                <h4>: {{show.ketua_panitia}}</h4>
+                                                            </div>
+                                                            <textarea v-model="show.deskripsi" cols="78" rows="8" class="form-control" readonly></textarea>
                                                         </div>
-                                                        <textarea v-model="show.deskripsi" cols="78" rows="8" class="form-control" readonly></textarea>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="modal fade" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="editEventLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="editEventLabel">Edit Event {{edit.nama_event}}</h3>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="form-group">
-                                                            <label for="">Nama Event</label>
-                                                            <input type="text" v-model="edit.nama_event" class="form-control" placeholder="Masukan nama event">
+                                            <div class="modal fade" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="editEventLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="editEventLabel">Edit Event {{edit.nama_event}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="">Ketua Panitia</label>
-                                                            <input type="text" v-model="edit.ketua_panitia" class="form-control" placeholder="Masukan nama ketua panitia">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="">Tanggal Event</label>
-                                                            <div class="col-md-12">
-                                                                <div class="col-md-5">
-                                                                    <input type="date" v-model="edit.tgl_mulai" class="form-control" style="margin-left: -30px">
-                                                                </div>
-                                                                <div class="col-md-1" style="margin-left: -50px; margin-top: 5px">
-                                                                    <b>s/d</b>
-                                                                </div>
-                                                                <div class="col-md-5" style="margin-left: -20px">
-                                                                    <input type="date" v-model="edit.tgl_akhir" class="form-control">
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label for="">Nama Event</label>
+                                                                <input type="text" v-model="edit.nama_event" class="form-control" placeholder="Masukan nama event">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="">Ketua Panitia</label>
+                                                                <input type="text" v-model="edit.ketua_panitia" class="form-control" placeholder="Masukan nama ketua panitia">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="">Tanggal Event</label>
+                                                                <div class="col-md-12">
+                                                                    <div class="col-md-5">
+                                                                        <input type="date" v-model="edit.tgl_mulai" class="form-control" style="margin-left: -30px">
+                                                                    </div>
+                                                                    <div class="col-md-1" style="margin-left: -50px; margin-top: 5px">
+                                                                        <b>s/d</b>
+                                                                    </div>
+                                                                    <div class="col-md-5" style="margin-left: -20px">
+                                                                        <input type="date" v-model="edit.tgl_akhir" class="form-control">
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="form-group">
+                                                                <label for="" style="margin-top: 10px">Deskripsi Event</label>
+                                                                <textarea cols="78" rows="8" v-model="edit.deskripsi" class="form-control"></textarea>
+                                                            </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="" style="margin-top: 10px">Deskripsi Event</label>
-                                                            <textarea cols="78" rows="8" v-model="edit.deskripsi" class="form-control"></textarea>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary" @click="saveEdit">
+                                                                <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
+                                                                <i class="fa fa-check" v-else></i>
+                                                                Simpan
+                                                            </button>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary" @click="saveEdit">
-                                                            <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
-                                                            <i class="fa fa-check" v-else></i>
-                                                            Simpan
-                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

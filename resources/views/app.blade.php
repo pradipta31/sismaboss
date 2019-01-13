@@ -14,8 +14,6 @@
     <div id="app">
         <router-view></router-view>
     </div>
-{{-- <script src="dist/js/pages/dashboard.js"></script>
-<script src="dist/js/demo.js"></script> --}}
 <script src="js/app.js"></script>
 </body>
 </html>

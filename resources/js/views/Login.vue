@@ -96,6 +96,7 @@ export default {
                 toast.success('Selamat datang ',r.data.email);
                 if (r.data.email != null) {
                     this.$router.push({path: 'main'});
+                    window.location.reload();
                 }else{
                     toast.error('Login gagal!');
                 }

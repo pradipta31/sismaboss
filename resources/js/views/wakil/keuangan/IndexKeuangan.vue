@@ -15,41 +15,43 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Tanggal</th>
-                                <th>Keterangan</th>
-                                <th>Debit</th>
-                                <th>Kredit</th>
-                                <th>Saldo</th>
-                                <th>PJ</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(f, index) in fund" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td v-if="f.tanggal">
-                                        {{f.tanggal}}
-                                    </td>
-                                    <td v-else>
-                                        {{format(f.created_at)}}
-                                    </td>
-                                    <td>{{f.keterangan}}</td>
-                                    <td>
-                                        {{f.debit}}
-                                    </td>
-                                    <td>
-                                        {{f.kredit}}
-                                    </td>
-                                    <td>
-                                        {{f.saldo}}
-                                    </td>
-                                    <td>{{f.username}}</td>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tanggal</th>
+                                    <th>Keterangan</th>
+                                    <th>Debit</th>
+                                    <th>Kredit</th>
+                                    <th>Saldo</th>
+                                    <th>PJ</th>
                                 </tr>
-                            </tbody>
-                            </table>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(f, index) in fund" :key="index">
+                                        <td>{{index+1}}</td>
+                                        <td v-if="f.tanggal">
+                                            {{f.tanggal}}
+                                        </td>
+                                        <td v-else>
+                                            {{format(f.created_at)}}
+                                        </td>
+                                        <td>{{f.keterangan}}</td>
+                                        <td>
+                                            {{f.debit}}
+                                        </td>
+                                        <td>
+                                            {{f.kredit}}
+                                        </td>
+                                        <td>
+                                            {{f.saldo}}
+                                        </td>
+                                        <td>{{f.username}}</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

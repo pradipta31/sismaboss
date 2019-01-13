@@ -6,6 +6,7 @@ use DB;
 use App\Periode;
 use App\User;
 use App\Inventory;
+use Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -28,11 +29,13 @@ class InventarisController extends Controller
             'penanggung_jawab' => 'required',
             'keterangan' => 'required'
         ]);
-
+        $filename = time() . '.' . $r->file('pict')->getClientOriginalExtension();
+        Image::make($r->file('pict'))->save(public_path('/images/inventaris/'.$filename));
         $invents = Inventory::create([
             'periode_id' => auth()->user()->periode_id,
             'nama' => $r->nama,
             'penanggung_jawab' => $r->penanggung_jawab,
+            'pict' => $filename,
             'keterangan' => $r->keterangan
         ]);
 

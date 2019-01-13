@@ -50,36 +50,38 @@
                                     </div>
                                 </div>
                             </div>
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>PJ</th>
-                                <th>Judul Absen</th>
-                                <th>Tanggal</th>
-                                <th>Absen</th>
-                                <th>Opsi</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(item, index) in absent" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td>{{item.username}}</td>
-                                    <td>{{item.judul_absen}}</td>
-                                    <td>{{format(item.created_at)}}</td>
-                                    <td>
-                                        <button class="btn btn-info btn-sm" @click="createAbsent(item.id)">Absen</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showAbsent" @click="showAbsent(item.id)"><i class="fa fa-eye"></i></button>
-                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editAbsent" @click="editAbsent(item.id)"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-danger btn-sm" @click="deleteAbsent(item.id)">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>PJ</th>
+                                    <th>Judul Absen</th>
+                                    <th>Tanggal</th>
+                                    <th>Absen</th>
+                                    <th>Opsi</th>
                                 </tr>
-                            </tbody>
-                            </table>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(item, index) in absent" :key="index">
+                                        <td>{{index+1}}</td>
+                                        <td>{{item.username}}</td>
+                                        <td>{{item.judul_absen}}</td>
+                                        <td>{{format(item.created_at)}}</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm" @click="createAbsent(item.id)">Absen</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showAbsent" @click="showAbsent(item.id)"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editAbsent" @click="editAbsent(item.id)"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" @click="deleteAbsent(item.id)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
                             <div class="modal fade" id="showAbsent" tabindex="-1" role="dialog" aria-labelledby="showAbsentLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">

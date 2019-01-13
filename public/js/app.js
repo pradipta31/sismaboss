@@ -83359,8 +83359,6 @@ module.exports = function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_IndexInventaris___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_IndexInventaris__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan__ = __webpack_require__(366);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__views_bendahara_laporan_IndexLaporan__ = __webpack_require__(371);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__views_bendahara_laporan_IndexLaporan___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35__views_bendahara_laporan_IndexLaporan__);
 
 
 
@@ -83415,7 +83413,6 @@ module.exports = function() {
 /**
  * ==================== BENDAHARA =====================
  */
-
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
@@ -83551,26 +83548,6 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
             path: 'bendahara/keuangan',
             component: __WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan___default.a,
             name: 'bendahara_keuangan_index'
-        },
-        // {
-        //     path: 'bendahara/pemasukan',
-        //     component: IndexPemasukan,
-        //     name: 'bendahara_pemasukan_index'
-        // },
-        // {
-        //     path: 'bendahara/pengeluaran',
-        //     component: IndexPengeluaran,
-        //     name: 'bendahara_pengeluaran_index'
-        // },
-        // {
-        //     path: 'bendahara/kas',
-        //     component: IndexKas,
-        //     name: 'bendahara_kas_index'
-        // },
-        {
-            path: 'bendahara/laporan',
-            component: __WEBPACK_IMPORTED_MODULE_35__views_bendahara_laporan_IndexLaporan___default.a,
-            name: 'bendahara_laporan_index'
         }]
     }]
 
@@ -86287,7 +86264,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -86431,6 +86408,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 toast.success('Selamat datang ', r.data.email);
                 if (r.data.email != null) {
                     _this.$router.push({ path: 'main' });
+                    window.location.reload();
                 } else {
                     toast.error('Login gagal!');
                 }
@@ -89599,7 +89577,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -89612,6 +89590,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -89930,227 +89910,233 @@ var render = function() {
               _vm._m(2),
               _vm._v(" "),
               _c("div", { staticClass: "box-body" }, [
-                _c(
-                  "table",
-                  {
-                    staticClass: "table table-bordered table-striped",
-                    attrs: { id: "example1" }
-                  },
-                  [
-                    _vm._m(3),
-                    _vm._v(" "),
-                    _c(
-                      "tbody",
-                      _vm._l(_vm.periode, function(prd, index) {
-                        return _c("tr", { key: index }, [
-                          _c("td", [_vm._v(_vm._s(index + 1))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(prd.periode))]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _vm._v(_vm._s(_vm.format(prd.created_at)))
-                          ]),
-                          _vm._v(" "),
-                          prd.status === "aktif"
-                            ? _c("td", [
-                                _c(
-                                  "span",
-                                  { staticClass: "label label-success" },
-                                  [_vm._v("Aktif")]
-                                )
-                              ])
-                            : _c("td", [
-                                _c(
-                                  "span",
-                                  { staticClass: "label label-warning" },
-                                  [_vm._v("Tidak Aktif")]
-                                )
-                              ]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-warning btn-sm",
-                                attrs: {
-                                  "data-toggle": "modal",
-                                  "data-target": "#editPeriode"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    _vm.editPeriode(prd.id)
-                                  }
-                                }
-                              },
-                              [_vm._v("Edit")]
-                            ),
+                _c("div", { staticClass: "table-responsive" }, [
+                  _c(
+                    "table",
+                    {
+                      staticClass: "table table-bordered table-striped",
+                      attrs: { id: "example1" }
+                    },
+                    [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        _vm._l(_vm.periode, function(prd, index) {
+                          return _c("tr", { key: index }, [
+                            _c("td", [_vm._v(_vm._s(index + 1))]),
                             _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "btn btn-danger btn-sm",
-                                attrs: { href: "javascript:void(0);" },
-                                on: {
-                                  click: function($event) {
-                                    _vm.deletePeriode(prd.id)
-                                  }
-                                }
-                              },
-                              [_vm._v("Hapus")]
-                            ),
+                            _c("td", [_vm._v(_vm._s(prd.periode))]),
                             _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "editPeriode",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "editPeriodeLabel",
-                                  "aria-hidden": "true"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal-dialog",
-                                    attrs: { role: "document" }
+                            _c("td", [
+                              _vm._v(_vm._s(_vm.format(prd.created_at)))
+                            ]),
+                            _vm._v(" "),
+                            prd.status === "aktif"
+                              ? _c("td", [
+                                  _c(
+                                    "span",
+                                    { staticClass: "label label-success" },
+                                    [_vm._v("Aktif")]
+                                  )
+                                ])
+                              : _c("td", [
+                                  _c(
+                                    "span",
+                                    { staticClass: "label label-warning" },
+                                    [_vm._v("Tidak Aktif")]
+                                  )
+                                ]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-warning btn-sm",
+                                  attrs: {
+                                    "data-toggle": "modal",
+                                    "data-target": "#editPeriode"
                                   },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "modal-content" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-header" },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass: "modal-title",
-                                                attrs: {
-                                                  id: "editPeriodeLabel"
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Edit Periode " +
-                                                    _vm._s(_vm.edit.periode)
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(4, true)
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-body" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  { attrs: { for: "" } },
-                                                  [_vm._v("Nama Event")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value: _vm.edit.periode,
-                                                      expression: "edit.periode"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
+                                  on: {
+                                    click: function($event) {
+                                      _vm.editPeriode(prd.id)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Edit")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "btn btn-danger btn-sm",
+                                  attrs: { href: "javascript:void(0);" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.deletePeriode(prd.id)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Hapus")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "modal fade",
+                                  attrs: {
+                                    id: "editPeriode",
+                                    tabindex: "-1",
+                                    role: "dialog",
+                                    "aria-labelledby": "editPeriodeLabel",
+                                    "aria-hidden": "true"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "modal-dialog",
+                                      attrs: { role: "document" }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "modal-content" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-header" },
+                                            [
+                                              _c(
+                                                "h3",
+                                                {
+                                                  staticClass: "modal-title",
                                                   attrs: {
-                                                    type: "text",
-                                                    placeholder:
-                                                      "Masukan periode"
-                                                  },
-                                                  domProps: {
-                                                    value: _vm.edit.periode
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.edit,
-                                                        "periode",
-                                                        $event.target.value
-                                                      )
-                                                    }
+                                                    id: "editPeriodeLabel"
                                                   }
-                                                })
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-footer" },
-                                          [
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "btn btn-secondary",
-                                                attrs: {
-                                                  type: "button",
-                                                  "data-dismiss": "modal"
-                                                }
-                                              },
-                                              [_vm._v("Close")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass: "btn btn-primary",
-                                                attrs: { type: "button" },
-                                                on: { click: _vm.saveEdit }
-                                              },
-                                              [
-                                                _vm.isLoadingEdit
-                                                  ? _c("i", {
-                                                      staticClass:
-                                                        "fa fa-spin fa-spinner"
-                                                    })
-                                                  : _c("i", {
-                                                      staticClass: "fa fa-check"
-                                                    }),
-                                                _vm._v(
-                                                  "\n                                                        Simpan\n                                                    "
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Edit Periode " +
+                                                      _vm._s(_vm.edit.periode)
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(4, true)
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-body" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "form-group" },
+                                                [
+                                                  _c(
+                                                    "label",
+                                                    { attrs: { for: "" } },
+                                                    [_vm._v("Nama Event")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("input", {
+                                                    directives: [
+                                                      {
+                                                        name: "model",
+                                                        rawName: "v-model",
+                                                        value: _vm.edit.periode,
+                                                        expression:
+                                                          "edit.periode"
+                                                      }
+                                                    ],
+                                                    staticClass: "form-control",
+                                                    attrs: {
+                                                      type: "text",
+                                                      placeholder:
+                                                        "Masukan periode"
+                                                    },
+                                                    domProps: {
+                                                      value: _vm.edit.periode
+                                                    },
+                                                    on: {
+                                                      input: function($event) {
+                                                        if (
+                                                          $event.target
+                                                            .composing
+                                                        ) {
+                                                          return
+                                                        }
+                                                        _vm.$set(
+                                                          _vm.edit,
+                                                          "periode",
+                                                          $event.target.value
+                                                        )
+                                                      }
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-footer" },
+                                            [
+                                              _c(
+                                                "button",
+                                                {
+                                                  staticClass:
+                                                    "btn btn-secondary",
+                                                  attrs: {
+                                                    type: "button",
+                                                    "data-dismiss": "modal"
+                                                  }
+                                                },
+                                                [_vm._v("Close")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "button",
+                                                {
+                                                  staticClass:
+                                                    "btn btn-primary",
+                                                  attrs: { type: "button" },
+                                                  on: { click: _vm.saveEdit }
+                                                },
+                                                [
+                                                  _vm.isLoadingEdit
+                                                    ? _c("i", {
+                                                        staticClass:
+                                                          "fa fa-spin fa-spinner"
+                                                      })
+                                                    : _c("i", {
+                                                        staticClass:
+                                                          "fa fa-check"
+                                                      }),
+                                                  _vm._v(
+                                                    "\n                                                            Simpan\n                                                        "
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
                           ])
-                        ])
-                      })
-                    )
-                  ]
-                )
+                        })
+                      )
+                    ]
+                  )
+                ])
               ])
             ])
           ])
@@ -90840,7 +90826,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -90851,6 +90837,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -91057,194 +91045,219 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.ketua, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.name))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.nim))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.email))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          item.status
-                            ? _c(
-                                "span",
-                                { staticClass: "label label-success" },
-                                [_vm._v("Aktif")]
-                              )
-                            : _c(
-                                "span",
-                                { staticClass: "label label-warning" },
-                                [_vm._v("Non Aktif")]
-                              )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showModal(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.ketua, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.editKetua(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-pencil" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.deleteKetua(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-trash" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.name))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "exampleModal",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "exampleModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.nim))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.email))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            item.status
+                              ? _c(
+                                  "span",
+                                  { staticClass: "label label-success" },
+                                  [_vm._v("Aktif")]
+                                )
+                              : _c(
+                                  "span",
+                                  { staticClass: "label label-warning" },
+                                  [_vm._v("Non Aktif")]
+                                )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "exampleModalLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Data : " + _vm._s(_vm.modal.name)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(2, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _c("div", { staticClass: "row" }, [
-                                        _vm._m(3, true),
+                                on: {
+                                  click: function($event) {
+                                    _vm.showModal(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.editKetua(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-pencil" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteKetua(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-trash" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "exampleModal",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "exampleModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: {
+                                                  id: "exampleModalLabel"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Data : " +
+                                                    _vm._s(_vm.modal.name)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(2, true)
+                                          ]
+                                        ),
                                         _vm._v(" "),
                                         _c(
                                           "div",
-                                          { staticClass: "col-sm-10" },
+                                          { staticClass: "modal-body" },
                                           [
-                                            _c("h4", [
-                                              _vm._v(
-                                                ": " + _vm._s(_vm.modal.periode)
+                                            _c("div", { staticClass: "row" }, [
+                                              _vm._m(3, true),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-sm-10" },
+                                                [
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.periode
+                                                        )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.name)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.username
+                                                        )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.email)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.nim)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _vm.modal.status
+                                                    ? _c("h4", [
+                                                        _vm._v(
+                                                          "\n                                                                : Aktif\n                                                            "
+                                                        )
+                                                      ])
+                                                    : _c("h4", [
+                                                        _vm._v(
+                                                          "\n                                                                : Tidak Aktif\n                                                            "
+                                                        )
+                                                      ])
+                                                ]
                                               )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                ": " + _vm._s(_vm.modal.name)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(_vm.modal.username)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                ": " + _vm._s(_vm.modal.email)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                ": " + _vm._s(_vm.modal.nim)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _vm.modal.status
-                                              ? _c("h4", [
-                                                  _vm._v(
-                                                    "\n                                                            : Aktif\n                                                        "
-                                                  )
-                                                ])
-                                              : _c("h4", [
-                                                  _vm._v(
-                                                    "\n                                                            : Tidak Aktif\n                                                        "
-                                                  )
-                                                ])
+                                            ])
                                           ]
-                                        )
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(4, true)
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(4, true)
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              )
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -93613,7 +93626,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -93626,6 +93639,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -93810,199 +93825,226 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.event, function(e, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.nama_event))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.ketua_panitia))]),
-                        _vm._v(" "),
-                        _c(
-                          "td",
-                          [
-                            _c("center", [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary btn-sm",
-                                  attrs: {
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleModal"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.showModal(e.id)
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.event, function(e, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.nama_event))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.ketua_panitia))]),
+                          _vm._v(" "),
+                          e.tgl_akhir
+                            ? _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.tglMulai(e.tgl_mulai)) +
+                                    " s/d " +
+                                    _vm._s(_vm.tglAkhir(e.tgl_akhir)) +
+                                    "\n                                    "
+                                )
+                              ])
+                            : _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.tglAkhir(e.tgl_mulai)) +
+                                    "\n                                    "
+                                )
+                              ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c("center", [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary btn-sm",
+                                    attrs: {
+                                      "data-toggle": "modal",
+                                      "data-target": "#exampleModal"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.showModal(e.id)
+                                      }
                                     }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-eye" })]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "modal fade",
+                                  attrs: {
+                                    id: "exampleModal",
+                                    tabindex: "-1",
+                                    role: "dialog",
+                                    "aria-labelledby": "exampleModalLabel",
+                                    "aria-hidden": "true"
                                   }
                                 },
-                                [_c("i", { staticClass: "fa fa-eye" })]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "exampleModal",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "exampleModalLabel",
-                                  "aria-hidden": "true"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal-dialog",
-                                    attrs: { role: "document" }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "modal-content" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-header" },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass: "modal-title",
-                                                attrs: {
-                                                  id: "exampleModalLabel"
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Nama Event : " +
-                                                    _vm._s(_vm.show.nama_event)
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(2, true)
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-body" },
-                                          [
-                                            _vm._m(3, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-7" },
-                                              [
-                                                _vm.show.tgl_akhir
-                                                  ? _c("h4", [
-                                                      _vm._v(
-                                                        ": \n                                                            " +
-                                                          _vm._s(
-                                                            _vm.tglMulai(
-                                                              _vm.show.tgl_mulai
-                                                            )
-                                                          ) +
-                                                          " s/d " +
-                                                          _vm._s(
-                                                            _vm.tglAkhir(
-                                                              _vm.show.tgl_akhir
-                                                            )
-                                                          ) +
-                                                          "\n                                                        "
-                                                      )
-                                                    ])
-                                                  : _c("h4", [
-                                                      _vm._v(
-                                                        ": \n                                                            " +
-                                                          _vm._s(
-                                                            _vm.tglAkhir(
-                                                              _vm.show.tgl_mulai
-                                                            )
-                                                          ) +
-                                                          "\n                                                        "
-                                                      )
-                                                    ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.show.ketua_panitia
-                                                      )
-                                                  )
-                                                ])
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "modal-dialog",
+                                      attrs: { role: "document" }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "modal-content" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-header" },
+                                            [
+                                              _c(
+                                                "h3",
                                                 {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.show.deskripsi,
-                                                  expression: "show.deskripsi"
-                                                }
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                cols: "78",
-                                                rows: "15",
-                                                readonly: ""
-                                              },
-                                              domProps: {
-                                                value: _vm.show.deskripsi
-                                              },
-                                              on: {
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
+                                                  staticClass: "modal-title",
+                                                  attrs: {
+                                                    id: "exampleModalLabel"
                                                   }
-                                                  _vm.$set(
-                                                    _vm.show,
-                                                    "deskripsi",
-                                                    $event.target.value
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Nama Event : " +
+                                                      _vm._s(
+                                                        _vm.show.nama_event
+                                                      )
                                                   )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(2, true)
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-body" },
+                                            [
+                                              _vm._m(3, true),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-7" },
+                                                [
+                                                  _vm.show.tgl_akhir
+                                                    ? _c("h4", [
+                                                        _vm._v(
+                                                          ": \n                                                                " +
+                                                            _vm._s(
+                                                              _vm.tglMulai(
+                                                                _vm.show
+                                                                  .tgl_mulai
+                                                              )
+                                                            ) +
+                                                            " s/d " +
+                                                            _vm._s(
+                                                              _vm.tglAkhir(
+                                                                _vm.show
+                                                                  .tgl_akhir
+                                                              )
+                                                            ) +
+                                                            "\n                                                            "
+                                                        )
+                                                      ])
+                                                    : _c("h4", [
+                                                        _vm._v(
+                                                          ": \n                                                                " +
+                                                            _vm._s(
+                                                              _vm.tglAkhir(
+                                                                _vm.show
+                                                                  .tgl_mulai
+                                                              )
+                                                            ) +
+                                                            "\n                                                            "
+                                                        )
+                                                      ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.show.ketua_panitia
+                                                        )
+                                                    )
+                                                  ])
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("textarea", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value: _vm.show.deskripsi,
+                                                    expression: "show.deskripsi"
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  cols: "78",
+                                                  rows: "15",
+                                                  readonly: ""
+                                                },
+                                                domProps: {
+                                                  value: _vm.show.deskripsi
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.show,
+                                                      "deskripsi",
+                                                      $event.target.value
+                                                    )
+                                                  }
                                                 }
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _vm._m(4, true)
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ],
-                          1
-                        )
-                      ])
-                    })
-                  )
-                ]
-              )
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _vm._m(4, true)
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -94035,6 +94077,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Nama Event")]),
         _vm._v(" "),
         _c("th", [_vm._v("Ketua Panitia")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Tanggal Event")]),
         _vm._v(" "),
         _c("th", [_vm._v("Opsi")])
       ])
@@ -94180,7 +94224,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -94193,6 +94237,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -94367,195 +94413,202 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.meeting, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.judul_rapat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(_vm.format(item.tgl_rapat)))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.moderator))]),
-                        _vm._v(" "),
-                        _c(
-                          "td",
-                          [
-                            _c("center", [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary btn-sm",
-                                  attrs: {
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleModal"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.showModal(item.id)
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.meeting, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.judul_rapat))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(_vm.format(item.tgl_rapat)))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.moderator))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c("center", [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary btn-sm",
+                                    attrs: {
+                                      "data-toggle": "modal",
+                                      "data-target": "#exampleModal"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.showModal(item.id)
+                                      }
                                     }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-eye" })]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "modal fade",
+                                  attrs: {
+                                    id: "exampleModal",
+                                    tabindex: "-1",
+                                    role: "dialog",
+                                    "aria-labelledby": "exampleModalLabel",
+                                    "aria-hidden": "true"
                                   }
                                 },
-                                [_c("i", { staticClass: "fa fa-eye" })]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "exampleModal",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "exampleModalLabel",
-                                  "aria-hidden": "true"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal-dialog",
-                                    attrs: { role: "document" }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "modal-content" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-header" },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass: "modal-title",
-                                                attrs: {
-                                                  id: "exampleModalLabel"
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Judul Rapat : " +
-                                                    _vm._s(
-                                                      _vm.modal.judul_rapat
-                                                    )
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(2, true)
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-body" },
-                                          [
-                                            _vm._m(3, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-6" },
-                                              [
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.format(
-                                                          _vm.modal.tgl_rapat
-                                                        )
-                                                      )
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.modal.jumlah_hadir
-                                                      ) +
-                                                      " Orang"
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.modal.moderator
-                                                      )
-                                                  )
-                                                ])
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "modal-dialog",
+                                      attrs: { role: "document" }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "modal-content" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-header" },
+                                            [
+                                              _c(
+                                                "h3",
                                                 {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.modal.hasil_rapat,
-                                                  expression:
-                                                    "modal.hasil_rapat"
-                                                }
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                cols: "85",
-                                                rows: "14",
-                                                readonly: ""
-                                              },
-                                              domProps: {
-                                                value: _vm.modal.hasil_rapat
-                                              },
-                                              on: {
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
+                                                  staticClass: "modal-title",
+                                                  attrs: {
+                                                    id: "exampleModalLabel"
                                                   }
-                                                  _vm.$set(
-                                                    _vm.modal,
-                                                    "hasil_rapat",
-                                                    $event.target.value
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Judul Rapat : " +
+                                                      _vm._s(
+                                                        _vm.modal.judul_rapat
+                                                      )
                                                   )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(2, true)
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-body" },
+                                            [
+                                              _vm._m(3, true),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-6" },
+                                                [
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.format(
+                                                            _vm.modal.tgl_rapat
+                                                          )
+                                                        )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.jumlah_hadir
+                                                        ) +
+                                                        " Orang"
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.moderator
+                                                        )
+                                                    )
+                                                  ])
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("textarea", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.modal.hasil_rapat,
+                                                    expression:
+                                                      "modal.hasil_rapat"
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  cols: "85",
+                                                  rows: "14",
+                                                  readonly: ""
+                                                },
+                                                domProps: {
+                                                  value: _vm.modal.hasil_rapat
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.modal,
+                                                      "hasil_rapat",
+                                                      $event.target.value
+                                                    )
+                                                  }
                                                 }
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _vm._m(4, true)
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ],
-                          1
-                        )
-                      ])
-                    })
-                  )
-                ]
-              )
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _vm._m(4, true)
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -94737,7 +94790,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -94751,6 +94804,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
+//
 //
 //
 //
@@ -94889,69 +94944,71 @@ var render = function() {
                 [_vm._v("Download .xls")]
               ),
               _vm._v(" "),
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.fund, function(f, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        f.tanggal
-                          ? _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(f.tanggal) +
-                                  "\n                                "
-                              )
-                            ])
-                          : _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(_vm.format(f.created_at)) +
-                                  "\n                                "
-                              )
-                            ]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(f.keterangan))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.debit) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.kredit) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.saldo) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(f.username))])
-                      ])
-                    })
-                  )
-                ]
-              )
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.fund, function(f, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          f.tanggal
+                            ? _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(f.tanggal) +
+                                    "\n                                    "
+                                )
+                              ])
+                            : _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.format(f.created_at)) +
+                                    "\n                                    "
+                                )
+                              ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(f.keterangan))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.debit) +
+                                "\n                                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.kredit) +
+                                "\n                                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.saldo) +
+                                "\n                                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(f.username))])
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -95087,7 +95144,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -95098,6 +95155,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -95310,144 +95369,154 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.letter, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.jenis))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.perihal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.tanggal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          item.jenis == "Surat Keluar"
-                            ? _c("span", [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "btn btn-primary",
-                                    attrs: { href: "file/surat/" + item.surat }
-                                  },
-                                  [_vm._v("Download Surat")]
-                                )
-                              ])
-                            : _c("span", [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "btn btn-primary btn-sm",
-                                    attrs: {
-                                      "data-toggle": "modal",
-                                      "data-target": "#showGambar"
-                                    },
-                                    on: {
-                                      click: function($event) {
-                                        _vm.showModal(item.id)
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                        Lihat Gambar\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.letter, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "showGambar",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "myLargeModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("div", { staticClass: "modal-dialog" }, [
-                                _c("div", { staticClass: "modal-content" }, [
-                                  _c("div", { staticClass: "modal-header" }, [
-                                    _c(
-                                      "h3",
-                                      {
-                                        staticClass: "modal-title",
-                                        attrs: { id: "exampleModalLabel" }
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.jenis))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.perihal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.tanggal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            item.jenis == "Surat Keluar"
+                              ? _c("span", [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "btn btn-primary",
+                                      attrs: {
+                                        href: "file/surat/" + item.surat
+                                      }
+                                    },
+                                    [_vm._v("Download Surat")]
+                                  )
+                                ])
+                              : _c("span", [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-primary btn-sm",
+                                      attrs: {
+                                        "data-toggle": "modal",
+                                        "data-target": "#showGambar"
                                       },
-                                      [
-                                        _vm._v(
-                                          "Data : " + _vm._s(_vm.modal.perihal)
-                                        )
-                                      ]
-                                    ),
+                                      on: {
+                                        click: function($event) {
+                                          _vm.showModal(item.id)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                            Lihat Gambar\n                                            "
+                                      )
+                                    ]
+                                  )
+                                ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "showGambar",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "myLargeModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c("div", { staticClass: "modal-dialog" }, [
+                                  _c("div", { staticClass: "modal-content" }, [
+                                    _c("div", { staticClass: "modal-header" }, [
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass: "modal-title",
+                                          attrs: { id: "exampleModalLabel" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "Data : " +
+                                              _vm._s(_vm.modal.perihal)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(2, true)
+                                    ]),
                                     _vm._v(" "),
-                                    _vm._m(2, true)
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "modal-body" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c("div", { staticClass: "col-md-12" }, [
-                                        _c("img", {
-                                          staticClass: "img-responsive",
-                                          attrs: {
-                                            src:
-                                              "images/surat/" + _vm.modal.pict,
-                                            height: "1080px",
-                                            width: "650px"
-                                          }
-                                        })
+                                    _c("div", { staticClass: "modal-body" }, [
+                                      _c("div", { staticClass: "row" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "col-md-12" },
+                                          [
+                                            _c("img", {
+                                              staticClass: "img-responsive",
+                                              attrs: {
+                                                src:
+                                                  "images/surat/" +
+                                                  _vm.modal.pict,
+                                                height: "1080px",
+                                                width: "650px"
+                                              }
+                                            })
+                                          ]
+                                        )
                                       ])
                                     ])
                                   ])
                                 ])
-                              ])
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showItem(item.id)
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.showItem(item.id)
+                                  }
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              ),
+                      })
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -95725,7 +95794,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -95739,6 +95808,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
+//
 //
 //
 //
@@ -95863,35 +95934,37 @@ var render = function() {
                 [_vm._v("Download .xls")]
               ),
               _vm._v(" "),
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.anggota, function(member, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.nama))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.nim))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.handphone))])
-                      ])
-                    })
-                  )
-                ]
-              )
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.anggota, function(member, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.nama))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.nim))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.handphone))])
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -96025,7 +96098,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -96038,6 +96111,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -96222,199 +96297,208 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.event, function(e, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.nama_event))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.ketua_panitia))]),
-                        _vm._v(" "),
-                        _c(
-                          "td",
-                          [
-                            _c("center", [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary btn-sm",
-                                  attrs: {
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleModal"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.showModal(e.id)
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.event, function(e, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.nama_event))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.ketua_panitia))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c("center", [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary btn-sm",
+                                    attrs: {
+                                      "data-toggle": "modal",
+                                      "data-target": "#exampleModal"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.showModal(e.id)
+                                      }
                                     }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-eye" })]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "modal fade",
+                                  attrs: {
+                                    id: "exampleModal",
+                                    tabindex: "-1",
+                                    role: "dialog",
+                                    "aria-labelledby": "exampleModalLabel",
+                                    "aria-hidden": "true"
                                   }
                                 },
-                                [_c("i", { staticClass: "fa fa-eye" })]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "exampleModal",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "exampleModalLabel",
-                                  "aria-hidden": "true"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal-dialog",
-                                    attrs: { role: "document" }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "modal-content" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-header" },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass: "modal-title",
-                                                attrs: {
-                                                  id: "exampleModalLabel"
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Nama Event : " +
-                                                    _vm._s(_vm.show.nama_event)
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(2, true)
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-body" },
-                                          [
-                                            _vm._m(3, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-7" },
-                                              [
-                                                _vm.show.tgl_akhir
-                                                  ? _c("h4", [
-                                                      _vm._v(
-                                                        ": \n                                                            " +
-                                                          _vm._s(
-                                                            _vm.tglMulai(
-                                                              _vm.show.tgl_mulai
-                                                            )
-                                                          ) +
-                                                          " s/d " +
-                                                          _vm._s(
-                                                            _vm.tglAkhir(
-                                                              _vm.show.tgl_akhir
-                                                            )
-                                                          ) +
-                                                          "\n                                                        "
-                                                      )
-                                                    ])
-                                                  : _c("h4", [
-                                                      _vm._v(
-                                                        ": \n                                                            " +
-                                                          _vm._s(
-                                                            _vm.tglAkhir(
-                                                              _vm.show.tgl_mulai
-                                                            )
-                                                          ) +
-                                                          "\n                                                        "
-                                                      )
-                                                    ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.show.ketua_panitia
-                                                      )
-                                                  )
-                                                ])
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "modal-dialog",
+                                      attrs: { role: "document" }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "modal-content" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-header" },
+                                            [
+                                              _c(
+                                                "h3",
                                                 {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.show.deskripsi,
-                                                  expression: "show.deskripsi"
-                                                }
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                cols: "78",
-                                                rows: "15",
-                                                readonly: ""
-                                              },
-                                              domProps: {
-                                                value: _vm.show.deskripsi
-                                              },
-                                              on: {
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
+                                                  staticClass: "modal-title",
+                                                  attrs: {
+                                                    id: "exampleModalLabel"
                                                   }
-                                                  _vm.$set(
-                                                    _vm.show,
-                                                    "deskripsi",
-                                                    $event.target.value
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Nama Event : " +
+                                                      _vm._s(
+                                                        _vm.show.nama_event
+                                                      )
                                                   )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(2, true)
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-body" },
+                                            [
+                                              _vm._m(3, true),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-7" },
+                                                [
+                                                  _vm.show.tgl_akhir
+                                                    ? _c("h4", [
+                                                        _vm._v(
+                                                          ": \n                                                                " +
+                                                            _vm._s(
+                                                              _vm.tglMulai(
+                                                                _vm.show
+                                                                  .tgl_mulai
+                                                              )
+                                                            ) +
+                                                            " s/d " +
+                                                            _vm._s(
+                                                              _vm.tglAkhir(
+                                                                _vm.show
+                                                                  .tgl_akhir
+                                                              )
+                                                            ) +
+                                                            "\n                                                            "
+                                                        )
+                                                      ])
+                                                    : _c("h4", [
+                                                        _vm._v(
+                                                          ": \n                                                                " +
+                                                            _vm._s(
+                                                              _vm.tglAkhir(
+                                                                _vm.show
+                                                                  .tgl_mulai
+                                                              )
+                                                            ) +
+                                                            "\n                                                            "
+                                                        )
+                                                      ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.show.ketua_panitia
+                                                        )
+                                                    )
+                                                  ])
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("textarea", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value: _vm.show.deskripsi,
+                                                    expression: "show.deskripsi"
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  cols: "78",
+                                                  rows: "15",
+                                                  readonly: ""
+                                                },
+                                                domProps: {
+                                                  value: _vm.show.deskripsi
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.show,
+                                                      "deskripsi",
+                                                      $event.target.value
+                                                    )
+                                                  }
                                                 }
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _vm._m(4, true)
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ],
-                          1
-                        )
-                      ])
-                    })
-                  )
-                ]
-              )
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _vm._m(4, true)
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -96592,7 +96676,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -96605,6 +96689,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -96779,195 +96865,202 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.meeting, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.judul_rapat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(_vm.format(item.tgl_rapat)))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.moderator))]),
-                        _vm._v(" "),
-                        _c(
-                          "td",
-                          [
-                            _c("center", [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary btn-sm",
-                                  attrs: {
-                                    "data-toggle": "modal",
-                                    "data-target": "#exampleModal"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.showModal(item.id)
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.meeting, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.judul_rapat))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(_vm.format(item.tgl_rapat)))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.moderator))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c("center", [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary btn-sm",
+                                    attrs: {
+                                      "data-toggle": "modal",
+                                      "data-target": "#exampleModal"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.showModal(item.id)
+                                      }
                                     }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-eye" })]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "modal fade",
+                                  attrs: {
+                                    id: "exampleModal",
+                                    tabindex: "-1",
+                                    role: "dialog",
+                                    "aria-labelledby": "exampleModalLabel",
+                                    "aria-hidden": "true"
                                   }
                                 },
-                                [_c("i", { staticClass: "fa fa-eye" })]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "exampleModal",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "exampleModalLabel",
-                                  "aria-hidden": "true"
-                                }
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "modal-dialog",
-                                    attrs: { role: "document" }
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "modal-content" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-header" },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass: "modal-title",
-                                                attrs: {
-                                                  id: "exampleModalLabel"
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Judul Rapat : " +
-                                                    _vm._s(
-                                                      _vm.modal.judul_rapat
-                                                    )
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(2, true)
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-body" },
-                                          [
-                                            _vm._m(3, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-6" },
-                                              [
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.format(
-                                                          _vm.modal.tgl_rapat
-                                                        )
-                                                      )
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.modal.jumlah_hadir
-                                                      ) +
-                                                      " Orang"
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.modal.moderator
-                                                      )
-                                                  )
-                                                ])
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("textarea", {
-                                              directives: [
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "modal-dialog",
+                                      attrs: { role: "document" }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "modal-content" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-header" },
+                                            [
+                                              _c(
+                                                "h3",
                                                 {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: _vm.modal.hasil_rapat,
-                                                  expression:
-                                                    "modal.hasil_rapat"
-                                                }
-                                              ],
-                                              staticClass: "form-control",
-                                              attrs: {
-                                                cols: "85",
-                                                rows: "14",
-                                                readonly: ""
-                                              },
-                                              domProps: {
-                                                value: _vm.modal.hasil_rapat
-                                              },
-                                              on: {
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
+                                                  staticClass: "modal-title",
+                                                  attrs: {
+                                                    id: "exampleModalLabel"
                                                   }
-                                                  _vm.$set(
-                                                    _vm.modal,
-                                                    "hasil_rapat",
-                                                    $event.target.value
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Judul Rapat : " +
+                                                      _vm._s(
+                                                        _vm.modal.judul_rapat
+                                                      )
                                                   )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(2, true)
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "modal-body" },
+                                            [
+                                              _vm._m(3, true),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-6" },
+                                                [
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.format(
+                                                            _vm.modal.tgl_rapat
+                                                          )
+                                                        )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.jumlah_hadir
+                                                        ) +
+                                                        " Orang"
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.moderator
+                                                        )
+                                                    )
+                                                  ])
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("textarea", {
+                                                directives: [
+                                                  {
+                                                    name: "model",
+                                                    rawName: "v-model",
+                                                    value:
+                                                      _vm.modal.hasil_rapat,
+                                                    expression:
+                                                      "modal.hasil_rapat"
+                                                  }
+                                                ],
+                                                staticClass: "form-control",
+                                                attrs: {
+                                                  cols: "85",
+                                                  rows: "14",
+                                                  readonly: ""
+                                                },
+                                                domProps: {
+                                                  value: _vm.modal.hasil_rapat
+                                                },
+                                                on: {
+                                                  input: function($event) {
+                                                    if (
+                                                      $event.target.composing
+                                                    ) {
+                                                      return
+                                                    }
+                                                    _vm.$set(
+                                                      _vm.modal,
+                                                      "hasil_rapat",
+                                                      $event.target.value
+                                                    )
+                                                  }
                                                 }
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _vm._m(4, true)
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ],
-                          1
-                        )
-                      ])
-                    })
-                  )
-                ]
-              )
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _vm._m(4, true)
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -97149,7 +97242,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -97160,6 +97253,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -97271,35 +97366,37 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.anggota, function(member, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.nama))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.nim))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(member.handphone))])
-                      ])
-                    })
-                  )
-                ]
-              )
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.anggota, function(member, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.username))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.nama))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.nim))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(member.handphone))])
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -97433,7 +97530,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -97444,6 +97541,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -97569,69 +97668,71 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.fund, function(f, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        f.tanggal
-                          ? _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(f.tanggal) +
-                                  "\n                                "
-                              )
-                            ])
-                          : _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(_vm.format(f.created_at)) +
-                                  "\n                                "
-                              )
-                            ]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(f.keterangan))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.debit) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.kredit) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.saldo) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(f.username))])
-                      ])
-                    })
-                  )
-                ]
-              )
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.fund, function(f, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          f.tanggal
+                            ? _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(f.tanggal) +
+                                    "\n                                    "
+                                )
+                              ])
+                            : _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.format(f.created_at)) +
+                                    "\n                                    "
+                                )
+                              ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(f.keterangan))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.debit) +
+                                "\n                                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.kredit) +
+                                "\n                                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.saldo) +
+                                "\n                                    "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(f.username))])
+                        ])
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -97767,7 +97868,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -97778,6 +97879,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -97990,144 +98093,154 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.letter, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.jenis))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.perihal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.tanggal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          item.jenis == "Surat Keluar"
-                            ? _c("span", [
-                                _c(
-                                  "a",
-                                  {
-                                    staticClass: "btn btn-primary",
-                                    attrs: { href: "file/surat/" + item.surat }
-                                  },
-                                  [_vm._v("Download Surat")]
-                                )
-                              ])
-                            : _c("span", [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "btn btn-primary btn-sm",
-                                    attrs: {
-                                      "data-toggle": "modal",
-                                      "data-target": "#showGambar"
-                                    },
-                                    on: {
-                                      click: function($event) {
-                                        _vm.showModal(item.id)
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                        Lihat Gambar\n                                        "
-                                    )
-                                  ]
-                                )
-                              ]),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.letter, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "showGambar",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "myLargeModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("div", { staticClass: "modal-dialog" }, [
-                                _c("div", { staticClass: "modal-content" }, [
-                                  _c("div", { staticClass: "modal-header" }, [
-                                    _c(
-                                      "h3",
-                                      {
-                                        staticClass: "modal-title",
-                                        attrs: { id: "exampleModalLabel" }
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.jenis))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.perihal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.tanggal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            item.jenis == "Surat Keluar"
+                              ? _c("span", [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "btn btn-primary",
+                                      attrs: {
+                                        href: "file/surat/" + item.surat
+                                      }
+                                    },
+                                    [_vm._v("Download Surat")]
+                                  )
+                                ])
+                              : _c("span", [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-primary btn-sm",
+                                      attrs: {
+                                        "data-toggle": "modal",
+                                        "data-target": "#showGambar"
                                       },
-                                      [
-                                        _vm._v(
-                                          "Data : " + _vm._s(_vm.modal.perihal)
-                                        )
-                                      ]
-                                    ),
+                                      on: {
+                                        click: function($event) {
+                                          _vm.showModal(item.id)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                            Lihat Gambar\n                                            "
+                                      )
+                                    ]
+                                  )
+                                ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "showGambar",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "myLargeModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c("div", { staticClass: "modal-dialog" }, [
+                                  _c("div", { staticClass: "modal-content" }, [
+                                    _c("div", { staticClass: "modal-header" }, [
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass: "modal-title",
+                                          attrs: { id: "exampleModalLabel" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "Data : " +
+                                              _vm._s(_vm.modal.perihal)
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(2, true)
+                                    ]),
                                     _vm._v(" "),
-                                    _vm._m(2, true)
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "modal-body" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c("div", { staticClass: "col-md-12" }, [
-                                        _c("img", {
-                                          staticClass: "img-responsive",
-                                          attrs: {
-                                            src:
-                                              "images/surat/" + _vm.modal.pict,
-                                            height: "1080px",
-                                            width: "650px"
-                                          }
-                                        })
+                                    _c("div", { staticClass: "modal-body" }, [
+                                      _c("div", { staticClass: "row" }, [
+                                        _c(
+                                          "div",
+                                          { staticClass: "col-md-12" },
+                                          [
+                                            _c("img", {
+                                              staticClass: "img-responsive",
+                                              attrs: {
+                                                src:
+                                                  "images/surat/" +
+                                                  _vm.modal.pict,
+                                                height: "1080px",
+                                                width: "650px"
+                                              }
+                                            })
+                                          ]
+                                        )
                                       ])
                                     ])
                                   ])
                                 ])
-                              ])
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showItem(item.id)
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.showItem(item.id)
+                                  }
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              ),
+                      })
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -98940,6 +99053,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -99108,67 +99223,69 @@ var render = function() {
                   ]
                 ),
                 _vm._v(" "),
-                _c(
-                  "table",
-                  {
-                    staticClass: "table table-bordered table-striped",
-                    attrs: { id: "example1" }
-                  },
-                  [
-                    _vm._m(1),
-                    _vm._v(" "),
-                    _c(
-                      "tbody",
-                      _vm._l(_vm.anggota, function(member, index) {
-                        return _c("tr", { key: index }, [
-                          _c("td", [_vm._v(_vm._s(index + 1))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(member.periode))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(member.username))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(member.nama))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(member.nim))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(member.handphone))]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-warning btn-sm",
-                                attrs: {
-                                  "data-toggle": "modal",
-                                  "data-target": "#editMember"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    _vm.editMember(member.id)
-                                  }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-pencil" })]
-                            ),
+                _c("div", { staticClass: "table-responsive" }, [
+                  _c(
+                    "table",
+                    {
+                      staticClass: "table table-bordered table-striped",
+                      attrs: { id: "example1" }
+                    },
+                    [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        _vm._l(_vm.anggota, function(member, index) {
+                          return _c("tr", { key: index }, [
+                            _c("td", [_vm._v(_vm._s(index + 1))]),
                             _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-danger btn-sm",
-                                on: {
-                                  click: function($event) {
-                                    _vm.deleteMember(member.id)
+                            _c("td", [_vm._v(_vm._s(member.periode))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(member.username))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(member.nama))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(member.nim))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(member.handphone))]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-warning btn-sm",
+                                  attrs: {
+                                    "data-toggle": "modal",
+                                    "data-target": "#editMember"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.editMember(member.id)
+                                    }
                                   }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-trash" })]
-                            )
+                                },
+                                [_c("i", { staticClass: "fa fa-pencil" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-danger btn-sm",
+                                  on: {
+                                    click: function($event) {
+                                      _vm.deleteMember(member.id)
+                                    }
+                                  }
+                                },
+                                [_c("i", { staticClass: "fa fa-trash" })]
+                              )
+                            ])
                           ])
-                        ])
-                      })
-                    )
-                  ]
-                ),
+                        })
+                      )
+                    ]
+                  )
+                ]),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -100158,7 +100275,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -100169,6 +100286,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -100452,163 +100571,68 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.letter, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.perihal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.tanggal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#showGambar"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showModal(item.id)
-                                }
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    Lihat Gambar\n                                    "
-                              )
-                            ]
-                          ),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.letter, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "showGambar",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "myLargeModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("div", { staticClass: "modal-dialog" }, [
-                                _c("div", { staticClass: "modal-content" }, [
-                                  _c("div", { staticClass: "modal-header" }, [
-                                    _c(
-                                      "h3",
-                                      {
-                                        staticClass: "modal-title",
-                                        attrs: { id: "exampleModalLabel" }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "Data : " + _vm._s(_vm.modal.perihal)
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _vm._m(2, true)
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "modal-body" }, [
-                                    _c("div", { staticClass: "row" }, [
-                                      _c("div", { staticClass: "col-md-12" }, [
-                                        _c("img", {
-                                          staticClass: "img-responsive",
-                                          attrs: {
-                                            src:
-                                              "images/surat/" + _vm.modal.pict,
-                                            height: "1080px",
-                                            width: "650px"
-                                          }
-                                        })
-                                      ])
-                                    ])
-                                  ])
-                                ])
-                              ])
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showModal(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#editSurat"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.editSurat(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-pencil" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
                           _vm._v(" "),
-                          _vm._m(3, true),
+                          _c("td", [_vm._v(_vm._s(item.perihal))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "exampleModal",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "exampleModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                          _c("td", [_vm._v(_vm._s(item.tanggal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#showGambar"
                                 },
-                                [
+                                on: {
+                                  click: function($event) {
+                                    _vm.showModal(item.id)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        Lihat Gambar\n                                        "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "showGambar",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "myLargeModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c("div", { staticClass: "modal-dialog" }, [
                                   _c("div", { staticClass: "modal-content" }, [
                                     _c("div", { staticClass: "modal-header" }, [
                                       _c(
@@ -100619,12 +100643,13 @@ var render = function() {
                                         },
                                         [
                                           _vm._v(
-                                            "Data : " + _vm._s(_vm.modal.jenis)
+                                            "Data : " +
+                                              _vm._s(_vm.modal.perihal)
                                           )
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _vm._m(4, true)
+                                      _vm._m(2, true)
                                     ]),
                                     _vm._v(" "),
                                     _c("div", { staticClass: "modal-body" }, [
@@ -100633,69 +100658,194 @@ var render = function() {
                                           "div",
                                           { staticClass: "col-md-12" },
                                           [
-                                            _vm._m(5, true),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-8" },
-                                              [
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.modal.nomor_surat
-                                                      )
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(_vm.modal.perihal)
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(_vm.modal.tanggal)
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(_vm.modal.username)
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    ": " +
-                                                      _vm._s(
-                                                        _vm.modal.deskripsi
-                                                      )
-                                                  )
-                                                ])
-                                              ]
-                                            )
+                                            _c("img", {
+                                              staticClass: "img-responsive",
+                                              attrs: {
+                                                src:
+                                                  "images/surat/" +
+                                                  _vm.modal.pict,
+                                                height: "1080px",
+                                                width: "650px"
+                                              }
+                                            })
                                           ]
                                         )
                                       ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(6, true)
+                                    ])
                                   ])
-                                ]
-                              )
-                            ]
-                          )
+                                ])
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.showModal(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#editSurat"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.editSurat(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-pencil" })]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(3, true),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "exampleModal",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "exampleModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: {
+                                                  id: "exampleModalLabel"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Data : " +
+                                                    _vm._s(_vm.modal.jenis)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(4, true)
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-body" },
+                                          [
+                                            _c("div", { staticClass: "row" }, [
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-12" },
+                                                [
+                                                  _vm._m(5, true),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    { staticClass: "col-md-8" },
+                                                    [
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          ": " +
+                                                            _vm._s(
+                                                              _vm.modal
+                                                                .nomor_surat
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          ": " +
+                                                            _vm._s(
+                                                              _vm.modal.perihal
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          ": " +
+                                                            _vm._s(
+                                                              _vm.modal.tanggal
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          ": " +
+                                                            _vm._s(
+                                                              _vm.modal.username
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          ": " +
+                                                            _vm._s(
+                                                              _vm.modal
+                                                                .deskripsi
+                                                            )
+                                                        )
+                                                      ])
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ])
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(6, true)
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              ),
+                      })
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -101198,7 +101348,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -101209,6 +101359,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -101377,186 +101529,212 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.letter, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.perihal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.tanggal))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "btn btn-primary",
-                              attrs: { href: "file/surat/" + item.surat }
-                            },
-                            [_vm._v("Download Surat")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.letter, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.periode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.perihal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.tanggal))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-primary",
+                                attrs: { href: "file/surat/" + item.surat }
                               },
-                              on: {
-                                click: function($event) {
-                                  _vm.showModal(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+                              [_vm._v("Download Surat")]
+                            )
+                          ]),
                           _vm._v(" "),
-                          _vm._m(2, true),
-                          _vm._v(" "),
-                          _vm._m(3, true),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "exampleModal",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "exampleModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "exampleModalLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Data : " + _vm._s(_vm.modal.jenis)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(4, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _c("div", { staticClass: "row" }, [
+                                on: {
+                                  click: function($event) {
+                                    _vm.showModal(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(2, true),
+                            _vm._v(" "),
+                            _vm._m(3, true),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "exampleModal",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "exampleModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
                                         _c(
                                           "div",
-                                          { staticClass: "col-md-12" },
+                                          { staticClass: "modal-header" },
                                           [
                                             _c(
-                                              "div",
-                                              { staticClass: "col-md-6" },
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: {
+                                                  id: "exampleModalLabel"
+                                                }
+                                              },
                                               [
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    "Nomor Surat : " +
-                                                      _vm._s(
-                                                        _vm.modal.nomor_surat
-                                                      )
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    "Perihal : " +
-                                                      _vm._s(_vm.modal.perihal)
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    "Tanggal : " +
-                                                      _vm._s(_vm.modal.tanggal)
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    "Penanggung Jawab : " +
-                                                      _vm._s(_vm.modal.username)
-                                                  )
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("h4", [
-                                                  _vm._v(
-                                                    "Deskripsi : " +
-                                                      _vm._s(
-                                                        _vm.modal.deskripsi
-                                                      )
-                                                  )
-                                                ])
+                                                _vm._v(
+                                                  "Data : " +
+                                                    _vm._s(_vm.modal.jenis)
+                                                )
                                               ]
                                             ),
                                             _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-6" },
-                                              [
-                                                _c("img", {
-                                                  staticClass: "img-square",
-                                                  attrs: {
-                                                    src:
-                                                      "images/surat/" +
-                                                      _vm.modal.pict,
-                                                    width: "250px",
-                                                    height: "250px"
-                                                  }
-                                                })
-                                              ]
-                                            )
+                                            _vm._m(4, true)
                                           ]
-                                        )
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(5, true)
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-body" },
+                                          [
+                                            _c("div", { staticClass: "row" }, [
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-12" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    { staticClass: "col-md-6" },
+                                                    [
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          "Nomor Surat : " +
+                                                            _vm._s(
+                                                              _vm.modal
+                                                                .nomor_surat
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          "Perihal : " +
+                                                            _vm._s(
+                                                              _vm.modal.perihal
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          "Tanggal : " +
+                                                            _vm._s(
+                                                              _vm.modal.tanggal
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          "Penanggung Jawab : " +
+                                                            _vm._s(
+                                                              _vm.modal.username
+                                                            )
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          "Deskripsi : " +
+                                                            _vm._s(
+                                                              _vm.modal
+                                                                .deskripsi
+                                                            )
+                                                        )
+                                                      ])
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    { staticClass: "col-md-6" },
+                                                    [
+                                                      _c("img", {
+                                                        staticClass:
+                                                          "img-square",
+                                                        attrs: {
+                                                          src:
+                                                            "images/surat/" +
+                                                            _vm.modal.pict,
+                                                          width: "250px",
+                                                          height: "250px"
+                                                        }
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ])
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(5, true)
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              ),
+                      })
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c("h6", [_vm._v("Note: PJ = Penanggung Jawab")])
             ])
@@ -101757,6 +101935,8 @@ exports.push([module.i, "\ninput[type=\"date\"].form-control[data-v-665b5e7a]{\n
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -102344,520 +102524,650 @@ var render = function() {
             _vm._m(2),
             _vm._v(" "),
             _c("div", { staticClass: "box-body" }, [
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.meeting, function(rapat, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(rapat.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(rapat.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(rapat.judul_rapat))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(_vm.format(rapat.tgl_rapat)))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(rapat.moderator))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModal"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showModal(rapat.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.meeting, function(rapat, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#exampleModalEdit"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.editRapat(rapat.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-pencil" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(rapat.periode))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.deleteRapat(rapat.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-trash" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(rapat.username))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "exampleModal",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "exampleModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                          _c("td", [_vm._v(_vm._s(rapat.judul_rapat))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(_vm.format(rapat.tgl_rapat)))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(rapat.moderator))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModal"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "exampleModalLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Judul Rapat : " +
-                                              _vm._s(_vm.modal.judul_rapat)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(4, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _vm._m(5, true),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-md-6" }, [
-                                        _c("h4", [
-                                          _vm._v(
-                                            ": " +
-                                              _vm._s(
-                                                _vm.format(_vm.modal.tgl_rapat)
-                                              )
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("h4", [
-                                          _vm._v(
-                                            ": " +
-                                              _vm._s(_vm.modal.jumlah_hadir) +
-                                              " Orang"
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("h4", [
-                                          _vm._v(
-                                            ": " + _vm._s(_vm.modal.moderator)
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("textarea", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.modal.hasil_rapat,
-                                            expression: "modal.hasil_rapat"
-                                          }
-                                        ],
-                                        staticClass: "form-control",
-                                        attrs: {
-                                          cols: "78",
-                                          rows: "15",
-                                          readonly: ""
-                                        },
-                                        domProps: {
-                                          value: _vm.modal.hasil_rapat
-                                        },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              _vm.modal,
-                                              "hasil_rapat",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(6, true)
-                                  ])
-                                ]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "exampleModalEdit",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "exampleModalLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                                on: {
+                                  click: function($event) {
+                                    _vm.showModal(rapat.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#exampleModalEdit"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "exampleModalLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Edit Data Rapat : " +
-                                              _vm._s(_vm.edit.judul_rapat)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(7, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _c("div", { staticClass: "row" }, [
-                                        _c("div", { staticClass: "col-md-5" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Judul Rapat")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: _vm.edit.judul_rapat,
-                                                    expression:
-                                                      "edit.judul_rapat"
-                                                  }
-                                                ],
-                                                staticClass: "form-control",
+                                on: {
+                                  click: function($event) {
+                                    _vm.editRapat(rapat.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-pencil" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteRapat(rapat.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-trash" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "exampleModal",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "exampleModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
                                                 attrs: {
-                                                  type: "text",
-                                                  rows: "8"
-                                                },
-                                                domProps: {
-                                                  value: _vm.edit.judul_rapat
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.edit,
-                                                      "judul_rapat",
-                                                      $event.target.value
-                                                    )
-                                                  }
+                                                  id: "exampleModalLabel"
                                                 }
-                                              })
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-md-5" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Tanggal Rapat")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: _vm.edit.tgl_rapat,
-                                                    expression: "edit.tgl_rapat"
-                                                  }
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "date",
-                                                  rows: "8"
-                                                },
-                                                domProps: {
-                                                  value: _vm.edit.tgl_rapat
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.edit,
-                                                      "tgl_rapat",
-                                                      $event.target.value
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Judul Rapat : " +
+                                                    _vm._s(
+                                                      _vm.modal.judul_rapat
                                                     )
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-md-5" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Jumlah Anggota Hadir")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      _vm.edit.jumlah_hadir,
-                                                    expression:
-                                                      "edit.jumlah_hadir"
-                                                  }
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "number",
-                                                  rows: "8",
-                                                  oninput:
-                                                    "this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\\..*)\\./g, '$1');"
-                                                },
-                                                domProps: {
-                                                  value: _vm.edit.jumlah_hadir
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.edit,
-                                                      "jumlah_hadir",
-                                                      $event.target.value
-                                                    )
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-md-5" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Pemimpin Rapat")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: _vm.edit.moderator,
-                                                    expression: "edit.moderator"
-                                                  }
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "text",
-                                                  rows: "8"
-                                                },
-                                                domProps: {
-                                                  value: _vm.edit.moderator
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      _vm.edit,
-                                                      "moderator",
-                                                      $event.target.value
-                                                    )
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]),
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(4, true)
+                                          ]
+                                        ),
                                         _vm._v(" "),
                                         _c(
                                           "div",
-                                          { staticClass: "form-group" },
+                                          { staticClass: "modal-body" },
                                           [
-                                            _vm._m(8, true),
+                                            _vm._m(5, true),
                                             _vm._v(" "),
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-12" },
+                                              { staticClass: "col-md-6" },
                                               [
-                                                _c("textarea", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.edit.hasil_rapat,
-                                                      expression:
-                                                        "edit.hasil_rapat"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    cols: "78",
-                                                    rows: "15"
-                                                  },
-                                                  domProps: {
-                                                    value: _vm.edit.hasil_rapat
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.edit,
-                                                        "hasil_rapat",
-                                                        $event.target.value
+                                                _c("h4", [
+                                                  _vm._v(
+                                                    ": " +
+                                                      _vm._s(
+                                                        _vm.format(
+                                                          _vm.modal.tgl_rapat
+                                                        )
                                                       )
-                                                    }
-                                                  }
-                                                })
+                                                  )
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("h4", [
+                                                  _vm._v(
+                                                    ": " +
+                                                      _vm._s(
+                                                        _vm.modal.jumlah_hadir
+                                                      ) +
+                                                      " Orang"
+                                                  )
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("h4", [
+                                                  _vm._v(
+                                                    ": " +
+                                                      _vm._s(
+                                                        _vm.modal.moderator
+                                                      )
+                                                  )
+                                                ])
                                               ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("textarea", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.modal.hasil_rapat,
+                                                  expression:
+                                                    "modal.hasil_rapat"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                cols: "78",
+                                                rows: "15",
+                                                readonly: ""
+                                              },
+                                              domProps: {
+                                                value: _vm.modal.hasil_rapat
+                                              },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    _vm.modal,
+                                                    "hasil_rapat",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(6, true)
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "exampleModalEdit",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "exampleModalLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: {
+                                                  id: "exampleModalLabel"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Edit Data Rapat : " +
+                                                    _vm._s(_vm.edit.judul_rapat)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(7, true)
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-body" },
+                                          [
+                                            _c("div", { staticClass: "row" }, [
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-5" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        { attrs: { for: "" } },
+                                                        [_vm._v("Judul Rapat")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.edit
+                                                                .judul_rapat,
+                                                            expression:
+                                                              "edit.judul_rapat"
+                                                          }
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          type: "text",
+                                                          rows: "8"
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.edit.judul_rapat
+                                                        },
+                                                        on: {
+                                                          input: function(
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.edit,
+                                                              "judul_rapat",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          }
+                                                        }
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-5" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        { attrs: { for: "" } },
+                                                        [
+                                                          _vm._v(
+                                                            "Tanggal Rapat"
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.edit
+                                                                .tgl_rapat,
+                                                            expression:
+                                                              "edit.tgl_rapat"
+                                                          }
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          type: "date",
+                                                          rows: "8"
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.edit.tgl_rapat
+                                                        },
+                                                        on: {
+                                                          input: function(
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.edit,
+                                                              "tgl_rapat",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          }
+                                                        }
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-5" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        { attrs: { for: "" } },
+                                                        [
+                                                          _vm._v(
+                                                            "Jumlah Anggota Hadir"
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.edit
+                                                                .jumlah_hadir,
+                                                            expression:
+                                                              "edit.jumlah_hadir"
+                                                          }
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          type: "number",
+                                                          rows: "8",
+                                                          oninput:
+                                                            "this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\\..*)\\./g, '$1');"
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.edit
+                                                              .jumlah_hadir
+                                                        },
+                                                        on: {
+                                                          input: function(
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.edit,
+                                                              "jumlah_hadir",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          }
+                                                        }
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-5" },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "form-group"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "label",
+                                                        { attrs: { for: "" } },
+                                                        [
+                                                          _vm._v(
+                                                            "Pemimpin Rapat"
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c("input", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.edit
+                                                                .moderator,
+                                                            expression:
+                                                              "edit.moderator"
+                                                          }
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          type: "text",
+                                                          rows: "8"
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.edit.moderator
+                                                        },
+                                                        on: {
+                                                          input: function(
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.edit,
+                                                              "moderator",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          }
+                                                        }
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "form-group" },
+                                                [
+                                                  _vm._m(8, true),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "col-md-12"
+                                                    },
+                                                    [
+                                                      _c("textarea", {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              _vm.edit
+                                                                .hasil_rapat,
+                                                            expression:
+                                                              "edit.hasil_rapat"
+                                                          }
+                                                        ],
+                                                        staticClass:
+                                                          "form-control",
+                                                        attrs: {
+                                                          cols: "78",
+                                                          rows: "15"
+                                                        },
+                                                        domProps: {
+                                                          value:
+                                                            _vm.edit.hasil_rapat
+                                                        },
+                                                        on: {
+                                                          input: function(
+                                                            $event
+                                                          ) {
+                                                            if (
+                                                              $event.target
+                                                                .composing
+                                                            ) {
+                                                              return
+                                                            }
+                                                            _vm.$set(
+                                                              _vm.edit,
+                                                              "hasil_rapat",
+                                                              $event.target
+                                                                .value
+                                                            )
+                                                          }
+                                                        }
+                                                      })
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ])
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-footer" },
+                                          [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass: "btn btn-primary",
+                                                staticStyle: {
+                                                  "margin-left": "15px"
+                                                },
+                                                attrs: { type: "submit" },
+                                                on: { click: _vm.saveEdit }
+                                              },
+                                              [
+                                                _vm.isLoadingEdit
+                                                  ? _c("i", {
+                                                      staticClass:
+                                                        "fa fa-spin fa-spinner"
+                                                    })
+                                                  : _c("i", {
+                                                      staticClass: "fa fa-check"
+                                                    }),
+                                                _vm._v(
+                                                  "\n                                                            Simpan\n                                                        "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "btn btn-secondary",
+                                                attrs: {
+                                                  type: "button",
+                                                  "data-dismiss": "modal"
+                                                }
+                                              },
+                                              [_vm._v("Close")]
                                             )
                                           ]
                                         )
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-footer" }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass: "btn btn-primary",
-                                          staticStyle: {
-                                            "margin-left": "15px"
-                                          },
-                                          attrs: { type: "submit" },
-                                          on: { click: _vm.saveEdit }
-                                        },
-                                        [
-                                          _vm.isLoadingEdit
-                                            ? _c("i", {
-                                                staticClass:
-                                                  "fa fa-spin fa-spinner"
-                                              })
-                                            : _c("i", {
-                                                staticClass: "fa fa-check"
-                                              }),
-                                          _vm._v(
-                                            "\n                                                        Simpan\n                                                    "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass: "btn btn-secondary",
-                                          attrs: {
-                                            type: "button",
-                                            "data-dismiss": "modal"
-                                          }
-                                        },
-                                        [_vm._v("Close")]
-                                      )
-                                    ])
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              )
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -103097,6 +103407,8 @@ exports.push([module.i, "\ninput[type=\"date\"].form-control{\n    line-height: 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -103757,359 +104069,314 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.event, function(e, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.periode))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.nama_event))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(e.ketua_panitia))]),
-                        _vm._v(" "),
-                        e.tgl_akhir
-                          ? _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(_vm.tglMulai(e.tgl_mulai)) +
-                                  " s/d " +
-                                  _vm._s(_vm.tglAkhir(e.tgl_akhir)) +
-                                  "\n                                "
-                              )
-                            ])
-                          : _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(_vm.tglAkhir(e.tgl_mulai)) +
-                                  "\n                                "
-                              )
-                            ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#showEvent"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showEvent(e.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.event, function(e, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#editEvent"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.editEvent(e.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-pencil" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(e.periode))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.deleteEvent(e.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-trash" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(e.username))]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "showEvent",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "showEventLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                          _c("td", [_vm._v(_vm._s(e.nama_event))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(e.ketua_panitia))]),
+                          _vm._v(" "),
+                          e.tgl_akhir
+                            ? _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.tglMulai(e.tgl_mulai)) +
+                                    " s/d " +
+                                    _vm._s(_vm.tglAkhir(e.tgl_akhir)) +
+                                    "\n                                    "
+                                )
+                              ])
+                            : _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.tglAkhir(e.tgl_mulai)) +
+                                    "\n                                    "
+                                )
+                              ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#showEvent"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "showEventLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Nama Event : " +
-                                              _vm._s(_vm.show.nama_event)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(4, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _vm._m(5, true),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "col-md-6" }, [
-                                        _vm.show.tgl_akhir
-                                          ? _c("h4", [
-                                              _vm._v(
-                                                ": \n                                                            " +
-                                                  _vm._s(
-                                                    _vm.tglMulai(
-                                                      _vm.show.tgl_mulai
-                                                    )
-                                                  ) +
-                                                  " s/d " +
-                                                  _vm._s(
-                                                    _vm.tglAkhir(
-                                                      _vm.show.tgl_akhir
-                                                    )
-                                                  ) +
-                                                  "\n                                                        "
-                                              )
-                                            ])
-                                          : _c("h4", [
-                                              _vm._v(
-                                                ": \n                                                            " +
-                                                  _vm._s(
-                                                    _vm.tglAkhir(
-                                                      _vm.show.tgl_mulai
-                                                    )
-                                                  ) +
-                                                  "\n                                                        "
-                                              )
-                                            ]),
-                                        _vm._v(" "),
-                                        _c("h4", [
-                                          _vm._v(
-                                            ": " +
-                                              _vm._s(_vm.show.ketua_panitia)
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("textarea", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.show.deskripsi,
-                                            expression: "show.deskripsi"
-                                          }
-                                        ],
-                                        staticClass: "form-control",
-                                        attrs: {
-                                          cols: "78",
-                                          rows: "8",
-                                          readonly: ""
-                                        },
-                                        domProps: { value: _vm.show.deskripsi },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              _vm.show,
-                                              "deskripsi",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      })
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(6, true)
-                                  ])
-                                ]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal fade",
-                              attrs: {
-                                id: "editEvent",
-                                tabindex: "-1",
-                                role: "dialog",
-                                "aria-labelledby": "editEventLabel",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal-dialog",
-                                  attrs: { role: "document" }
+                                on: {
+                                  click: function($event) {
+                                    _vm.showEvent(e.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#editEvent"
                                 },
-                                [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "editEventLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Edit Event " +
-                                              _vm._s(_vm.edit.nama_event)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(7, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Nama Event")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.edit.nama_event,
-                                              expression: "edit.nama_event"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            type: "text",
-                                            placeholder: "Masukan nama event"
-                                          },
-                                          domProps: {
-                                            value: _vm.edit.nama_event
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                _vm.edit,
-                                                "nama_event",
-                                                $event.target.value
-                                              )
-                                            }
-                                          }
-                                        })
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Ketua Panitia")
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.edit.ketua_panitia,
-                                              expression: "edit.ketua_panitia"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: {
-                                            type: "text",
-                                            placeholder:
-                                              "Masukan nama ketua panitia"
-                                          },
-                                          domProps: {
-                                            value: _vm.edit.ketua_panitia
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                _vm.edit,
-                                                "ketua_panitia",
-                                                $event.target.value
-                                              )
-                                            }
-                                          }
-                                        })
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c("label", { attrs: { for: "" } }, [
-                                          _vm._v("Tanggal Event")
-                                        ]),
+                                on: {
+                                  click: function($event) {
+                                    _vm.editEvent(e.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-pencil" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteEvent(e.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-trash" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "showEvent",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "showEventLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: { id: "showEventLabel" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Nama Event : " +
+                                                    _vm._s(_vm.show.nama_event)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(4, true)
+                                          ]
+                                        ),
                                         _vm._v(" "),
                                         _c(
                                           "div",
-                                          { staticClass: "col-md-12" },
+                                          { staticClass: "modal-body" },
+                                          [
+                                            _vm._m(5, true),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "col-md-6" },
+                                              [
+                                                _vm.show.tgl_akhir
+                                                  ? _c("h4", [
+                                                      _vm._v(
+                                                        ": \n                                                                " +
+                                                          _vm._s(
+                                                            _vm.tglMulai(
+                                                              _vm.show.tgl_mulai
+                                                            )
+                                                          ) +
+                                                          " s/d " +
+                                                          _vm._s(
+                                                            _vm.tglAkhir(
+                                                              _vm.show.tgl_akhir
+                                                            )
+                                                          ) +
+                                                          "\n                                                            "
+                                                      )
+                                                    ])
+                                                  : _c("h4", [
+                                                      _vm._v(
+                                                        ": \n                                                                " +
+                                                          _vm._s(
+                                                            _vm.tglAkhir(
+                                                              _vm.show.tgl_mulai
+                                                            )
+                                                          ) +
+                                                          "\n                                                            "
+                                                      )
+                                                    ]),
+                                                _vm._v(" "),
+                                                _c("h4", [
+                                                  _vm._v(
+                                                    ": " +
+                                                      _vm._s(
+                                                        _vm.show.ketua_panitia
+                                                      )
+                                                  )
+                                                ])
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("textarea", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: _vm.show.deskripsi,
+                                                  expression: "show.deskripsi"
+                                                }
+                                              ],
+                                              staticClass: "form-control",
+                                              attrs: {
+                                                cols: "78",
+                                                rows: "8",
+                                                readonly: ""
+                                              },
+                                              domProps: {
+                                                value: _vm.show.deskripsi
+                                              },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    _vm.show,
+                                                    "deskripsi",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _vm._m(6, true)
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "modal fade",
+                                attrs: {
+                                  id: "editEvent",
+                                  tabindex: "-1",
+                                  role: "dialog",
+                                  "aria-labelledby": "editEventLabel",
+                                  "aria-hidden": "true"
+                                }
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "modal-dialog",
+                                    attrs: { role: "document" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-header" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: { id: "editEventLabel" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Edit Event " +
+                                                    _vm._s(_vm.edit.nama_event)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(7, true)
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-body" },
                                           [
                                             _c(
                                               "div",
-                                              { staticClass: "col-md-5" },
+                                              { staticClass: "form-group" },
                                               [
+                                                _c(
+                                                  "label",
+                                                  { attrs: { for: "" } },
+                                                  [_vm._v("Nama Event")]
+                                                ),
+                                                _vm._v(" "),
                                                 _c("input", {
                                                   directives: [
                                                     {
                                                       name: "model",
                                                       rawName: "v-model",
-                                                      value: _vm.edit.tgl_mulai,
+                                                      value:
+                                                        _vm.edit.nama_event,
                                                       expression:
-                                                        "edit.tgl_mulai"
+                                                        "edit.nama_event"
                                                     }
                                                   ],
                                                   staticClass: "form-control",
-                                                  staticStyle: {
-                                                    "margin-left": "-30px"
+                                                  attrs: {
+                                                    type: "text",
+                                                    placeholder:
+                                                      "Masukan nama event"
                                                   },
-                                                  attrs: { type: "date" },
                                                   domProps: {
-                                                    value: _vm.edit.tgl_mulai
+                                                    value: _vm.edit.nama_event
                                                   },
                                                   on: {
                                                     input: function($event) {
@@ -104120,7 +104387,7 @@ var render = function() {
                                                       }
                                                       _vm.$set(
                                                         _vm.edit,
-                                                        "tgl_mulai",
+                                                        "nama_event",
                                                         $event.target.value
                                                       )
                                                     }
@@ -104129,31 +104396,36 @@ var render = function() {
                                               ]
                                             ),
                                             _vm._v(" "),
-                                            _vm._m(8, true),
-                                            _vm._v(" "),
                                             _c(
                                               "div",
-                                              {
-                                                staticClass: "col-md-5",
-                                                staticStyle: {
-                                                  "margin-left": "-20px"
-                                                }
-                                              },
+                                              { staticClass: "form-group" },
                                               [
+                                                _c(
+                                                  "label",
+                                                  { attrs: { for: "" } },
+                                                  [_vm._v("Ketua Panitia")]
+                                                ),
+                                                _vm._v(" "),
                                                 _c("input", {
                                                   directives: [
                                                     {
                                                       name: "model",
                                                       rawName: "v-model",
-                                                      value: _vm.edit.tgl_akhir,
+                                                      value:
+                                                        _vm.edit.ketua_panitia,
                                                       expression:
-                                                        "edit.tgl_akhir"
+                                                        "edit.ketua_panitia"
                                                     }
                                                   ],
                                                   staticClass: "form-control",
-                                                  attrs: { type: "date" },
+                                                  attrs: {
+                                                    type: "text",
+                                                    placeholder:
+                                                      "Masukan nama ketua panitia"
+                                                  },
                                                   domProps: {
-                                                    value: _vm.edit.tgl_akhir
+                                                    value:
+                                                      _vm.edit.ketua_panitia
                                                   },
                                                   on: {
                                                     input: function($event) {
@@ -104164,7 +104436,185 @@ var render = function() {
                                                       }
                                                       _vm.$set(
                                                         _vm.edit,
-                                                        "tgl_akhir",
+                                                        "ketua_panitia",
+                                                        $event.target.value
+                                                      )
+                                                    }
+                                                  }
+                                                })
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "form-group" },
+                                              [
+                                                _c(
+                                                  "label",
+                                                  { attrs: { for: "" } },
+                                                  [_vm._v("Tanggal Event")]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "col-md-12" },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass: "col-md-5"
+                                                      },
+                                                      [
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.edit
+                                                                  .tgl_mulai,
+                                                              expression:
+                                                                "edit.tgl_mulai"
+                                                            }
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          staticStyle: {
+                                                            "margin-left":
+                                                              "-30px"
+                                                          },
+                                                          attrs: {
+                                                            type: "date"
+                                                          },
+                                                          domProps: {
+                                                            value:
+                                                              _vm.edit.tgl_mulai
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.$set(
+                                                                _vm.edit,
+                                                                "tgl_mulai",
+                                                                $event.target
+                                                                  .value
+                                                              )
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _vm._m(8, true),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass: "col-md-5",
+                                                        staticStyle: {
+                                                          "margin-left": "-20px"
+                                                        }
+                                                      },
+                                                      [
+                                                        _c("input", {
+                                                          directives: [
+                                                            {
+                                                              name: "model",
+                                                              rawName:
+                                                                "v-model",
+                                                              value:
+                                                                _vm.edit
+                                                                  .tgl_akhir,
+                                                              expression:
+                                                                "edit.tgl_akhir"
+                                                            }
+                                                          ],
+                                                          staticClass:
+                                                            "form-control",
+                                                          attrs: {
+                                                            type: "date"
+                                                          },
+                                                          domProps: {
+                                                            value:
+                                                              _vm.edit.tgl_akhir
+                                                          },
+                                                          on: {
+                                                            input: function(
+                                                              $event
+                                                            ) {
+                                                              if (
+                                                                $event.target
+                                                                  .composing
+                                                              ) {
+                                                                return
+                                                              }
+                                                              _vm.$set(
+                                                                _vm.edit,
+                                                                "tgl_akhir",
+                                                                $event.target
+                                                                  .value
+                                                              )
+                                                            }
+                                                          }
+                                                        })
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "form-group" },
+                                              [
+                                                _c(
+                                                  "label",
+                                                  {
+                                                    staticStyle: {
+                                                      "margin-top": "10px"
+                                                    },
+                                                    attrs: { for: "" }
+                                                  },
+                                                  [_vm._v("Deskripsi Event")]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("textarea", {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value: _vm.edit.deskripsi,
+                                                      expression:
+                                                        "edit.deskripsi"
+                                                    }
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: {
+                                                    cols: "78",
+                                                    rows: "8"
+                                                  },
+                                                  domProps: {
+                                                    value: _vm.edit.deskripsi
+                                                  },
+                                                  on: {
+                                                    input: function($event) {
+                                                      if (
+                                                        $event.target.composing
+                                                      ) {
+                                                        return
+                                                      }
+                                                      _vm.$set(
+                                                        _vm.edit,
+                                                        "deskripsi",
                                                         $event.target.value
                                                       )
                                                     }
@@ -104173,97 +104623,61 @@ var render = function() {
                                               ]
                                             )
                                           ]
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "form-group" }, [
-                                        _c(
-                                          "label",
-                                          {
-                                            staticStyle: {
-                                              "margin-top": "10px"
-                                            },
-                                            attrs: { for: "" }
-                                          },
-                                          [_vm._v("Deskripsi Event")]
                                         ),
                                         _vm._v(" "),
-                                        _c("textarea", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: _vm.edit.deskripsi,
-                                              expression: "edit.deskripsi"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          attrs: { cols: "78", rows: "8" },
-                                          domProps: {
-                                            value: _vm.edit.deskripsi
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                _vm.edit,
-                                                "deskripsi",
-                                                $event.target.value
-                                              )
-                                            }
-                                          }
-                                        })
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-footer" }, [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass: "btn btn-secondary",
-                                          attrs: {
-                                            type: "button",
-                                            "data-dismiss": "modal"
-                                          }
-                                        },
-                                        [_vm._v("Close")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass: "btn btn-primary",
-                                          attrs: { type: "button" },
-                                          on: { click: _vm.saveEdit }
-                                        },
-                                        [
-                                          _vm.isLoadingEdit
-                                            ? _c("i", {
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-footer" },
+                                          [
+                                            _c(
+                                              "button",
+                                              {
                                                 staticClass:
-                                                  "fa fa-spin fa-spinner"
-                                              })
-                                            : _c("i", {
-                                                staticClass: "fa fa-check"
-                                              }),
-                                          _vm._v(
-                                            "\n                                                        Simpan\n                                                    "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ])
-                                ]
-                              )
-                            ]
-                          )
+                                                  "btn btn-secondary",
+                                                attrs: {
+                                                  type: "button",
+                                                  "data-dismiss": "modal"
+                                                }
+                                              },
+                                              [_vm._v("Close")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass: "btn btn-primary",
+                                                attrs: { type: "button" },
+                                                on: { click: _vm.saveEdit }
+                                              },
+                                              [
+                                                _vm.isLoadingEdit
+                                                  ? _c("i", {
+                                                      staticClass:
+                                                        "fa fa-spin fa-spinner"
+                                                    })
+                                                  : _c("i", {
+                                                      staticClass: "fa fa-check"
+                                                    }),
+                                                _vm._v(
+                                                  "\n                                                            Simpan\n                                                        "
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              )
+                      })
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])
@@ -104524,6 +104938,8 @@ exports.push([module.i, "\ninput[type=\"date\"].form-control{\n    line-height: 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
 //
 //
 //
@@ -105012,95 +105428,99 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(2),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.absent, function(item, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.username))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(item.judul_absen))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(_vm.format(item.created_at)))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-info btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.createAbsent(item.id)
-                                }
-                              }
-                            },
-                            [_vm._v("Absen")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#showAbsent"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.showAbsent(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-eye" })]
-                          ),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.absent, function(item, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-warning btn-sm",
-                              attrs: {
-                                "data-toggle": "modal",
-                                "data-target": "#editAbsent"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.editAbsent(item.id)
-                                }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-pencil" })]
-                          ),
+                          _c("td", [_vm._v(_vm._s(item.username))]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.deleteAbsent(item.id)
+                          _c("td", [_vm._v(_vm._s(item.judul_absen))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(_vm.format(item.created_at)))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-info btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.createAbsent(item.id)
+                                  }
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-trash" })]
-                          )
+                              },
+                              [_vm._v("Absen")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#showAbsent"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.showAbsent(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-eye" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning btn-sm",
+                                attrs: {
+                                  "data-toggle": "modal",
+                                  "data-target": "#editAbsent"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.editAbsent(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-pencil" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteAbsent(item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-trash" })]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              ),
+                      })
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -105956,7 +106376,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -106043,12 +106463,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             table: null,
-            invents: []
+            invents: [],
+            modal: {}
         };
     },
     mounted: function mounted() {
@@ -106127,144 +106550,161 @@ var render = function() {
                   [_vm._v("Tambah Inventaris")]
                 ),
                 _vm._v(" "),
-                _c(
-                  "table",
-                  {
-                    staticClass: "table table-bordered table-striped",
-                    attrs: { id: "example1" }
-                  },
-                  [
-                    _vm._m(1),
-                    _vm._v(" "),
-                    _c(
-                      "tbody",
-                      _vm._l(_vm.inventories, function(item, index) {
-                        return _c("tr", { key: index }, [
-                          _c("td", [_vm._v(_vm._s(index + 1))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.nama))]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.penanggung_jawab))]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary btn-sm",
-                                attrs: {
-                                  "data-toggle": "modal",
-                                  "data-target": "#showGambar"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    _vm.lihatGambar(item.id)
-                                  }
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                    Lihat Gambar\n                                    "
-                                )
-                              ]
-                            ),
+                _c("div", { staticClass: "table-responsive" }, [
+                  _c(
+                    "table",
+                    {
+                      staticClass: "table table-bordered table-striped",
+                      attrs: { id: "example1" }
+                    },
+                    [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        _vm._l(_vm.invents, function(item, index) {
+                          return _c("tr", { key: index }, [
+                            _c("td", [_vm._v(_vm._s(index + 1))]),
                             _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "showGambar",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "myLargeModalLabel",
-                                  "aria-hidden": "true"
-                                }
-                              },
-                              [
-                                _c("div", { staticClass: "modal-dialog" }, [
-                                  _c("div", { staticClass: "modal-content" }, [
-                                    _c("div", { staticClass: "modal-header" }, [
-                                      _c(
-                                        "h3",
-                                        {
-                                          staticClass: "modal-title",
-                                          attrs: { id: "exampleModalLabel" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Data : " +
-                                              _vm._s(_vm.modal.perihal)
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(2, true)
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "modal-body" }, [
-                                      _c("div", { staticClass: "row" }, [
+                            _c("td", [_vm._v(_vm._s(item.nama))]),
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(item.penanggung_jawab))]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-primary btn-sm",
+                                  attrs: {
+                                    "data-toggle": "modal",
+                                    "data-target": "#showGambar"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.lihatGambar(item.id)
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                        Lihat Gambar\n                                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "modal fade",
+                                  attrs: {
+                                    id: "showGambar",
+                                    tabindex: "-1",
+                                    role: "dialog",
+                                    "aria-labelledby": "myLargeModalLabel",
+                                    "aria-hidden": "true"
+                                  }
+                                },
+                                [
+                                  _c("div", { staticClass: "modal-dialog" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "modal-content" },
+                                      [
                                         _c(
                                           "div",
-                                          { staticClass: "col-md-12" },
+                                          { staticClass: "modal-header" },
                                           [
-                                            _c("img", {
-                                              staticClass: "img-responsive",
-                                              attrs: {
-                                                src:
-                                                  "images/surat/" +
-                                                  _vm.modal.pict,
-                                                height: "1080px",
-                                                width: "650px"
-                                              }
-                                            })
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass: "modal-title",
+                                                attrs: {
+                                                  id: "exampleModalLabel"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "Data : " +
+                                                    _vm._s(_vm.modal.perihal)
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm._m(2, true)
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "modal-body" },
+                                          [
+                                            _c("div", { staticClass: "row" }, [
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-12" },
+                                                [
+                                                  _c("img", {
+                                                    staticClass:
+                                                      "img-responsive",
+                                                    attrs: {
+                                                      src:
+                                                        "images/surat/" +
+                                                        _vm.modal.pict,
+                                                      height: "1080px",
+                                                      width: "650px"
+                                                    }
+                                                  })
+                                                ]
+                                              )
+                                            ])
                                           ]
                                         )
-                                      ])
-                                    ])
+                                      ]
+                                    )
                                   ])
-                                ])
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v("Keterangan")]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-warning btn-sm",
-                                attrs: {
-                                  "data-toggle": "modal",
-                                  "data-target": "#editSurat"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    _vm.editInventaris(item.id)
-                                  }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-pencil" })]
-                            ),
+                                ]
+                              )
+                            ]),
                             _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-danger btn-sm",
-                                on: {
-                                  click: function($event) {
-                                    _vm.deleteInventaris(item.id)
+                            _c("td", [_vm._v("Keterangan")]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-warning btn-sm",
+                                  attrs: {
+                                    "data-toggle": "modal",
+                                    "data-target": "#editSurat"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.editInventaris(item.id)
+                                    }
                                   }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-trash" })]
-                            )
+                                },
+                                [_c("i", { staticClass: "fa fa-pencil" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-danger btn-sm",
+                                  on: {
+                                    click: function($event) {
+                                      _vm.deleteInventaris(item.id)
+                                    }
+                                  }
+                                },
+                                [_c("i", { staticClass: "fa fa-trash" })]
+                              )
+                            ])
                           ])
-                        ])
-                      })
-                    )
-                  ]
-                ),
+                        })
+                      )
+                    ]
+                  )
+                ]),
                 _vm._v(" "),
                 _c("h6", [_vm._v("Note: PJ = Penanggung Jawab")])
               ],
@@ -106432,56 +106872,6 @@ exports.push([module.i, "\ninput[type=\"date\"].form-control[data-v-567c6c4e]{\n
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -107000,8 +107390,6 @@ var render = function() {
             _c("div", { staticClass: "box-body" }, [
               _vm._m(1),
               _vm._v(" "),
-              _vm._m(2),
-              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -107023,7 +107411,7 @@ var render = function() {
                     },
                     [
                       _c("div", { staticClass: "modal-content" }, [
-                        _vm._m(3),
+                        _vm._m(2),
                         _vm._v(" "),
                         _c("div", { staticClass: "modal-body" }, [
                           _c("div", { staticClass: "form-group" }, [
@@ -107267,337 +107655,120 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "modal fade",
-                  attrs: {
-                    id: "tambahSaldo",
-                    tabindex: "-1",
-                    role: "dialog",
-                    "aria-labelledby": "tambahSaldoLabel",
-                    "aria-hidden": "true"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "modal-dialog",
-                      attrs: { role: "document" }
-                    },
-                    [
-                      _c("div", { staticClass: "modal-content" }, [
-                        _vm._m(4),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "modal-body" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("span", [
-                              _c("label", { attrs: { for: "" } }, [
-                                _vm._v("Debit")
-                              ]),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.saldo.debit,
-                                    expression: "saldo.debit"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "number",
-                                  oninput:
-                                    "this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\\..*)\\./g, '$1');"
-                                },
-                                domProps: { value: _vm.saldo.debit },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.saldo,
-                                      "debit",
-                                      $event.target.value
-                                    )
-                                  }
-                                }
-                              })
-                            ])
-                          ]),
+              _c("div", { staticClass: "table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "table table-bordered table-striped",
+                    attrs: { id: "example1" }
+                  },
+                  [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.fund, function(f, index) {
+                        return _c("tr", { key: index }, [
+                          _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("span", [
-                              _c("label", { attrs: { for: "" } }, [
-                                _vm._v("Kredit")
-                              ]),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.saldo.kredit,
-                                    expression: "saldo.kredit"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "number",
-                                  oninput:
-                                    "this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\\..*)\\./g, '$1');"
-                                },
-                                domProps: { value: _vm.saldo.kredit },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.saldo,
-                                      "kredit",
-                                      $event.target.value
-                                    )
-                                  }
-                                }
-                              })
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("span", [
-                              _c("span", [
-                                _c("label", { attrs: { for: "" } }, [
-                                  _vm._v("Saldo")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.saldo.saldo,
-                                      expression: "saldo.saldo"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "number",
-                                    oninput:
-                                      "this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\\..*)\\./g, '$1');"
-                                  },
-                                  domProps: { value: _vm.saldo.saldo },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.saldo,
-                                        "saldo",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                })
+                          f.tanggal
+                            ? _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(f.tanggal) +
+                                    "\n                                    "
+                                )
                               ])
-                            ])
-                          ]),
+                            : _c("td", [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(_vm.format(f.created_at)) +
+                                    "\n                                    "
+                                )
+                              ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "form-group" }, [
-                            _c(
-                              "label",
-                              {
-                                staticStyle: { "margin-top": "10px" },
-                                attrs: { for: "" }
-                              },
-                              [_vm._v("Keterangan")]
-                            ),
-                            _vm._v(" "),
-                            _c("textarea", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.saldo.keterangan,
-                                  expression: "saldo.keterangan"
-                                }
-                              ],
-                              staticClass: "form-control",
-                              attrs: { cols: "78", rows: "8" },
-                              domProps: { value: _vm.saldo.keterangan },
-                              on: {
-                                input: function($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.saldo,
-                                    "keterangan",
-                                    $event.target.value
-                                  )
-                                }
-                              }
-                            })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "modal-footer" }, [
-                          _c("small", { staticClass: "pull-left" }, [
+                          _c("td", [_vm._v(_vm._s(f.keterangan))]),
+                          _vm._v(" "),
+                          _c("td", [
                             _vm._v(
-                              "Note: Debit = Pemasukan, Kredit = Pengeluaran"
+                              "\n                                        " +
+                                _vm._s(f.debit) +
+                                "\n                                    "
                             )
                           ]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-secondary",
-                              attrs: { type: "button", "data-dismiss": "modal" }
-                            },
-                            [_vm._v("Close")]
-                          ),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.kredit) +
+                                "\n                                    "
+                            )
+                          ]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary",
-                              attrs: { type: "button" },
-                              on: { click: _vm.saveSaldo }
-                            },
-                            [
-                              _vm.isLoadingSaldo
-                                ? _c("i", {
-                                    staticClass: "fa fa-spin fa-spinner"
-                                  })
-                                : _c("i", { staticClass: "fa fa-check" }),
-                              _vm._v(
-                                "\n                                            Simpan\n                                        "
-                              )
-                            ]
-                          )
-                        ])
-                      ])
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "table",
-                {
-                  staticClass: "table table-bordered table-striped",
-                  attrs: { id: "example1" }
-                },
-                [
-                  _vm._m(5),
-                  _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.fund, function(f, index) {
-                      return _c("tr", { key: index }, [
-                        _c("td", [_vm._v(_vm._s(index + 1))]),
-                        _vm._v(" "),
-                        f.tanggal
-                          ? _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(f.tanggal) +
-                                  "\n                                "
-                              )
-                            ])
-                          : _c("td", [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(_vm.format(f.created_at)) +
-                                  "\n                                "
-                              )
-                            ]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(f.keterangan))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.debit) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.kredit) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(f.saldo) +
-                              "\n                                "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(f.username))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          !f.saldo
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: {
-                                    "data-toggle": "modal",
-                                    "data-target": "#editKeuangan"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.editKeuangan(f.id)
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "fa fa-pencil" })]
-                              )
-                            : _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: {
-                                    "data-toggle": "modal",
-                                    "data-target": "#editSaldo"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.editKeuangan(f.id)
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "fa fa-pencil" })]
-                              ),
+                          _c("td", [
+                            _vm._v(
+                              "\n                                        " +
+                                _vm._s(f.saldo) +
+                                "\n                                    "
+                            )
+                          ]),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm",
-                              on: {
-                                click: function($event) {
-                                  _vm.deleteKeuangan(f.id)
+                          _c("td", [_vm._v(_vm._s(f.username))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            !f.saldo
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      "data-toggle": "modal",
+                                      "data-target": "#editKeuangan"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.editKeuangan(f.id)
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-pencil" })]
+                                )
+                              : _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      "data-toggle": "modal",
+                                      "data-target": "#editSaldo"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.editKeuangan(f.id)
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "fa fa-pencil" })]
+                                ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteKeuangan(f.id)
+                                  }
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "fa fa-trash" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "fa fa-trash" })]
+                            )
+                          ])
                         ])
-                      ])
-                    })
-                  )
-                ]
-              ),
+                      })
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -107630,7 +107801,7 @@ var render = function() {
                             [_vm._v("Edit Data " + _vm._s(_vm.edit.jenis))]
                           ),
                           _vm._v(" "),
-                          _vm._m(6)
+                          _vm._m(4)
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "modal-body" }, [
@@ -107911,7 +108082,7 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._m(7)
+                          _vm._m(5)
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "modal-body" }, [
@@ -108143,57 +108314,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "btn btn-info",
-        staticStyle: { "margin-bottom": "10px" },
-        attrs: {
-          type: "submit",
-          "data-toggle": "modal",
-          "data-target": "#tambahSaldo"
-        }
-      },
-      [
-        _c("i", { staticClass: "fa fa-plus" }),
-        _vm._v(" Saldo\n                        ")
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
       _c(
         "h3",
         { staticClass: "modal-title", attrs: { id: "tambahKeuanganLabel" } },
         [_vm._v("Tambah Data Keuangan")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-label": "Close"
-          }
-        },
-        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-header" }, [
-      _c(
-        "h3",
-        { staticClass: "modal-title", attrs: { id: "tambahSaldoLabel" } },
-        [_vm._v("Tambah Saldo Bulanan")]
       ),
       _vm._v(" "),
       _c(
@@ -108279,36 +108404,7 @@ if (false) {
 }
 
 /***/ }),
-/* 371 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = null
-/* template */
-var __vue_template__ = null
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/views/bendahara/laporan/IndexLaporan.vue"
-
-module.exports = Component.exports
-
-
-/***/ }),
+/* 371 */,
 /* 372 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -108883,7 +108979,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -108947,6 +109043,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -108956,16 +109063,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 keterangan: '',
                 penanggung_jawab: ''
             },
+            form: new FormData(),
             isLoading: false
         };
     },
+    mounted: function mounted() {
+        this.init();
+    },
 
     methods: {
+        init: function init() {
+            var self = this;
+
+            $('#fileFoto').change(function () {
+                var picture = document.getElementById('fileFoto');
+                if (picture.files.length > 0) {
+                    self.form.append('pict', picture.files[0]);
+                }
+            });
+        },
+        onChange: function onChange() {
+            this.form.append('nama', this.data.nama);
+            this.form.append('keterangan', this.data.keterangan);
+            this.form.append('penanggung_jawab', this.data.penanggung_jawab);
+        },
         save: function save() {
             var _this = this;
 
             this.isLoading = true;
-            axios.post('api/inventaris/tambah-inventaris', this.data).then(function (r) {
+            this.onChange();
+            axios.post('api/inventaris/tambah-inventaris', this.form).then(function (r) {
                 _this.isLoading = false;
                 if (r.data.message) {
                     toast.success(r.data.message);
@@ -108977,6 +109104,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(e);
                 toast.error(r.data.error);
             });
+        },
+        pilihFoto: function pilihFoto() {
+            $('#fileFoto').trigger('click');
         }
     }
 });
@@ -109082,6 +109212,44 @@ var render = function() {
                         }
                       }
                     })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("div", { staticClass: "input-group" }, [
+                      _c("label", { staticClass: "input-group-btn" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary btn-md",
+                            on: { click: _vm.pilihFoto }
+                          },
+                          [_c("i", { staticClass: "fa fa-cloud-upload" })]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "hidden",
+                          attrs: {
+                            type: "file",
+                            id: "fileFoto",
+                            accept: "image/*"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        staticStyle: {
+                          cursor: "default",
+                          "caret-color": "transparent"
+                        },
+                        attrs: {
+                          type: "text",
+                          readonly: "readonly",
+                          placeholder: "Upload foto"
+                        },
+                        on: { click: _vm.pilihFoto }
+                      })
+                    ])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group" }, [

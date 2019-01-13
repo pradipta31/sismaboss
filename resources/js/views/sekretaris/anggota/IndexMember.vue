@@ -18,35 +18,37 @@
                             <router-link class="btn btn-primary" :to="{name: 'sekretaris_anggota_create'}" style="margin-bottom: 10px">
                                 Tambah Anggota
                             </router-link>
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Periode</th>
-                                    <th>PJ</th>
-                                    <th>Nama</th>
-                                    <th>Nim</th>
-                                    <th>No Telp</th>
-                                    <th>Opsi</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="(member, index) in anggota" :key="index">
-                                        <td>{{index+1}}</td>
-                                        <td>{{member.periode}}</td>
-                                        <td>{{member.username}}</td>
-                                        <td>{{member.nama}}</td>
-                                        <td>{{member.nim}}</td>
-                                        <td>{{member.handphone}}</td>
-                                        <td>
-                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editMember" @click="editMember(member.id)"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" @click="deleteMember(member.id)">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </td>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Periode</th>
+                                        <th>PJ</th>
+                                        <th>Nama</th>
+                                        <th>Nim</th>
+                                        <th>No Telp</th>
+                                        <th>Opsi</th>
                                     </tr>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(member, index) in anggota" :key="index">
+                                            <td>{{index+1}}</td>
+                                            <td>{{member.periode}}</td>
+                                            <td>{{member.username}}</td>
+                                            <td>{{member.nama}}</td>
+                                            <td>{{member.nim}}</td>
+                                            <td>{{member.handphone}}</td>
+                                            <td>
+                                                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editMember" @click="editMember(member.id)"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-danger btn-sm" @click="deleteMember(member.id)">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <div class="modal fade" id="editMember" tabindex="-1" role="dialog" aria-labelledby="editMemberLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">

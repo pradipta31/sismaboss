@@ -54,7 +54,6 @@ import IndexInventaris from './views/sekretaris/inventaris/IndexInventaris'
  * ==================== BENDAHARA =====================
  */
 import IndexKeuanganBendahara from './views/bendahara/keuangan/IndexKeuangan'
-import IndexLaporanBendahara from './views/bendahara/laporan/IndexLaporan'
 
 Vue.use(Router);
 export default new Router({
@@ -223,26 +222,6 @@ export default new Router({
                     component: IndexKeuanganBendahara,
                     name: 'bendahara_keuangan_index'
                 },
-                // {
-                //     path: 'bendahara/pemasukan',
-                //     component: IndexPemasukan,
-                //     name: 'bendahara_pemasukan_index'
-                // },
-                // {
-                //     path: 'bendahara/pengeluaran',
-                //     component: IndexPengeluaran,
-                //     name: 'bendahara_pengeluaran_index'
-                // },
-                // {
-                //     path: 'bendahara/kas',
-                //     component: IndexKas,
-                //     name: 'bendahara_kas_index'
-                // },
-                {
-                    path: 'bendahara/laporan',
-                    component: IndexLaporanBendahara,
-                    name: 'bendahara_laporan_index'
-                }
             ]
         }
     ]

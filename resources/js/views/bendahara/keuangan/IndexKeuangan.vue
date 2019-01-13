@@ -19,10 +19,6 @@
                                 <i class="fa fa-plus"></i> Keuangan
                             </button>
 
-                            <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#tambahSaldo" style="margin-bottom: 10px">
-                                <i class="fa fa-plus"></i> Saldo
-                            </button>
-
                             <!-- Modal -->
                             <div class="modal fade" id="tambahKeuangan" tabindex="-1" role="dialog" aria-labelledby="tambahKeuanganLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -79,101 +75,55 @@
                                 </div>
                             </div>
 
-                            <div class="modal fade" id="tambahSaldo" tabindex="-1" role="dialog" aria-labelledby="tambahSaldoLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h3 class="modal-title" id="tambahSaldoLabel">Tambah Saldo Bulanan</h3>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <span>
-                                                    <label for="">Debit</label>
-                                                    <input type="number" class="form-control" v-model="saldo.debit" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                                                </span>
-                                            </div>
-                                            <div class="form-group">
-                                                <span>
-                                                    <label for="">Kredit</label>
-                                                    <input type="number" class="form-control" v-model="saldo.kredit" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                                                </span>
-                                            </div>
-                                            <div class="form-group">
-                                                <span>
-                                                    <span>
-                                                        <label for="">Saldo</label>
-                                                       <input type="number" class="form-control" v-model="saldo.saldo" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="" style="margin-top: 10px">Keterangan</label>
-                                                <textarea cols="78" rows="8" class="form-control" v-model="saldo.keterangan"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <small class="pull-left">Note: Debit = Pemasukan, Kredit = Pengeluaran</small>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" @click="saveSaldo">
-                                                <i class="fa fa-spin fa-spinner" v-if="isLoadingSaldo"></i>
-                                                <i class="fa fa-check" v-else></i>
-                                                Simpan
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Tanggal</th>
-                                <th>Keterangan</th>
-                                <th>Debit</th>
-                                <th>Kredit</th>
-                                <th>Saldo</th>
-                                <th>PJ</th>
-                                <th>Opsi</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(f, index) in fund" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td v-if="f.tanggal">
-                                        {{f.tanggal}}
-                                    </td>
-                                    <td v-else>
-                                        {{format(f.created_at)}}
-                                    </td>
-                                    <td>{{f.keterangan}}</td>
-                                    <td>
-                                        {{f.debit}}
-                                    </td>
-                                    <td>
-                                        {{f.kredit}}
-                                    </td>
-                                    <td>
-                                        {{f.saldo}}
-                                    </td>
-                                    <td>{{f.username}}</td>
-                                    <td>
-                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editKeuangan" @click="editKeuangan(f.id)" v-if="!f.saldo">
-                                            <i class="fa fa-pencil"></i>
-                                        </button>
-                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editSaldo" @click="editKeuangan(f.id)" v-else>
-                                            <i class="fa fa-pencil"></i>
-                                        </button>
-                                        <button class="btn btn-danger btn-sm" @click="deleteKeuangan(f.id)">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tanggal</th>
+                                    <th>Keterangan</th>
+                                    <th>Debit</th>
+                                    <th>Kredit</th>
+                                    <th>Saldo</th>
+                                    <th>PJ</th>
+                                    <th>Opsi</th>
                                 </tr>
-                            </tbody>
-                            </table>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(f, index) in fund" :key="index">
+                                        <td>{{index+1}}</td>
+                                        <td v-if="f.tanggal">
+                                            {{f.tanggal}}
+                                        </td>
+                                        <td v-else>
+                                            {{format(f.created_at)}}
+                                        </td>
+                                        <td>{{f.keterangan}}</td>
+                                        <td>
+                                            {{f.debit}}
+                                        </td>
+                                        <td>
+                                            {{f.kredit}}
+                                        </td>
+                                        <td>
+                                            {{f.saldo}}
+                                        </td>
+                                        <td>{{f.username}}</td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editKeuangan" @click="editKeuangan(f.id)" v-if="!f.saldo">
+                                                <i class="fa fa-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editSaldo" @click="editKeuangan(f.id)" v-else>
+                                                <i class="fa fa-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-danger btn-sm" @click="deleteKeuangan(f.id)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
                             <div class="modal fade" id="editKeuangan" tabindex="-1" role="dialog" aria-labelledby="editKeuanganLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">

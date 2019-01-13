@@ -15,64 +15,66 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th width="15px">No</th>
-                                <th>Periode</th>
-                                <th>Jenis</th>
-                                <th>Nomor Surat</th>
-                                <th>Perihal</th>
-                                <th>Tanggal</th>
-                                <th>PJ</th>
-                                <th>File</th>
-                                <th width="100px">Opsi</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(item, index) in letter" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td>{{item.periode}}</td>
-                                    <td>{{item.jenis}}</td>
-                                    <td>{{item.nomor_surat}}</td>
-                                    <td>{{item.perihal}}</td>
-                                    <td>{{item.tanggal}}</td>
-                                    <td>{{item.username}}</td>
-                                    <td>
-                                        <span v-if="item.jenis == 'Surat Keluar'">
-                                            <a :href="`file/surat/${item.surat}`" class="btn btn-primary">Download Surat</a>
-                                        </span>
-                                        <span v-else>
-                                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showGambar" @click="showModal(item.id)">
-                                            Lihat Gambar
-                                            </button>
-                                        </span>
-                                        <div class="modal fade" id="showGambar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.perihal}}</h3>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <img :src="'images/surat/'+modal.pict" class="img-responsive" height="1080px" width="650px">
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th width="15px">No</th>
+                                    <th>Periode</th>
+                                    <th>Jenis</th>
+                                    <th>Nomor Surat</th>
+                                    <th>Perihal</th>
+                                    <th>Tanggal</th>
+                                    <th>PJ</th>
+                                    <th>File</th>
+                                    <th width="100px">Opsi</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(item, index) in letter" :key="index">
+                                        <td>{{index+1}}</td>
+                                        <td>{{item.periode}}</td>
+                                        <td>{{item.jenis}}</td>
+                                        <td>{{item.nomor_surat}}</td>
+                                        <td>{{item.perihal}}</td>
+                                        <td>{{item.tanggal}}</td>
+                                        <td>{{item.username}}</td>
+                                        <td>
+                                            <span v-if="item.jenis == 'Surat Keluar'">
+                                                <a :href="`file/surat/${item.surat}`" class="btn btn-primary">Download Surat</a>
+                                            </span>
+                                            <span v-else>
+                                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showGambar" @click="showModal(item.id)">
+                                                Lihat Gambar
+                                                </button>
+                                            </span>
+                                            <div class="modal fade" id="showGambar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.perihal}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <img :src="'images/surat/'+modal.pict" class="img-responsive" height="1080px" width="650px">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showItem(item.id)"><i class="fa fa-eye"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            </table>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showItem(item.id)"><i class="fa fa-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">

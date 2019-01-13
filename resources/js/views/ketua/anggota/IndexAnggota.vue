@@ -16,28 +16,30 @@
                     <div class="box">
                         <div class="box-body">
                             <a :href="`ketua/anggota/${user.periode_id}`" class="btn btn-primary" style="margin-bottom: 5px">Download .xls</a>
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Periode</th>
-                                    <th>PJ</th>
-                                    <th>Nama</th>
-                                    <th>Nim</th>
-                                    <th>No Telp</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="(member, index) in anggota" :key="index">
-                                        <td>{{index+1}}</td>
-                                        <td>{{member.periode}}</td>
-                                        <td>{{member.username}}</td>
-                                        <td>{{member.nama}}</td>
-                                        <td>{{member.nim}}</td>
-                                        <td>{{member.handphone}}</td>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Periode</th>
+                                        <th>PJ</th>
+                                        <th>Nama</th>
+                                        <th>Nim</th>
+                                        <th>No Telp</th>
                                     </tr>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(member, index) in anggota" :key="index">
+                                            <td>{{index+1}}</td>
+                                            <td>{{member.periode}}</td>
+                                            <td>{{member.username}}</td>
+                                            <td>{{member.nama}}</td>
+                                            <td>{{member.nim}}</td>
+                                            <td>{{member.handphone}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

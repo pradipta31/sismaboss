@@ -67,122 +67,124 @@
                             <h3 class="box-title">Data Rapat UKM BOSS</h3>
                         </div>
                         <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th width="15px">No</th>
-                                <th>Periode</th>
-                                <th>PJ</th>
-                                <th>Judul Rapat</th>
-                                <th>Tanggal</th>
-                                <th>Pemimpin Rapat</th>
-                                <th>Opsi</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(rapat, index) in meeting" :key="index">
-                                    <td>{{index+1}}</td>
-                                    <td>{{rapat.periode}}</td>
-                                    <td>{{rapat.username}}</td>
-                                    <td>{{rapat.judul_rapat}}</td>
-                                    <td>{{format(rapat.tgl_rapat)}}</td>
-                                    <td>{{rapat.moderator}}</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(rapat.id)"><i class="fa fa-eye"></i></button>
-                                        <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModalEdit" @click="editRapat(rapat.id)"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-danger btn-sm" @click="deleteRapat(rapat.id)">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="exampleModalLabel">Judul Rapat : {{modal.judul_rapat}}</h3>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="col-md-6">
-                                                            <h4>Tanggal Rapat </h4>
-                                                            <h4>Jumlah Anggota Hadir </h4>
-                                                            <h4>Pemimpin Rapat </h4>
-                                                            <h4>Hasil Rapat </h4>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <h4>: {{format(modal.tgl_rapat)}}</h4>
-                                                            <h4>: {{modal.jumlah_hadir}} Orang</h4>
-                                                            <h4>: {{modal.moderator}}</h4>
-                                                        </div>
-                                                        <textarea v-model="modal.hasil_rapat" cols="78" rows="15" class="form-control" readonly></textarea>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="exampleModalLabel">Edit Data Rapat : {{edit.judul_rapat}}</h3>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="row">
-                                                            <div class="col-md-5">
-                                                                <div class="form-group">
-                                                                    <label for="">Judul Rapat</label>
-                                                                    <input type="text" v-model="edit.judul_rapat" rows="8" class="form-control">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <div class="form-group">
-                                                                    <label for="">Tanggal Rapat</label>
-                                                                    <input type="date" v-model="edit.tgl_rapat" rows="8" class="form-control">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <div class="form-group">
-                                                                    <label for="">Jumlah Anggota Hadir</label>
-                                                                    <input type="number" v-model="edit.jumlah_hadir" rows="8" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-5">
-                                                                <div class="form-group">
-                                                                    <label for="">Pemimpin Rapat</label>
-                                                                    <input type="text" v-model="edit.moderator" rows="8" class="form-control">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="col-md-12">
-                                                                    <label for="">Hasil Rapat</label>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <textarea v-model="edit.hasil_rapat" cols="78" rows="15" class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="submit" class="btn btn-primary" @click="saveEdit" style="margin-left: 15px">
-                                                            <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
-                                                            <i class="fa fa-check" v-else></i>
-                                                            Simpan
-                                                        </button>
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th width="15px">No</th>
+                                    <th>Periode</th>
+                                    <th>PJ</th>
+                                    <th>Judul Rapat</th>
+                                    <th>Tanggal</th>
+                                    <th>Pemimpin Rapat</th>
+                                    <th>Opsi</th>
                                 </tr>
-                            </tbody>
-                            </table>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(rapat, index) in meeting" :key="index">
+                                        <td>{{index+1}}</td>
+                                        <td>{{rapat.periode}}</td>
+                                        <td>{{rapat.username}}</td>
+                                        <td>{{rapat.judul_rapat}}</td>
+                                        <td>{{format(rapat.tgl_rapat)}}</td>
+                                        <td>{{rapat.moderator}}</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(rapat.id)"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModalEdit" @click="editRapat(rapat.id)"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" @click="deleteRapat(rapat.id)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">Judul Rapat : {{modal.judul_rapat}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="col-md-6">
+                                                                <h4>Tanggal Rapat </h4>
+                                                                <h4>Jumlah Anggota Hadir </h4>
+                                                                <h4>Pemimpin Rapat </h4>
+                                                                <h4>Hasil Rapat </h4>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h4>: {{format(modal.tgl_rapat)}}</h4>
+                                                                <h4>: {{modal.jumlah_hadir}} Orang</h4>
+                                                                <h4>: {{modal.moderator}}</h4>
+                                                            </div>
+                                                            <textarea v-model="modal.hasil_rapat" cols="78" rows="15" class="form-control" readonly></textarea>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="exampleModalLabel">Edit Data Rapat : {{edit.judul_rapat}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        <label for="">Judul Rapat</label>
+                                                                        <input type="text" v-model="edit.judul_rapat" rows="8" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        <label for="">Tanggal Rapat</label>
+                                                                        <input type="date" v-model="edit.tgl_rapat" rows="8" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        <label for="">Jumlah Anggota Hadir</label>
+                                                                        <input type="number" v-model="edit.jumlah_hadir" rows="8" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        <label for="">Pemimpin Rapat</label>
+                                                                        <input type="text" v-model="edit.moderator" rows="8" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12">
+                                                                        <label for="">Hasil Rapat</label>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <textarea v-model="edit.hasil_rapat" cols="78" rows="15" class="form-control"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="btn btn-primary" @click="saveEdit" style="margin-left: 15px">
+                                                                <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
+                                                                <i class="fa fa-check" v-else></i>
+                                                                Simpan
+                                                            </button>
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

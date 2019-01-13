@@ -31,6 +31,17 @@
                                         <input type="text" class="form-control" v-model="data.penanggung_jawab" placeholder="Masukan penanggung jawab">
                                     </div>
                                     <div class="form-group">
+                                        <div class="input-group">
+                                            <label class="input-group-btn">
+                                                <button class="btn btn-primary btn-md" @click="pilihFoto"><i class="fa fa-cloud-upload"></i></button>
+                                                <input type="file" class="hidden" id="fileFoto" accept="image/*">
+                                            </label>
+                                            <input type="text" class="form-control" @click="pilihFoto" 
+                                            style="cursor: default; caret-color: transparent" readonly="readonly"
+                                            placeholder="Upload foto">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="">Keterangan</label>
                                         <textarea class="form-control" v-model="data.keterangan"></textarea>
                                     </div>
@@ -60,13 +71,33 @@ export default {
                 keterangan: '',
                 penanggung_jawab: ''
             },
+            form: new FormData(),
             isLoading: false
         }
     },
+    mounted(){
+        this.init()
+    },
     methods:{
+        init(){
+            var self = this;
+
+            $('#fileFoto').change(function(){
+                var picture = document.getElementById('fileFoto');
+                if(picture.files.length > 0){
+                    self.form.append('pict',picture.files[0]);
+                }
+            });
+        },
+        onChange(){
+            this.form.append('nama',this.data.nama);
+            this.form.append('keterangan',this.data.keterangan);
+            this.form.append('penanggung_jawab',this.data.penanggung_jawab);
+        },
         save(){
-            this.isLoading = true
-            axios.post('api/inventaris/tambah-inventaris',this.data)
+            this.isLoading = true;
+            this.onChange();
+            axios.post('api/inventaris/tambah-inventaris',this.form)
             .then(r => {
                 this.isLoading = false
                 if(r.data.message){
@@ -80,6 +111,9 @@ export default {
                 console.log(e);
                 toast.error(r.data.error)
             })
+        },
+        pilihFoto(){
+            $('#fileFoto').trigger('click');
         }
     }
 }

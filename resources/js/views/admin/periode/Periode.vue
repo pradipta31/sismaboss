@@ -41,61 +41,63 @@
                                 <h3 class="box-title">Data Periode UKM BOSS</h3>
                             </div>
                             <div class="box-body">
-                                <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr>
-                                    <th width="15px">No</th>
-                                    <th>Periode</th>
-                                    <th>Dibuat Pada Tanggal</th>
-                                    <th>Status</th>
-                                    <th>Opsi</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="(prd, index) in periode" :key="index">
-                                        <td>{{index+1}}</td>
-                                        <td>{{prd.periode}}</td>
-                                        <td>{{format(prd.created_at)}}</td>
-                                        <td v-if="prd.status === 'aktif'">
-                                            <span class="label label-success">Aktif</span>
-                                        </td>
-                                        <td v-else>
-                                            <span class="label label-warning">Tidak Aktif</span>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editPeriode" @click="editPeriode(prd.id)">Edit</button>
-                                            <a href="javascript:void(0);" class="btn btn-danger btn-sm" @click="deletePeriode(prd.id)">Hapus</a>
+                                <div class="table-responsive">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th width="15px">No</th>
+                                        <th>Periode</th>
+                                        <th>Dibuat Pada Tanggal</th>
+                                        <th>Status</th>
+                                        <th>Opsi</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(prd, index) in periode" :key="index">
+                                            <td>{{index+1}}</td>
+                                            <td>{{prd.periode}}</td>
+                                            <td>{{format(prd.created_at)}}</td>
+                                            <td v-if="prd.status === 'aktif'">
+                                                <span class="label label-success">Aktif</span>
+                                            </td>
+                                            <td v-else>
+                                                <span class="label label-warning">Tidak Aktif</span>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editPeriode" @click="editPeriode(prd.id)">Edit</button>
+                                                <a href="javascript:void(0);" class="btn btn-danger btn-sm" @click="deletePeriode(prd.id)">Hapus</a>
 
-                                            <div class="modal fade" id="editPeriode" tabindex="-1" role="dialog" aria-labelledby="editPeriodeLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title" id="editPeriodeLabel">Edit Periode {{edit.periode}}</h3>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="form-group">
-                                                            <label for="">Nama Event</label>
-                                                            <input type="text" v-model="edit.periode" class="form-control" placeholder="Masukan periode">
+                                                <div class="modal fade" id="editPeriode" tabindex="-1" role="dialog" aria-labelledby="editPeriodeLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h3 class="modal-title" id="editPeriodeLabel">Edit Periode {{edit.periode}}</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary" @click="saveEdit">
-                                                            <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
-                                                            <i class="fa fa-check" v-else></i>
-                                                            Simpan
-                                                        </button>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label for="">Nama Event</label>
+                                                                <input type="text" v-model="edit.periode" class="form-control" placeholder="Masukan periode">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary" @click="saveEdit">
+                                                                <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
+                                                                <i class="fa fa-check" v-else></i>
+                                                                Simpan
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
