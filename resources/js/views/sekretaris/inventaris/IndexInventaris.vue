@@ -40,7 +40,7 @@
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.perihal}}</h3>
+                                                            <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.nama}}</h3>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
@@ -48,7 +48,7 @@
                                                         <div class="modal-body">
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <img :src="'images/surat/'+modal.pict" class="img-responsive" height="1080px" width="650px">
+                                                                    <img :src="'images/inventaris/'+modal.pict" class="img-responsive" height="1080px" width="650px">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -83,7 +83,8 @@ export default {
             table: null,
             invents: [],
             modal:{
-                
+                nama: '',
+                pict: ''
             }
         }
     },
@@ -110,13 +111,46 @@ export default {
             })
         },
         editInventaris(id){
-
+            this.$router.push({name: 'sekretaris_inventaris_edit',params: {id: id}});
         },
         deleteInventaris(id){
-
+            swal({
+                title: 'Apakah anda yakin ingin menghapus data inventaris ini ?',
+                buttons: true,
+                icon: 'info',
+                dangerMode: true
+            })
+            .then(yes => {
+                if(yes){
+                    axios.delete(`api/inventaris/${id}`)
+                    .then(r => {
+                        swal({
+                            title: "Berhasil!",
+                            text: "Data inventaris berhasil dihapus!",
+                            icon: "success",
+                        })
+                        .then((berhasil) => {
+                            if(berhasil){
+                                this.getData(true);
+                            }
+                        })
+                    })
+                    .catch(e => {
+                        console.log(e);
+                        toast.error('Gagal menghapus data inventaris yang dipilih');
+                    })
+                }
+            })
         },
         lihatGambar(id){
-
+            axios.get(`api/inventaris/show/${id}`)
+            .then(r => {
+                this.modal = r.data.inventaris
+                console.log(r.data.inventaris)
+            })
+            .catch(e => {
+                console.log(e)
+            })
         }
     }
 }

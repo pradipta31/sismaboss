@@ -86,13 +86,21 @@ Route::group(['middleware' => 'api', 'namespace' => 'Sekretaris'], function ($ro
     Route::delete('anggota/{id}', 'MemberController@deleteMember');
 
     Route::post('surat/tambah-surat/', 'LetterController@createLetter');
+
     Route::get('surat-masuk','LetterController@getSuratMasuk');
     Route::get('surat-masuk/edit/{id}','LetterController@editSuratMasuk');
     Route::put('surat-masuk/edit/{id}', 'LetterController@updateSuratMasuk');
-    Route::get('surat-keluar','LetterController@getSuratKeluar');
-    Route::get('surat-keluar/download/{id}', 'LetterController@downloadSuratKeluar');
+    Route::post('surat-masuk/', 'LetterController@ubahSuratMasuk');
     Route::get('surat-masuk/show/{id}','LetterController@showSuratMasuk');
 
+    Route::get('surat-keluar','LetterController@getSuratKeluar');
+    Route::get('surat-keluar/download/{id}', 'LetterController@downloadSuratKeluar');
+    Route::get('surat-keluar/edit/{id}', 'LetterController@editSuratKeluar');
+    Route::put('surat-keluar/edit/{id}', 'LetterController@updateSuratKeluar');
+    Route::post('surat-keluar/', 'LetterController@ubahSuratKeluar');
+
+    Route::delete('surat/{id}', 'LetterController@deleteSurat');
+    
     Route::get('absen/tambah/{id}', 'AbsenController@getAbsenT');
     Route::post('absen/tambah/{id}', 'AbsenController@createAbsenT');
     Route::delete('absen/tambah/{id}', 'AbsenController@deleteAbsenT');
@@ -120,6 +128,7 @@ Route::group(['middleware' => 'api', 'namespace' => 'Sekretaris'], function ($ro
 
     Route::get('inventaris', 'InventarisController@getInventaris');
     Route::post('inventaris/tambah-inventaris/', 'InventarisController@createInventaris');
+    Route::get('inventaris/show/{id}', 'InventarisController@showInventaris');
     Route::get('inventaris/edit/{id}', 'InventarisController@editInventaris');
     Route::put('inventaris/edit/{id}', 'InventarisController@updateInventaris');
     Route::delete('inventaris/{id}', 'InventarisController@deleteInventaris');

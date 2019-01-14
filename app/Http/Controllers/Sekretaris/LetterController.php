@@ -102,6 +102,26 @@ class LetterController extends Controller
         ]);
     }
 
+    public function updateSuratMasuk(Request $r, $id){
+        $this->validate($r,[
+            'nomor_surat' => 'required',
+            'perihal' => 'required',
+            'tanggal' => 'required',
+            'deskripsi' => 'required'
+        ]);
+        
+        $letters = Letter::findOrFail($id)->update([
+            'nomor_surat' => $r->nomor_surat,
+            'perihal' => $r->perihal,
+            'tanggal' => $r->tanggal,
+            'deskripsi' => $r->deskripsi
+        ]);
+
+        return response()->json([
+            'message' => 'Data surat Berhasil diubah'
+        ]);
+    }
+
     public function getSuratKeluar(){
         $letters = Letter::select('letters.*','periodes.periode','users.username')
         ->join('periodes','periodes.id','=','letters.periode_id')

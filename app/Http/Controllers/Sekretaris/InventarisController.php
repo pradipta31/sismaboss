@@ -43,4 +43,52 @@ class InventarisController extends Controller
             'message' => 'Data inventaris baru berhasil ditambahkan'
         ]);
     }
+
+    public function showInventaris($id){
+        $inventaris = Inventory::where('inventories.id','=',$id)->first();
+
+        $response = [
+            'inventaris' => $inventaris
+        ];
+
+        return response()->json($response);
+    }
+
+    public function editInventaris($id){
+        $inventories = Inventory::where('inventories.id','=',$id)->first();
+
+        $response = [
+            'inventories' => $inventories
+        ];
+
+        return response()->json($response);
+    }
+
+    public function updateInventaris(Request $r, $id){
+        $this->validate($r,[
+            'nama' => 'required',
+            'penanggung_jawab' => 'required',
+            'keterangan' => 'required'
+        ]);
+
+        $invents = Inventory::findOrFail($id)->update([
+            'nama' => $r->nama,
+            'penanggung_jawab' => $r->penanggung_jawab,
+            'keterangan' => $r->keterangan
+        ]);
+        
+        return response()->json([
+            'message' => 'Data inventaris berhasil diubah'
+        ]);
+    }
+
+    public function deleteInventaris($id){
+        $invents = Inventory::findOrFail($id)->delete();
+
+        $response = [
+            'message' => 'Berhasil menghapus data inventaris yang dipilih'
+        ];
+
+        return response()->json($response);
+    }
 }

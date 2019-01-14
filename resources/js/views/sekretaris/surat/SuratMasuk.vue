@@ -20,7 +20,6 @@
                                 <thead>
                                 <tr>
                                     <th width="15px">No</th>
-                                    <th>Periode</th>
                                     <th>Nomor Surat</th>
                                     <th>Perihal</th>
                                     <th>Tanggal</th>
@@ -32,7 +31,6 @@
                                 <tbody>
                                     <tr v-for="(item, index) in letter" :key="index">
                                         <td>{{index+1}}</td>
-                                        <td>{{item.periode}}</td>
                                         <td>{{item.nomor_surat}}</td>
                                         <td>{{item.perihal}}</td>
                                         <td>{{item.tanggal}}</td>
@@ -40,6 +38,7 @@
                                         <td><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showGambar" @click="showModal(item.id)">
                                             Lihat Gambar
                                             </button>
+                                            <button class="btn btn-warning" @click="editFile(item.id)">Edit</button>
                                             <div class="modal fade" id="showGambar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
@@ -129,18 +128,6 @@
                                                 <label for="">Tanggal Event</label>
                                                 <input type="date" v-model="edit.tanggal" class="form-control">
                                             </div>
-                                            <div>
-                                                <div class="input-group">
-                                                    <label class="input-group-btn">
-                                                        <button class="btn btn-primary btn-md" @click="pilihFoto"><i class="fa fa-cloud-upload"></i></button>
-                                                        
-                                                        <input type="file" class="hidden" id="fileFoto" accept="image/*">
-                                                    </label>
-                                                    <input type="text" class="form-control" @click="pilihFoto" 
-                                                    style="cursor: default; caret-color: transparent" readonly="readonly"
-                                                    placeholder="Upload foto" v-model="edit.pict">
-                                                </div>
-                                            </div>
                                             <div class="form-group">
                                                 <label for="" style="margin-top: 10px">Deskripsi</label>
                                                 <textarea cols="78" rows="8" v-model="edit.deskripsi" class="form-control"></textarea>
@@ -188,7 +175,6 @@ export default {
                 nomor_surat: '',
                 perihal: '',
                 tanggal: '',
-                pict: '',
                 deskripsi: ''
             },
             form: new FormData(),
@@ -206,7 +192,8 @@ export default {
                 }
             });
         },
-        getData(){
+        getData(reload = false){
+            if(reload) window.location.reload();
             axios.get('api/surat-masuk')
             .then(r => {
                 this.letter = r.data.letters
@@ -246,7 +233,36 @@ export default {
             })
         },
         saveEdit(){
-
+            this.isLoading = true
+            axios.put('api/surat-masuk/edit/'+this.edit.id,this.edit)
+            .then(r => {
+                this.isLoading = false
+                this.edit.nomor_surat = '';
+                this.edit.perihal = '';
+                this.edit.tanggal = '';
+                this.edit.deskripsi = '';
+                if(r.data.message){
+                    swal({
+                        title: "Berhasil!",
+                        text: "Data surat masuk berhasil diubah!",
+                        icon: "success",
+                    })
+                    .then((berhasil) => {
+                        if(berhasil){
+                            this.getData(true);
+                        }
+                    })
+                }else{
+                    toast.error(r.data.error)
+                }
+            })
+            .catch(e => {
+                console.log(e);
+                toast.error(r.data.error)
+            })
+        },
+        editFile(id){
+            this.$router.push({name: 'sekretaris_surat_edit',params: {id: id}});
         }
     }
     
@@ -254,5 +270,7 @@ export default {
 </script>
 
 <style>
-
+    input[type="date"].form-control{
+        line-height: 14px;
+    }
 </style>

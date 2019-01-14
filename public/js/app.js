@@ -83345,20 +83345,24 @@ module.exports = function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__views_sekretaris_surat_SuratMasuk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26__views_sekretaris_surat_SuratMasuk__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__views_sekretaris_surat_SuratKeluar__ = __webpack_require__(335);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__views_sekretaris_surat_SuratKeluar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27__views_sekretaris_surat_SuratKeluar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__views_sekretaris_rapat_IndexRapat__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__views_sekretaris_rapat_IndexRapat___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28__views_sekretaris_rapat_IndexRapat__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__views_sekretaris_event_IndexEvent__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__views_sekretaris_event_IndexEvent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29__views_sekretaris_event_IndexEvent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__views_sekretaris_absen_IndexAbsen__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__views_sekretaris_absen_IndexAbsen___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30__views_sekretaris_absen_IndexAbsen__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_TambahAbsen__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_TambahAbsen___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_TambahAbsen__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__views_sekretaris_inventaris_TambahInventaris__ = __webpack_require__(360);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__views_sekretaris_inventaris_TambahInventaris___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32__views_sekretaris_inventaris_TambahInventaris__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_IndexInventaris__ = __webpack_require__(361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_IndexInventaris___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_IndexInventaris__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan__ = __webpack_require__(366);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__views_sekretaris_surat_EditSurat__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__views_sekretaris_surat_EditSurat___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28__views_sekretaris_surat_EditSurat__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__views_sekretaris_rapat_IndexRapat__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__views_sekretaris_rapat_IndexRapat___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29__views_sekretaris_rapat_IndexRapat__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__views_sekretaris_event_IndexEvent__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__views_sekretaris_event_IndexEvent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30__views_sekretaris_event_IndexEvent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_IndexAbsen__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_IndexAbsen___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_IndexAbsen__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__views_sekretaris_absen_TambahAbsen__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__views_sekretaris_absen_TambahAbsen___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32__views_sekretaris_absen_TambahAbsen__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_TambahInventaris__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_TambahInventaris___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_TambahInventaris__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__views_sekretaris_inventaris_IndexInventaris__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__views_sekretaris_inventaris_IndexInventaris___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_34__views_sekretaris_inventaris_IndexInventaris__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__views_sekretaris_inventaris_EditInventaris__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__views_sekretaris_inventaris_EditInventaris___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35__views_sekretaris_inventaris_EditInventaris__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__views_bendahara_keuangan_IndexKeuangan__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__views_bendahara_keuangan_IndexKeuangan___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_36__views_bendahara_keuangan_IndexKeuangan__);
 
 
 
@@ -83398,6 +83402,8 @@ module.exports = function() {
 /**
  * ==================== SEKRETARIS =====================
  */
+
+
 
 
 
@@ -83521,32 +83527,40 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
             component: __WEBPACK_IMPORTED_MODULE_27__views_sekretaris_surat_SuratKeluar___default.a,
             name: 'sekretaris_surat_keluar_index'
         }, {
+            path: 'sekretaris/surat/:id/edit',
+            component: __WEBPACK_IMPORTED_MODULE_28__views_sekretaris_surat_EditSurat___default.a,
+            name: 'sekretaris_surat_edit'
+        }, {
             path: 'sekretaris/rapat',
-            component: __WEBPACK_IMPORTED_MODULE_28__views_sekretaris_rapat_IndexRapat___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_29__views_sekretaris_rapat_IndexRapat___default.a,
             name: 'sekretaris_rapat_index'
         }, {
             path: 'sekretaris/event',
-            component: __WEBPACK_IMPORTED_MODULE_29__views_sekretaris_event_IndexEvent___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_30__views_sekretaris_event_IndexEvent___default.a,
             name: 'sekretaris_event_index'
         }, {
             path: 'sekretaris/absen',
-            component: __WEBPACK_IMPORTED_MODULE_30__views_sekretaris_absen_IndexAbsen___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_IndexAbsen___default.a,
             name: 'sekretaris_absen_index'
         }, {
             path: 'sekretaris/absen/tambah/:id',
-            component: __WEBPACK_IMPORTED_MODULE_31__views_sekretaris_absen_TambahAbsen___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_32__views_sekretaris_absen_TambahAbsen___default.a,
             name: 'sekretaris_absen_create'
         }, {
             path: 'sekretaris/inventaris/tambah-inventaris',
-            component: __WEBPACK_IMPORTED_MODULE_32__views_sekretaris_inventaris_TambahInventaris___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_TambahInventaris___default.a,
             name: 'sekretaris_inventaris_tambah'
         }, {
             path: 'sekretaris/inventaris',
-            component: __WEBPACK_IMPORTED_MODULE_33__views_sekretaris_inventaris_IndexInventaris___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_34__views_sekretaris_inventaris_IndexInventaris___default.a,
             name: 'sekretaris_inventaris_index'
         }, {
+            path: 'sekretaris/inventaris/edit/:id',
+            component: __WEBPACK_IMPORTED_MODULE_35__views_sekretaris_inventaris_EditInventaris___default.a,
+            name: 'sekretaris_inventaris_edit'
+        }, {
             path: 'bendahara/keuangan',
-            component: __WEBPACK_IMPORTED_MODULE_34__views_bendahara_keuangan_IndexKeuangan___default.a,
+            component: __WEBPACK_IMPORTED_MODULE_36__views_bendahara_keuangan_IndexKeuangan___default.a,
             name: 'bendahara_keuangan_index'
         }]
     }]
@@ -99738,7 +99752,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -100083,7 +100096,11 @@ var render = function() {
                             staticClass: "pull-left",
                             staticStyle: { "margin-top": "10px" }
                           },
-                          [_vm._v("Note: File boleh dikosongkan")]
+                          [
+                            _vm._v(
+                              "Note: Upload file jika surat keluar, upload gambar jika surat masuk"
+                            )
+                          ]
                         )
                       ]
                     )
@@ -100275,7 +100292,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\ninput[type=\"date\"].form-control{\n    line-height: 14px;\n}\n", ""]);
 
 // exports
 
@@ -100286,19 +100303,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -100476,7 +100480,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 nomor_surat: '',
                 perihal: '',
                 tanggal: '',
-                pict: '',
                 deskripsi: ''
             },
             form: new FormData(),
@@ -100498,6 +100501,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getData: function getData() {
             var _this = this;
 
+            var reload = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+            if (reload) window.location.reload();
             axios.get('api/surat-masuk').then(function (r) {
                 _this.letter = r.data.letters;
             }).catch(function (e) {
@@ -100533,7 +100539,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(e);
             });
         },
-        saveEdit: function saveEdit() {}
+        saveEdit: function saveEdit() {
+            var _this4 = this;
+
+            this.isLoading = true;
+            axios.put('api/surat-masuk/edit/' + this.edit.id, this.edit).then(function (r) {
+                _this4.isLoading = false;
+                _this4.edit.nomor_surat = '';
+                _this4.edit.perihal = '';
+                _this4.edit.tanggal = '';
+                _this4.edit.deskripsi = '';
+                if (r.data.message) {
+                    swal({
+                        title: "Berhasil!",
+                        text: "Data surat masuk berhasil diubah!",
+                        icon: "success"
+                    }).then(function (berhasil) {
+                        if (berhasil) {
+                            _this4.getData(true);
+                        }
+                    });
+                } else {
+                    toast.error(r.data.error);
+                }
+            }).catch(function (e) {
+                console.log(e);
+                toast.error(r.data.error);
+            });
+        },
+        editFile: function editFile(id) {
+            this.$router.push({ name: 'sekretaris_surat_edit', params: { id: id } });
+        }
     }
 
 });
@@ -100587,8 +100623,6 @@ var render = function() {
                         return _c("tr", { key: index }, [
                           _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.periode))]),
-                          _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(item.perihal))]),
@@ -100617,6 +100651,19 @@ var render = function() {
                                   "\n                                        Lihat Gambar\n                                        "
                                 )
                               ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning",
+                                on: {
+                                  click: function($event) {
+                                    _vm.editFile(item.id)
+                                  }
+                                }
+                              },
+                              [_vm._v("Edit")]
                             ),
                             _vm._v(" "),
                             _c(
@@ -100984,69 +101031,6 @@ var render = function() {
                             })
                           ]),
                           _vm._v(" "),
-                          _c("div", [
-                            _c("div", { staticClass: "input-group" }, [
-                              _c("label", { staticClass: "input-group-btn" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "btn btn-primary btn-md",
-                                    on: { click: _vm.pilihFoto }
-                                  },
-                                  [
-                                    _c("i", {
-                                      staticClass: "fa fa-cloud-upload"
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("input", {
-                                  staticClass: "hidden",
-                                  attrs: {
-                                    type: "file",
-                                    id: "fileFoto",
-                                    accept: "image/*"
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.edit.pict,
-                                    expression: "edit.pict"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                staticStyle: {
-                                  cursor: "default",
-                                  "caret-color": "transparent"
-                                },
-                                attrs: {
-                                  type: "text",
-                                  readonly: "readonly",
-                                  placeholder: "Upload foto"
-                                },
-                                domProps: { value: _vm.edit.pict },
-                                on: {
-                                  click: _vm.pilihFoto,
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.edit,
-                                      "pict",
-                                      $event.target.value
-                                    )
-                                  }
-                                }
-                              })
-                            ])
-                          ]),
-                          _vm._v(" "),
                           _c("div", { staticClass: "form-group" }, [
                             _c(
                               "label",
@@ -101145,8 +101129,6 @@ var staticRenderFns = [
     return _c("thead", [
       _c("tr", [
         _c("th", { attrs: { width: "15px" } }, [_vm._v("No")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Periode")]),
         _vm._v(" "),
         _c("th", [_vm._v("Nomor Surat")]),
         _vm._v(" "),
@@ -101348,7 +101330,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\ninput[type=\"date\"].form-control{\n    line-height: 14px;\n}\n", ""]);
 
 // exports
 
@@ -101359,7 +101341,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
 //
 //
 //
@@ -101491,7 +101472,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         },
-        downloadSurat: function downloadSurat(id) {}
+        editFile: function editFile(id) {
+            this.$router.push({ name: 'sekretaris_surat_edit', params: { id: id } });
+        }
     }
 
 });
@@ -101545,8 +101528,6 @@ var render = function() {
                         return _c("tr", { key: index }, [
                           _c("td", [_vm._v(_vm._s(index + 1))]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(item.periode))]),
-                          _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(item.nomor_surat))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(item.perihal))]),
@@ -101562,7 +101543,20 @@ var render = function() {
                                 staticClass: "btn btn-primary",
                                 attrs: { href: "file/surat/" + item.surat }
                               },
-                              [_vm._v("Download Surat")]
+                              [_vm._v("Download")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-warning",
+                                on: {
+                                  click: function($event) {
+                                    _vm.editFile(item.id)
+                                  }
+                                }
+                              },
+                              [_vm._v("Edit")]
                             )
                           ]),
                           _vm._v(" "),
@@ -101761,8 +101755,6 @@ var staticRenderFns = [
     return _c("thead", [
       _c("tr", [
         _c("th", { attrs: { width: "15px" } }, [_vm._v("No")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Periode")]),
         _vm._v(" "),
         _c("th", [_vm._v("Nomor Surat")]),
         _vm._v(" "),
@@ -106376,7 +106368,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -106471,7 +106463,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             table: null,
             invents: [],
-            modal: {}
+            modal: {
+                nama: '',
+                pict: ''
+            }
         };
     },
     mounted: function mounted() {
@@ -106498,9 +106493,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         },
-        editInventaris: function editInventaris(id) {},
-        deleteInventaris: function deleteInventaris(id) {},
-        lihatGambar: function lihatGambar(id) {}
+        editInventaris: function editInventaris(id) {
+            this.$router.push({ name: 'sekretaris_inventaris_edit', params: { id: id } });
+        },
+        deleteInventaris: function deleteInventaris(id) {
+            var _this2 = this;
+
+            swal({
+                title: 'Apakah anda yakin ingin menghapus data inventaris ini ?',
+                buttons: true,
+                icon: 'info',
+                dangerMode: true
+            }).then(function (yes) {
+                if (yes) {
+                    axios.delete('api/inventaris/' + id).then(function (r) {
+                        swal({
+                            title: "Berhasil!",
+                            text: "Data inventaris berhasil dihapus!",
+                            icon: "success"
+                        }).then(function (berhasil) {
+                            if (berhasil) {
+                                _this2.getData(true);
+                            }
+                        });
+                    }).catch(function (e) {
+                        console.log(e);
+                        toast.error('Gagal menghapus data inventaris yang dipilih');
+                    });
+                }
+            });
+        },
+        lihatGambar: function lihatGambar(id) {
+            var _this3 = this;
+
+            axios.get('api/inventaris/show/' + id).then(function (r) {
+                _this3.modal = r.data.inventaris;
+                console.log(r.data.inventaris);
+            }).catch(function (e) {
+                console.log(e);
+            });
+        }
     }
 });
 
@@ -106625,7 +106657,7 @@ var render = function() {
                                               [
                                                 _vm._v(
                                                   "Data : " +
-                                                    _vm._s(_vm.modal.perihal)
+                                                    _vm._s(_vm.modal.nama)
                                                 )
                                               ]
                                             ),
@@ -106648,7 +106680,7 @@ var render = function() {
                                                       "img-responsive",
                                                     attrs: {
                                                       src:
-                                                        "images/surat/" +
+                                                        "images/inventaris/" +
                                                         _vm.modal.pict,
                                                       height: "1080px",
                                                       width: "650px"
@@ -109333,6 +109365,836 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-f55572aa", module.exports)
+  }
+}
+
+/***/ }),
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(405)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(407)
+/* template */
+var __vue_template__ = __webpack_require__(408)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/views/sekretaris/inventaris/EditInventaris.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-fbe38068", Component.options)
+  } else {
+    hotAPI.reload("data-v-fbe38068", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 405 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(406);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("4155dd83", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fbe38068\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditInventaris.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fbe38068\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditInventaris.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 406 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 407 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            data: {
+                nama: '',
+                penanggung_jawab: '',
+                keterangan: ''
+            },
+            isLoading: false
+        };
+    },
+    mounted: function mounted() {
+        this.init();
+    },
+
+    methods: {
+        init: function init() {
+            var _this = this;
+
+            axios.get('api/inventaris/edit/' + this.$route.params.id).then(function (r) {
+                _this.data = r.data.inventories;
+            }).catch(function (e) {
+                console.log(e);
+            });
+        },
+        saveEdit: function saveEdit() {
+            var _this2 = this;
+
+            this.isLoading = true;
+            axios.put('api/inventaris/edit/' + this.$route.params.id, this.data).then(function (r) {
+                _this2.isLoading = false;
+                if (r.data.message) {
+                    toast.success(r.data.message);
+                    _this2.$router.push({ name: 'sekretaris_inventaris_index' });
+                } else {
+                    toast.error(r.data.error);
+                }
+            }).catch(function (e) {
+                console.log(e);
+                toast.error(r.data.error);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 408 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("section", { staticClass: "content-header" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("ol", { staticClass: "breadcrumb" }, [
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { path: "/main" } } }, [
+              _c("i", { staticClass: "fa fa-dashboard" }),
+              _vm._v(" Dashboard")
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("li", { staticClass: "active" }, [_vm._v("Edit Inventaris")])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "content" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-xs-6" }, [
+          _c("div", { staticClass: "box" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "box-body" },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [
+                    _vm._v("Nama Inventaris")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.data.nama,
+                        expression: "data.nama"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      placeholder: "Masukan nama inventaris"
+                    },
+                    domProps: { value: _vm.data.nama },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.data, "nama", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [
+                    _vm._v("Penanggung Jawab")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.data.penanggung_jawab,
+                        expression: "data.penanggung_jawab"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      placeholder: "Masukan penanggung jawab"
+                    },
+                    domProps: { value: _vm.data.penanggung_jawab },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.data,
+                          "penanggung_jawab",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Keterangan")]),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.data.keterangan,
+                        expression: "data.keterangan"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    domProps: { value: _vm.data.keterangan },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.data, "keterangan", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "submit" },
+                    on: { click: _vm.saveEdit }
+                  },
+                  [
+                    _vm.isLoading
+                      ? _c("i", { staticClass: "fa fa-spin fa-spinner" })
+                      : _c("i", { staticClass: "fa fa-check" }),
+                    _vm._v(
+                      "\n                            Simpan\n                        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "btn btn-info",
+                    attrs: { to: { name: "sekretaris_inventaris_index" } }
+                  },
+                  [_vm._v("Kembali")]
+                )
+              ],
+              1
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", [
+      _vm._v("\n            Edit Data Inventaris\n            "),
+      _c("small", [
+        _vm._v("edit data Inventaris pada periode yang sudah didaftarkan")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-header" }, [
+      _c("h3", { staticClass: "box-ttitle" }, [
+        _vm._v(
+          "\n                            Edit Data Inventaris\n                        "
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-fbe38068", module.exports)
+  }
+}
+
+/***/ }),
+/* 409 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(410)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(412)
+/* template */
+var __vue_template__ = __webpack_require__(413)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/views/sekretaris/surat/EditSurat.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d9d49b40", Component.options)
+  } else {
+    hotAPI.reload("data-v-d9d49b40", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 410 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(411);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("716bd3bf", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d9d49b40\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditSurat.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d9d49b40\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditSurat.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 411 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\ninput[type=\"date\"].form-control{\n    line-height: 14px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 412 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            data: {
+                jenis: ''
+            },
+            form: new FormData(),
+            isLoading: false
+        };
+    },
+    mounted: function mounted() {
+        this.init();
+        this.getInit();
+    },
+
+    methods: {
+        getInit: function getInit() {
+            var self = this;
+            $('#fileFoto').change(function () {
+                var picture = document.getElementById('fileFoto');
+                if (picture.files.length > 0) {
+                    self.form.append('pict', picture.files[0]);
+                }
+            });
+
+            $('#fileSurat').change(function () {
+                var data = document.getElementById('fileSurat');
+                if (data.files.length > 0) {
+                    self.form.append('surat', data.files[0]);
+                }
+            });
+        },
+        init: function init() {
+            var _this = this;
+
+            axios.get('api/surat-masuk/edit/' + this.$route.params.id).then(function (r) {
+                _this.data = r.data.letters;
+                console.log(r.data.letters);
+            }).catch(function (e) {
+                console.log(e);
+            });
+        },
+        saveEdit: function saveEdit() {
+            this.isLoading = true;
+        },
+        pilihFoto: function pilihFoto() {
+            $('#fileFoto').trigger('click');
+        },
+        pilihFile: function pilihFile() {
+            $('#fileSurat').trigger('click');
+        }
+    }
+});
+
+/***/ }),
+/* 413 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("section", { staticClass: "content-header" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("ol", { staticClass: "breadcrumb" }, [
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { path: "/main" } } }, [
+              _c("i", { staticClass: "fa fa-dashboard" }),
+              _vm._v(" Dashboard")
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("li", { staticClass: "active" }, [_vm._v("Edit Surat")])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "content" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-xs-6" }, [
+          _c("div", { staticClass: "box" }, [
+            _c("div", { staticClass: "box-header" }, [
+              _c("h3", { staticClass: "box-ttitle" }, [
+                _vm._v(
+                  "\n                            Edit Foto/File Surat " +
+                    _vm._s(_vm.data.perihal) +
+                    "\n                        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "box-body" },
+              [
+                _vm.data.jenis == "Surat Masuk"
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "col-md-12",
+                          staticStyle: {
+                            "margin-bottom": "10px",
+                            "margin-top": "10px"
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "input-group" }, [
+                            _c("label", { staticClass: "input-group-btn" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-primary btn-md",
+                                  on: { click: _vm.pilihFoto }
+                                },
+                                [_c("i", { staticClass: "fa fa-cloud-upload" })]
+                              ),
+                              _vm._v(" "),
+                              _c("input", {
+                                staticClass: "hidden",
+                                attrs: {
+                                  type: "file",
+                                  id: "fileFoto",
+                                  accept: "image/*"
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "form-control",
+                              staticStyle: {
+                                cursor: "default",
+                                "caret-color": "transparent"
+                              },
+                              attrs: {
+                                type: "text",
+                                readonly: "readonly",
+                                placeholder: "Upload foto"
+                              },
+                              on: { click: _vm.pilihFoto }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "small",
+                            {
+                              staticClass: "pull-left",
+                              staticStyle: { "margin-top": "10px" }
+                            },
+                            [
+                              _vm._v(
+                                "Note: Upload file jika surat keluar, upload gambar jika surat masuk"
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
+                  : _c(
+                      "div",
+                      {
+                        staticClass: "form-group",
+                        staticStyle: { "margin-bottom": "10px" }
+                      },
+                      [
+                        _c("div", { staticClass: "col-md-12" }, [
+                          _c("div", { staticClass: "input-group" }, [
+                            _c("label", { staticClass: "input-group-btn" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-warning btn-md",
+                                  on: { click: _vm.pilihFile }
+                                },
+                                [_c("i", { staticClass: "fa fa-upload " })]
+                              ),
+                              _vm._v(" "),
+                              _c("input", {
+                                staticClass: "hidden",
+                                attrs: { type: "file", id: "fileSurat" }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass: "form-control",
+                              staticStyle: {
+                                cursor: "default",
+                                "caret-color": "transparent"
+                              },
+                              attrs: {
+                                type: "text",
+                                readonly: "readonly",
+                                placeholder: "Upload file"
+                              },
+                              on: { click: _vm.pilihFile }
+                            })
+                          ])
+                        ])
+                      ]
+                    ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "submit" },
+                    on: { click: _vm.saveEdit }
+                  },
+                  [
+                    _vm.isLoading
+                      ? _c("i", { staticClass: "fa fa-spin fa-spinner" })
+                      : _c("i", { staticClass: "fa fa-check" }),
+                    _vm._v(
+                      "\n                            Simpan\n                        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.data.jenis == "Surat Keluar"
+                  ? _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-info",
+                        attrs: { to: { name: "sekretaris_surat_keluar_index" } }
+                      },
+                      [_vm._v("Kembali")]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.data.jenis == "Surat Masuk"
+                  ? _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-info",
+                        attrs: { to: { name: "sekretaris_surat_masuk_index" } }
+                      },
+                      [_vm._v("Kembali")]
+                    )
+                  : _vm._e()
+              ],
+              1
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", [
+      _vm._v("\n            Edit Data Surat\n            "),
+      _c("small", [
+        _vm._v("edit data Surat pada periode yang sudah didaftarkan")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-d9d49b40", module.exports)
   }
 }
 

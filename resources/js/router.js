@@ -43,12 +43,14 @@ import IndexAnggota from './views/sekretaris/anggota/IndexMember'
 import TambahSurat from './views/sekretaris/surat/TambahSurat'
 import SuratMasuk from './views/sekretaris/surat/SuratMasuk'
 import SuratKeluar from './views/sekretaris/surat/SuratKeluar'
+import EditSurat from './views/sekretaris/surat/EditSurat'
 import IndexRapat from './views/sekretaris/rapat/IndexRapat'
 import IndexEvent from './views/sekretaris/event/IndexEvent'
 import IndexAbsen from './views/sekretaris/absen/IndexAbsen'
 import TambahAbsen from './views/sekretaris/absen/TambahAbsen'
 import TambahInventaris from './views/sekretaris/inventaris/TambahInventaris'
 import IndexInventaris from './views/sekretaris/inventaris/IndexInventaris'
+import EditInventaris from './views/sekretaris/inventaris/EditInventaris'
 
 /**
  * ==================== BENDAHARA =====================
@@ -188,6 +190,11 @@ export default new Router({
                     name: 'sekretaris_surat_keluar_index'
                 },
                 {
+                    path: 'sekretaris/surat/:id/edit',
+                    component: EditSurat,
+                    name: 'sekretaris_surat_edit'
+                },
+                {
                     path: 'sekretaris/rapat',
                     component: IndexRapat,
                     name: 'sekretaris_rapat_index'
@@ -216,6 +223,11 @@ export default new Router({
                     path: 'sekretaris/inventaris',
                     component: IndexInventaris,
                     name: 'sekretaris_inventaris_index'
+                },
+                {
+                    path: 'sekretaris/inventaris/edit/:id',
+                    component: EditInventaris,
+                    name: 'sekretaris_inventaris_edit'
                 },
                 {
                     path: 'bendahara/keuangan',

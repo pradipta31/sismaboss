@@ -75,9 +75,8 @@
                                                 style="cursor: default; caret-color: transparent" readonly="readonly"
                                                 placeholder="Upload foto">
                                             </div>
-                                            <small class="pull-left" style="margin-top: 10px">Note: File boleh dikosongkan</small>
-                                        </div>
-                                            
+                                            <small class="pull-left" style="margin-top: 10px">Note: Upload file jika surat keluar, upload gambar jika surat masuk</small>
+                                        </div>  
                                     </div>
                                     <div class="col-md-12" style="margin-top: 15px">
                                         <div class="form-group">
@@ -162,12 +161,6 @@ export default {
         pilihFile(){
             $('#fileSurat').trigger('click');
         },
-        // addButton(){
-        //     console.log('berhasil klik button tambah')
-        // },
-        // removeButton(){
-        //     console.log('berhasil klik button remove')
-        // }
     }
 }
 </script>

@@ -20,7 +20,6 @@
                                 <thead>
                                 <tr>
                                     <th width="15px">No</th>
-                                    <th>Periode</th>
                                     <th>Nomor Surat</th>
                                     <th>Perihal</th>
                                     <th>Tanggal</th>
@@ -32,13 +31,13 @@
                                 <tbody>
                                     <tr v-for="(item, index) in letter" :key="index">
                                         <td>{{index+1}}</td>
-                                        <td>{{item.periode}}</td>
                                         <td>{{item.nomor_surat}}</td>
                                         <td>{{item.perihal}}</td>
                                         <td>{{item.tanggal}}</td>
                                         <td>{{item.username}}</td>
                                         <td>
-                                            <a :href="`file/surat/${item.surat}`" class="btn btn-primary">Download Surat</a>
+                                            <a :href="`file/surat/${item.surat}`" class="btn btn-primary">Download</a>
+                                            <button class="btn btn-warning" @click="editFile(item.id)">Edit</button>
                                         </td>
                                         <td>
                                             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
@@ -130,14 +129,16 @@ export default {
                 }
             })
         },
-        downloadSurat(id){
-            
-        },
+        editFile(id){
+            this.$router.push({name: 'sekretaris_surat_edit',params: {id: id}});
+        }
     }
     
 }
 </script>
 
 <style>
-
+    input[type="date"].form-control{
+        line-height: 14px;
+    }
 </style>
