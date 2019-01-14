@@ -10,7 +10,7 @@ class Member extends Model
     protected $fillable = [
         'periode_id',
         'user_id',
-        'nama',
+        'name',
         'nim',
         'handphone'
     ];

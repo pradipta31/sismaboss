@@ -56,7 +56,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>Keterangan</td>
+                                        <td>{{item.keterangan}}</td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editSurat" @click="editInventaris(item.id)"><i class="fa fa-pencil"></i></button>
                                             <button class="btn btn-danger btn-sm" @click="deleteInventaris(item.id)">

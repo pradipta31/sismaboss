@@ -122,6 +122,34 @@ class LetterController extends Controller
         ]);
     }
 
+    public function editSuratKeluar($id){
+        $letters = Letter::where('id','=',$id)->first();
+
+        return response()->json([
+            'letters'  => $letters
+        ]);
+    }
+
+    public function updateSuratKeluar(Request $r, $id){
+        $this->validate($r,[
+            'nomor_surat' => 'required',
+            'perihal' => 'required',
+            'tanggal' => 'required',
+            'deskripsi' => 'required'
+        ]);
+        
+        $letters = Letter::findOrFail($id)->update([
+            'nomor_surat' => $r->nomor_surat,
+            'perihal' => $r->perihal,
+            'tanggal' => $r->tanggal,
+            'deskripsi' => $r->deskripsi
+        ]);
+
+        return response()->json([
+            'message' => 'Data surat Berhasil diubah'
+        ]);
+    }
+
     public function getSuratKeluar(){
         $letters = Letter::select('letters.*','periodes.periode','users.username')
         ->join('periodes','periodes.id','=','letters.periode_id')
@@ -134,16 +162,6 @@ class LetterController extends Controller
         ]);
     }
 
-    public function downloadSuratKeluar($id){
-        $file= public_path(). "/file/surat/info.pdf";
-
-        $headers = array(
-                'Content-Type: application/pdf',
-                );
-
-        return Response::download($file, 'filename.pdf', $headers);
-    }
-
     public function showSuratMasuk($id){
         $letters = Letter::select('letters.*','periodes.periode','users.username')
         ->join('periodes','periodes.id','=','letters.periode_id')
@@ -154,6 +172,59 @@ class LetterController extends Controller
         $response = [
             'let' => $letters
         ];
+        return response()->json($response);
+    }
+
+    public function showSuratKeluar($id){
+        $letters = Letter::select('letters.*','periodes.periode','users.username')
+        ->join('periodes','periodes.id','=','letters.periode_id')
+        ->join('users','users.id','=','letters.user_id')
+        ->where('letters.id','=',$id)
+        ->first();
+
+        $response = [
+            'letters' => $letters
+        ];
+        return response()->json($response);
+    }
+
+    public function ubahSuratMasuk(Request $r, $id){
+        $pict = $r->file('pict');
+        $file = time().'.'.$pict->getClientOriginalExtension();
+        $path = 'images/surat';
+        $pict->storeAs($path,$file,'public');
+        if ($r->file('pict')->isValid()) {
+            $surat = Letter::findOrFail($id)->update([
+                'pict' => $file
+            ]);
+        }
+        return response()->json([
+            'message' => 'Foto surat berhasil diubah'
+        ]);
+    }
+
+    public function ubahSuratKeluar(Request $r, $id){
+        $surat = $r->file('surat');
+        $file = time().'.'.$surat->getClientOriginalExtension();
+        $path = 'file/surat';
+        $surat->storeAs($path,$file,'public');
+        if ($r->file('surat')->isValid()) {
+            $surat = Letter::findOrFail($id)->update([
+                'surat' => $file
+            ]);
+        }
+        return response()->json([
+            'message' => 'Foto surat berhasil diubah'
+        ]);
+    }
+
+    public function deleteSurat($id){
+        $letters = Letter::findOrFail($id)->delete();
+
+        $response = [
+            'message' => 'Berhasil menghapus data surat yang dipilih'
+        ];
+
         return response()->json($response);
     }
 }

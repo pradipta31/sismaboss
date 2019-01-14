@@ -16,10 +16,10 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('periode_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('nim')->unique();
-            $table->string('nama');
-            $table->string('handphone');
+            $table->string('name');
+            $table->string('handphone')->nullable();
             $table->timestamps();
 
             $table->foreign('periode_id')->references('id')->on('periodes')->onDelete('cascade');

@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Ketua;
 use DB;
 use App\Periode;
 use App\User;
+use App\Member;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class PengurusController extends Controller
 {
     public function getPengurus(){
-        $admins = User::where('role','!=','ketua')
-        ->where('role','!=','admin')
+        $admins = User::where('role','!=','admin')
         ->where('periode_id','=',auth()->user()->periode_id)
         ->get();
 
@@ -53,6 +53,12 @@ class PengurusController extends Controller
                             'email' => $r->email,
                             'password' => bcrypt($r->password),
                             'status' => '1'
+                        ]);
+
+                        $members = Member::create([
+                            'periode_id' => $users->periode_id,
+                            'name' => $r->name,
+                            'nim' => $r->nim
                         ]);
                     }else{
                         return response()->json([

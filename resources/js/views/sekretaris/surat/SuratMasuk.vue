@@ -62,7 +62,7 @@
                                         <td>
                                             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
                                             <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editSurat" @click="editSurat(item.id)"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm">
+                                            <button class="btn btn-danger btn-sm" @click="deleteSurat(item.id)">
                                                 <i class="fa fa-trash"></i>
                                             </button>
 
@@ -70,7 +70,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.jenis}}</h3>
+                                                        <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.perihal}}</h3>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                         </button>
@@ -262,7 +262,36 @@ export default {
             })
         },
         editFile(id){
-            this.$router.push({name: 'sekretaris_surat_edit',params: {id: id}});
+            this.$router.push({name: 'sekretaris_surat_masuk_edit',params: {id: id}});
+        },
+        deleteSurat(id){
+            swal({
+                title: 'Apakah anda yakin ingin menghapus data Surat ini ?',
+                buttons: true,
+                icon: 'info',
+                dangerMode: true
+            })
+            .then(yes => {
+                if(yes){
+                    axios.delete(`api/surat/${id}`)
+                    .then(r => {
+                        swal({
+                            title: "Berhasil!",
+                            text: "Data surat berhasil dihapus!",
+                            icon: "success",
+                        })
+                        .then((berhasil) => {
+                            if(berhasil){
+                                this.getData(true);
+                            }
+                        })
+                    })
+                    .catch(e => {
+                        console.log(e);
+                        toast.error('Gagal menghapus data surat yang dipilih');
+                    })
+                }
+            })
         }
     }
     

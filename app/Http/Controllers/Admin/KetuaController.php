@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use DB;
 use App\Periode;
 use App\User;
+use App\Member;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -37,6 +38,12 @@ class KetuaController extends Controller
             'password' => bcrypt($r->password),
             'role' => 'ketua',
             'status' => '1'
+        ]);
+
+        $members = Member::create([
+            'periode_id' => $r->periode_id,
+            'name' => $r->name,
+            'nim' => $r->nim
         ]);
 
         $periode = Periode::findOrFail($r->periode_id)->update([

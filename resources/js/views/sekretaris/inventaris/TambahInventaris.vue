@@ -51,6 +51,7 @@
                                             <i class="fa fa-check" v-else></i>
                                             Simpan
                                         </button>
+                                        <router-link :to="{name: 'sekretaris_inventaris_index'}" class="btn btn-warning">Kembali</router-link>
                                     </div>
                                 </div>
                             </div>

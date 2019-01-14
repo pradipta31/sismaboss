@@ -79,6 +79,16 @@
             </router-link>
           </li>
           <li v-if="isKetua">
+            <router-link :to="{ name: 'ketua_absen_index'}" class="dec">
+              <i class="fa fa-address-book-o"></i> <span>Absen</span>
+            </router-link>
+          </li>
+          <li v-if="isKetua">
+            <router-link :to="{ name: 'ketua_inventaris_index'}" class="dec">
+              <i class="fa fa-gear"></i> <span>Inventaris</span>
+            </router-link>
+          </li>
+          <li v-if="isKetua">
             <router-link :to="{ name: 'ketua_rapat_index'}" class="dec">
               <i class="fa fa-comments"></i> <span>Rapat</span>
             </router-link>

@@ -30,7 +30,7 @@
                                             <input type="text" class="form-control" v-model="item.nim">
                                         </td>
                                         <td>
-                                            <input type="text" class="form-control" v-model="item.nama">
+                                            <input type="text" class="form-control" v-model="item.name">
                                         </td>
                                         <td>
                                             <input type="text" class="form-control" v-model="item.handphone">
@@ -71,7 +71,7 @@ export default {
             anggota:[
                 {
                     nim: '',
-                    nama: '',
+                    name: '',
                     handphone: ''
                 }
             ],
@@ -83,14 +83,14 @@ export default {
         addForm(index){
             this.anggota.splice(index+1,0,{
                 nim: '',
-                nama: '',
+                name: '',
                 handphone: ''
             })
         },
         minForm(index){
             if(this.anggota.length < 2){
                 this.anggota[0].nim = '';
-                this.anggota[0].nama = '';
+                this.anggota[0].name = '';
                 this.anggota[0].handphone = '';
             }else{
                 this.anggota.splice(index,1)

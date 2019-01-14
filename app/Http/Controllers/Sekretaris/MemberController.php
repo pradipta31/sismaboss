@@ -13,10 +13,9 @@ use App\Http\Controllers\Controller;
 class MemberController extends Controller
 {
     public function getMember(){
-        $members = Member::select('members.*','periodes.periode','users.username')
+        $members = Member::select('members.*','periodes.periode')
         ->join('periodes','periodes.id','=','members.periode_id')
-        ->join('users','users.id','=','members.user_id')
-        ->where('users.periode_id','=',auth()->user()->periode_id)
+        ->where('members.periode_id','=',auth()->user()->periode_id)
         ->get();
 
         return response()->json([
@@ -27,7 +26,7 @@ class MemberController extends Controller
     public function createMember(Request $r){
         $this->validate($r,[
             'anggota.*.nim' => 'required',
-            'anggota.*.nama' => 'required',
+            'anggota.*.name' => 'required',
             'anggota.*.handphone' => 'required'
         ]);
         
@@ -37,7 +36,7 @@ class MemberController extends Controller
                     'periode_id' => auth()->user()->periode_id,
                     'user_id' => auth()->user()->id,
                     'nim' => $anggota['nim'],
-                    'nama' => $anggota['nama'],
+                    'name' => $anggota['name'],
                     'handphone' => $anggota['handphone']
                 ]);
             }
@@ -77,7 +76,7 @@ class MemberController extends Controller
     public function updateMember(Request $r, $id){
         $members = Member::findOrFail($id)->update([
             'user_id' => auth()->user()->id,
-            'nama' => $r->nama,
+            'name' => $r->name,
             'nim' => $r->nim,
             'handphone' => $r->handphone
         ]);

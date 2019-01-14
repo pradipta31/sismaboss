@@ -22,7 +22,6 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Periode</th>
-                                        <th>PJ</th>
                                         <th>Nama</th>
                                         <th>Nim</th>
                                         <th>No Telp</th>
@@ -32,10 +31,10 @@
                                         <tr v-for="(member, index) in anggota" :key="index">
                                             <td>{{index+1}}</td>
                                             <td>{{member.periode}}</td>
-                                            <td>{{member.username}}</td>
-                                            <td>{{member.nama}}</td>
+                                            <td>{{member.name}}</td>
                                             <td>{{member.nim}}</td>
-                                            <td>{{member.handphone}}</td>
+                                            <td v-if="member.handphone">{{member.handphone}}</td>
+                                            <td v-else>-</td>
                                         </tr>
                                     </tbody>
                                 </table>

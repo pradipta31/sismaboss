@@ -23,6 +23,9 @@ import IndexRapatKetua from './views/ketua/rapat/IndexRapat'
 import KetuaIndexKeuangan from './views/ketua/keuangan/IndexKeuangan'
 import KetuaIndexSurat from './views/ketua/surat/IndexSurat'
 import KetuaIndexAnggota from './views/ketua/anggota/IndexAnggota'
+import IndexInventarisKetua from './views/ketua/inventaris/IndexInventaris'
+import IndexAbsenKetua from './views/ketua/absen/IndexAbsen'
+import LihatAbsenKetua from './views/ketua/absen/LihatAbsen'
 
 
 /**
@@ -43,7 +46,8 @@ import IndexAnggota from './views/sekretaris/anggota/IndexMember'
 import TambahSurat from './views/sekretaris/surat/TambahSurat'
 import SuratMasuk from './views/sekretaris/surat/SuratMasuk'
 import SuratKeluar from './views/sekretaris/surat/SuratKeluar'
-import EditSurat from './views/sekretaris/surat/EditSurat'
+import EditSuratMasuk from './views/sekretaris/surat/EditSuratMasuk'
+import EditSuratKeluar from './views/sekretaris/surat/EditSuratKeluar'
 import IndexRapat from './views/sekretaris/rapat/IndexRapat'
 import IndexEvent from './views/sekretaris/event/IndexEvent'
 import IndexAbsen from './views/sekretaris/absen/IndexAbsen'
@@ -130,6 +134,21 @@ export default new Router({
                     name: 'ketua_rapat_index'
                 },
                 {
+                    path: 'ketua/inventaris',
+                    component: IndexInventarisKetua,
+                    name: 'ketua_inventaris_index'
+                },
+                {
+                    path: 'ketua/absen',
+                    component: IndexAbsenKetua,
+                    name: 'ketua_absen_index'
+                },
+                {
+                    path: 'ketua/absen/lihat-absen/:id',
+                    component: LihatAbsenKetua,
+                    name: 'ketua_absen_view'
+                },
+                {
                     path: 'ketua/event',
                     component: IndexEventKetua,
                     name: 'ketua_event_index'
@@ -190,9 +209,14 @@ export default new Router({
                     name: 'sekretaris_surat_keluar_index'
                 },
                 {
-                    path: 'sekretaris/surat/:id/edit',
-                    component: EditSurat,
-                    name: 'sekretaris_surat_edit'
+                    path: 'sekretaris/surat-masuk/:id/edit',
+                    component: EditSuratMasuk,
+                    name: 'sekretaris_surat_masuk_edit'
+                },
+                {
+                    path: 'sekretaris/surat-keluar/:id/edit',
+                    component: EditSuratKeluar,
+                    name: 'sekretaris_surat_keluar_edit'
                 },
                 {
                     path: 'sekretaris/rapat',

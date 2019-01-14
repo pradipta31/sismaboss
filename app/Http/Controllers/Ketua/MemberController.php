@@ -40,7 +40,7 @@ class MemberController extends Controller
         $row = 2;
         foreach($members as $member){
             $sheet->setCellValue('A'.$row,$member->nim);
-            $sheet->setCellValue('B'.$row,$member->nama);
+            $sheet->setCellValue('B'.$row,$member->name);
             $sheet->setCellValue('C'.$row,$member->handphone);
             $row++;
         }

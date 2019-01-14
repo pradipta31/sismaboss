@@ -41,8 +41,8 @@
                                         </td>
                                         <td>
                                             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
-                                            <button class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm">
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editSurat" @click="editSurat(item.id)"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" @click="deleteSurat(item.id)">
                                                 <i class="fa fa-trash"></i>
                                             </button>
 
@@ -50,7 +50,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.jenis}}</h3>
+                                                        <h3 class="modal-title" id="exampleModalLabel">Data : {{modal.perihal}}</h3>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                         </button>
@@ -58,15 +58,19 @@
                                                     <div class="modal-body">
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <div class="col-md-6">
-                                                                    <h4>Nomor Surat : {{modal.nomor_surat}}</h4>
-                                                                    <h4>Perihal : {{modal.perihal}}</h4>
-                                                                    <h4>Tanggal : {{modal.tanggal}}</h4>
-                                                                    <h4>Penanggung Jawab : {{modal.username}}</h4>
-                                                                    <h4>Deskripsi : {{modal.deskripsi}}</h4>
+                                                                <div class="col-md-4">
+                                                                    <h4>Nomor Surat </h4>
+                                                                    <h4>Perihal </h4>
+                                                                    <h4>Tanggal </h4>
+                                                                    <h4>Penanggung Jawab </h4>
+                                                                    <h4>Deskripsi </h4>
                                                                 </div>
-                                                                <div class="col-md-6">
-                                                                    <img :src="'images/surat/'+modal.pict" class="img-square" width="250px" height="250px">
+                                                                <div class="col-md-8">
+                                                                    <h4>: {{modal.nomor_surat}}</h4>
+                                                                    <h4>: {{modal.perihal}}</h4>
+                                                                    <h4>: {{modal.tanggal}}</h4>
+                                                                    <h4>: {{modal.username}}</h4>
+                                                                    <h4>: {{modal.deskripsi}}</h4>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -81,6 +85,44 @@
                                     </tr>
                                 </tbody>
                                 </table>
+                                <div class="modal fade" id="editSurat" tabindex="-1" role="dialog" aria-labelledby="editSuratLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="editSuratLabel">Edit Surat {{edit.perihal}}</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="">Nomor surat</label>
+                                                    <input type="text" v-model="edit.nomor_surat" class="form-control" placeholder="Masukan nomor surat">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Perihal</label>
+                                                    <input type="text" v-model="edit.perihal" class="form-control" placeholder="Masukan perihal">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Tanggal Event</label>
+                                                    <input type="date" v-model="edit.tanggal" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" style="margin-top: 10px">Deskripsi</label>
+                                                    <textarea cols="78" rows="8" v-model="edit.deskripsi" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" @click="saveEdit">
+                                                    <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
+                                                    <i class="fa fa-check" v-else></i>
+                                                    Simpan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <h6>Note: PJ = Penanggung Jawab</h6>
                         </div>
@@ -109,11 +151,16 @@ export default {
                 pict: '',
                 deskripsi: ''
             },
+            edit: {
+
+            },
+            isLoadingEdit: false,
             letter: []
         }
     },
     methods:{
-        getData(){
+        getData(reload = false){
+            if(reload) window.location.reload();
             axios.get('api/surat-keluar')
             .then(r => {
                 this.letter = r.data.letters
@@ -129,8 +176,86 @@ export default {
                 }
             })
         },
+        showModal(id){
+            axios.get(`api/surat-keluar/show/${id}`)
+            .then(r => {
+                this.modal = r.data.letters
+                console.log(r.data.letters)
+            })
+            .catch(e => {
+                console.log(e)
+            })
+        },
+        editSurat(id){
+            axios.get(`api/surat-keluar/edit/${id}`)
+            .then(r => {
+                this.edit = r.data.letters
+                console.log(r.data.letters)
+            })
+            .catch(e => {
+                console.log(e)
+            })
+        },
+        saveEdit(){
+            this.isLoading = true
+            axios.put('api/surat-keluar/edit/'+this.edit.id,this.edit)
+            .then(r => {
+                this.isLoading = false
+                this.edit.nomor_surat = '';
+                this.edit.perihal = '';
+                this.edit.tanggal = '';
+                this.edit.deskripsi = '';
+                if(r.data.message){
+                    swal({
+                        title: "Berhasil!",
+                        text: "Data surat masuk berhasil diubah!",
+                        icon: "success",
+                    })
+                    .then((berhasil) => {
+                        if(berhasil){
+                            this.getData(true);
+                        }
+                    })
+                }else{
+                    toast.error(r.data.error)
+                }
+            })
+            .catch(e => {
+                console.log(e);
+                toast.error(r.data.error)
+            })
+        },
         editFile(id){
-            this.$router.push({name: 'sekretaris_surat_edit',params: {id: id}});
+            this.$router.push({name: 'sekretaris_surat_keluar_edit',params: {id: id}});
+        },
+        deleteSurat(id){
+            swal({
+                title: 'Apakah anda yakin ingin menghapus data Surat ini ?',
+                buttons: true,
+                icon: 'info',
+                dangerMode: true
+            })
+            .then(yes => {
+                if(yes){
+                    axios.delete(`api/surat/${id}`)
+                    .then(r => {
+                        swal({
+                            title: "Berhasil!",
+                            text: "Data surat berhasil dihapus!",
+                            icon: "success",
+                        })
+                        .then((berhasil) => {
+                            if(berhasil){
+                                this.getData(true);
+                            }
+                        })
+                    })
+                    .catch(e => {
+                        console.log(e);
+                        toast.error('Gagal menghapus data surat yang dipilih');
+                    })
+                }
+            })
         }
     }
     

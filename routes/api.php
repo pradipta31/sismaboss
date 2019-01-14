@@ -62,6 +62,13 @@ Route::group(['middleware' => 'api', 'namespace' => 'Ketua'], function ($router)
     Route::get('event/{id}', 'EventController@showEvent');
 
     Route::get('anggota/show/{id}', 'MemberController@saveExcel');
+
+    Route::get('inventaris', 'InventarisController@getInventaris');
+    Route::get('inventaris/show/{id}', 'InventarisController@showInventaris');
+
+    Route::get('absen', 'AbsenController@getData');
+    Route::get('absen/show/{id}', 'AbsenController@showAbsen');
+    Route::get('absen/lihat-absen/{id}', 'AbsenController@lihatAbsen');
 }); 
 
 Route::group(['middleware' => 'api', 'namespace' => 'Wakil'], function ($router){
@@ -90,14 +97,15 @@ Route::group(['middleware' => 'api', 'namespace' => 'Sekretaris'], function ($ro
     Route::get('surat-masuk','LetterController@getSuratMasuk');
     Route::get('surat-masuk/edit/{id}','LetterController@editSuratMasuk');
     Route::put('surat-masuk/edit/{id}', 'LetterController@updateSuratMasuk');
-    Route::post('surat-masuk/', 'LetterController@ubahSuratMasuk');
+    Route::post('surat-masuk/{id}', 'LetterController@ubahSuratMasuk');
     Route::get('surat-masuk/show/{id}','LetterController@showSuratMasuk');
 
     Route::get('surat-keluar','LetterController@getSuratKeluar');
     Route::get('surat-keluar/download/{id}', 'LetterController@downloadSuratKeluar');
     Route::get('surat-keluar/edit/{id}', 'LetterController@editSuratKeluar');
     Route::put('surat-keluar/edit/{id}', 'LetterController@updateSuratKeluar');
-    Route::post('surat-keluar/', 'LetterController@ubahSuratKeluar');
+    Route::post('surat-keluar/{id}', 'LetterController@ubahSuratKeluar');
+    Route::get('surat-keluar/show/{id}', 'LetterController@showSuratKeluar');
 
     Route::delete('surat/{id}', 'LetterController@deleteSurat');
     

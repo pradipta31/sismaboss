@@ -24,7 +24,6 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Periode</th>
-                                        <th>PJ</th>
                                         <th>Nama</th>
                                         <th>Nim</th>
                                         <th>No Telp</th>
@@ -35,10 +34,14 @@
                                         <tr v-for="(member, index) in anggota" :key="index">
                                             <td>{{index+1}}</td>
                                             <td>{{member.periode}}</td>
-                                            <td>{{member.username}}</td>
-                                            <td>{{member.nama}}</td>
+                                            <td>{{member.name}}</td>
                                             <td>{{member.nim}}</td>
-                                            <td>{{member.handphone}}</td>
+                                            <td v-if="member.handphone">
+                                                {{member.handphone}}
+                                            </td>
+                                            <td v-else>
+                                                -
+                                            </td>
                                             <td>
                                                 <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editMember" @click="editMember(member.id)"><i class="fa fa-pencil"></i></button>
                                                 <button class="btn btn-danger btn-sm" @click="deleteMember(member.id)">
@@ -53,7 +56,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3 class="modal-title" id="editMemberLabel">Edit Anggota {{edit.nama}}</h3>
+                                            <h3 class="modal-title" id="editMemberLabel">Edit Anggota {{edit.name}}</h3>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
@@ -61,7 +64,7 @@
                                         <div class="modal-body">
                                             <div class="form-group">
                                                 <label for="">Nama</label>
-                                                <input type="text" v-model="edit.nama" class="form-control" placeholder="Masukan nama anggota">
+                                                <input type="text" v-model="edit.name" class="form-control" placeholder="Masukan nama anggota">
                                             </div>
                                             <div class="form-group">
                                                 <label for="">NIM</label>
@@ -97,12 +100,12 @@ export default {
         return {
             table: null,
             data:{
-                nama: '',
+                name: '',
                 nim: '',
                 handphone: ''
             },
             edit:{
-                nama: '',
+                name: '',
                 nim: '',
                 handphone: ''
             },
