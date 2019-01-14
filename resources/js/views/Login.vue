@@ -23,13 +23,14 @@
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalCenterTitle">Deskripsi Sistem Informasi Manajemen UKM BOSS (SISMABOSS)</h5>
+                                    <h3 class="modal-title" id="exampleModalCenterTitle">Deskripsi Sistem Informasi Manajemen UKM BOSS (SISMABOSS)</h3>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptates voluptate repellat. Aperiam hic assumenda molestias corporis dolore ut, quae nemo, alias reiciendis corrupti incidunt ex soluta rerum, minima vero.
+                                <div class="modal-body text-justify">
+                                    Sistem Informasi Manajemen UKM BOSS Merupakan Sistem Informasi berbasis web dengan menggunakan Framework Laravel dan Vue.js. 
+                                    Sistem ini dibuat agar dapat meringankan beban dari pengurus-pengurus UKM BOSS dalam mengelola data-data UKM BOSS.
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

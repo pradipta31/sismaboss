@@ -1,6 +1,6 @@
 <template>
   <header class="main-header">
-    <a href="/#/" class="logo" style="text-decoration: none">
+    <a href="/#/main" class="logo" style="text-decoration: none">
       <span class="logo-mini"><b>BOSS</b></span>
       <span class="logo-lg"><b>UKM</b>BOSS</span>
     </a>

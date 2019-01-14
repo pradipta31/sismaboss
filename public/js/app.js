@@ -86306,7 +86306,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -86350,6 +86350,7 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -86621,7 +86622,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c(
-                    "h5",
+                    "h3",
                     {
                       staticClass: "modal-title",
                       attrs: { id: "exampleModalCenterTitle" }
@@ -86651,9 +86652,9 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "modal-body" }, [
+                _c("div", { staticClass: "modal-body text-justify" }, [
                   _vm._v(
-                    "\n                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptates voluptate repellat. Aperiam hic assumenda molestias corporis dolore ut, quae nemo, alias reiciendis corrupti incidunt ex soluta rerum, minima vero.\n                            "
+                    "\n                                Sistem Informasi Manajemen UKM BOSS Merupakan Sistem Informasi berbasis web dengan menggunakan Framework Laravel dan Vue.js. \n                                Sistem ini dibuat agar dapat meringankan beban dari pengurus-pengurus UKM BOSS dalam mengelola data-data UKM BOSS.\n                            "
                   )
                 ]),
                 _vm._v(" "),
@@ -87129,7 +87130,7 @@ var staticRenderFns = [
       {
         staticClass: "logo",
         staticStyle: { "text-decoration": "none" },
-        attrs: { href: "/#/" }
+        attrs: { href: "/#/main" }
       },
       [
         _c("span", { staticClass: "logo-mini" }, [_c("b", [_vm._v("BOSS")])]),
