@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Periode;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -43,11 +44,23 @@ class PeriodeController extends Controller
         ]);
 
         $periode = Periode::findOrFail($id)->update([
-            'periode' => $r->periode
+            'periode' => $r->periode,
+            'status' => $r->status
         ]);
 
+        if($r->status == 'aktif'){
+            $status = '1';
+        }else{
+            $status = '0';
+        }
+
+        $users = User::where('periode_id', '=', $id)
+        ->update([
+            'status' => $status
+        ]);
+        
         return response()->json([
-            'message' => 'Periode baru berhasil disimpan'
+            'message' => 'Periode berhasil diubah'
         ]);
     }
 

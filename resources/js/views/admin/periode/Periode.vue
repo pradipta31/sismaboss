@@ -65,38 +65,51 @@
                                             </td>
                                             <td>
                                                 <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editPeriode" @click="editPeriode(prd.id)">Edit</button>
-                                                <a href="javascript:void(0);" class="btn btn-danger btn-sm" @click="deletePeriode(prd.id)">Hapus</a>
-
-                                                <div class="modal fade" id="editPeriode" tabindex="-1" role="dialog" aria-labelledby="editPeriodeLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h3 class="modal-title" id="editPeriodeLabel">Edit Periode {{edit.periode}}</h3>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="form-group">
-                                                                <label for="">Nama Event</label>
-                                                                <input type="text" v-model="edit.periode" class="form-control" placeholder="Masukan periode">
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary" @click="saveEdit">
-                                                                <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
-                                                                <i class="fa fa-check" v-else></i>
-                                                                Simpan
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                <!-- <a href="javascript:void(0);" class="btn btn-danger btn-sm" @click="deletePeriode(prd.id)">Hapus</a> -->
                                             </td>
                                         </tr>
                                     </tbody>
                                     </table>
+                                    <div class="modal fade" id="editPeriode" tabindex="-1" role="dialog" aria-labelledby="editPeriodeLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="editPeriodeLabel">Edit Periode {{edit.periode}}</h3>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="">Periode</label>
+                                                                <input type="text" v-model="edit.periode" class="form-control" placeholder="Masukan periode">
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="">Status</label>
+                                                                <select class="form-control" v-model="edit.status">
+                                                                    <option value="aktif">Aktif</option>
+                                                                    <option value="nonaktif">Non Aktif</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary" @click="saveEdit">
+                                                        <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
+                                                        <i class="fa fa-check" v-else></i>
+                                                        Simpan
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +133,8 @@ export default {
                 periode: ''
             },
             edit:{
-                periode: ''
+                periode: '',
+                status: ''
             },
             isLoading: false,
             isLoadingEdit: false,
@@ -184,6 +198,7 @@ export default {
                     axios.put('api/periode/edit/'+this.edit.id,this.edit)
                     .then(r => {
                         this.edit.periode = '';
+                        this.edit.status = '';
                         console.log(r)
                         swal({
                             title: "Berhasil!",

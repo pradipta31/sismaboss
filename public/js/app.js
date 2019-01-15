@@ -89672,7 +89672,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -89685,6 +89685,19 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -89807,7 +89820,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 periode: ''
             },
             edit: {
-                periode: ''
+                periode: '',
+                status: ''
             },
             isLoading: false,
             isLoadingEdit: false,
@@ -89873,6 +89887,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 if (yes) {
                     axios.put('api/periode/edit/' + _this4.edit.id, _this4.edit).then(function (r) {
                         _this4.edit.periode = '';
+                        _this4.edit.status = '';
                         console.log(r);
                         swal({
                             title: "Berhasil!",
@@ -90059,175 +90074,190 @@ var render = function() {
                                   }
                                 },
                                 [_vm._v("Edit")]
-                              ),
-                              _vm._v(" "),
+                              )
+                            ])
+                          ])
+                        })
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal fade",
+                      attrs: {
+                        id: "editPeriode",
+                        tabindex: "-1",
+                        role: "dialog",
+                        "aria-labelledby": "editPeriodeLabel",
+                        "aria-hidden": "true"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "modal-dialog",
+                          attrs: { role: "document" }
+                        },
+                        [
+                          _c("div", { staticClass: "modal-content" }, [
+                            _c("div", { staticClass: "modal-header" }, [
                               _c(
-                                "a",
+                                "h3",
                                 {
-                                  staticClass: "btn btn-danger btn-sm",
-                                  attrs: { href: "javascript:void(0);" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.deletePeriode(prd.id)
-                                    }
-                                  }
-                                },
-                                [_vm._v("Hapus")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "modal fade",
-                                  attrs: {
-                                    id: "editPeriode",
-                                    tabindex: "-1",
-                                    role: "dialog",
-                                    "aria-labelledby": "editPeriodeLabel",
-                                    "aria-hidden": "true"
-                                  }
+                                  staticClass: "modal-title",
+                                  attrs: { id: "editPeriodeLabel" }
                                 },
                                 [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass: "modal-dialog",
-                                      attrs: { role: "document" }
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "modal-content" },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "modal-header" },
-                                            [
-                                              _c(
-                                                "h3",
-                                                {
-                                                  staticClass: "modal-title",
-                                                  attrs: {
-                                                    id: "editPeriodeLabel"
-                                                  }
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "Edit Periode " +
-                                                      _vm._s(_vm.edit.periode)
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _vm._m(4, true)
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "modal-body" },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "form-group" },
-                                                [
-                                                  _c(
-                                                    "label",
-                                                    { attrs: { for: "" } },
-                                                    [_vm._v("Nama Event")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c("input", {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value: _vm.edit.periode,
-                                                        expression:
-                                                          "edit.periode"
-                                                      }
-                                                    ],
-                                                    staticClass: "form-control",
-                                                    attrs: {
-                                                      type: "text",
-                                                      placeholder:
-                                                        "Masukan periode"
-                                                    },
-                                                    domProps: {
-                                                      value: _vm.edit.periode
-                                                    },
-                                                    on: {
-                                                      input: function($event) {
-                                                        if (
-                                                          $event.target
-                                                            .composing
-                                                        ) {
-                                                          return
-                                                        }
-                                                        _vm.$set(
-                                                          _vm.edit,
-                                                          "periode",
-                                                          $event.target.value
-                                                        )
-                                                      }
-                                                    }
-                                                  })
-                                                ]
-                                              )
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            { staticClass: "modal-footer" },
-                                            [
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-secondary",
-                                                  attrs: {
-                                                    type: "button",
-                                                    "data-dismiss": "modal"
-                                                  }
-                                                },
-                                                [_vm._v("Close")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "btn btn-primary",
-                                                  attrs: { type: "button" },
-                                                  on: { click: _vm.saveEdit }
-                                                },
-                                                [
-                                                  _vm.isLoadingEdit
-                                                    ? _c("i", {
-                                                        staticClass:
-                                                          "fa fa-spin fa-spinner"
-                                                      })
-                                                    : _c("i", {
-                                                        staticClass:
-                                                          "fa fa-check"
-                                                      }),
-                                                  _vm._v(
-                                                    "\n                                                            Simpan\n                                                        "
-                                                  )
-                                                ]
-                                              )
-                                            ]
+                                  _vm._v(
+                                    "Edit Periode " + _vm._s(_vm.edit.periode)
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm._m(4)
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "modal-body" }, [
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", { attrs: { for: "" } }, [
+                                      _vm._v("Periode")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.edit.periode,
+                                          expression: "edit.periode"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        type: "text",
+                                        placeholder: "Masukan periode"
+                                      },
+                                      domProps: { value: _vm.edit.periode },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.edit,
+                                            "periode",
+                                            $event.target.value
                                           )
-                                        ]
-                                      )
-                                    ]
+                                        }
+                                      }
+                                    })
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c("label", { attrs: { for: "" } }, [
+                                      _vm._v("Status")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "select",
+                                      {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.edit.status,
+                                            expression: "edit.status"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        on: {
+                                          change: function($event) {
+                                            var $$selectedVal = Array.prototype.filter
+                                              .call(
+                                                $event.target.options,
+                                                function(o) {
+                                                  return o.selected
+                                                }
+                                              )
+                                              .map(function(o) {
+                                                var val =
+                                                  "_value" in o
+                                                    ? o._value
+                                                    : o.value
+                                                return val
+                                              })
+                                            _vm.$set(
+                                              _vm.edit,
+                                              "status",
+                                              $event.target.multiple
+                                                ? $$selectedVal
+                                                : $$selectedVal[0]
+                                            )
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "aktif" } },
+                                          [_vm._v("Aktif")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "option",
+                                          { attrs: { value: "nonaktif" } },
+                                          [_vm._v("Non Aktif")]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "modal-footer" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-secondary",
+                                  attrs: {
+                                    type: "button",
+                                    "data-dismiss": "modal"
+                                  }
+                                },
+                                [_vm._v("Close")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-primary",
+                                  attrs: { type: "button" },
+                                  on: { click: _vm.saveEdit }
+                                },
+                                [
+                                  _vm.isLoadingEdit
+                                    ? _c("i", {
+                                        staticClass: "fa fa-spin fa-spinner"
+                                      })
+                                    : _c("i", { staticClass: "fa fa-check" }),
+                                  _vm._v(
+                                    "\n                                                    Simpan\n                                                "
                                   )
                                 ]
                               )
                             ])
                           ])
-                        })
+                        ]
                       )
                     ]
                   )
