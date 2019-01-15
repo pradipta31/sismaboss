@@ -36,7 +36,7 @@ class AbsenController extends Controller
     }
 
     public function lihatAbsen($id){
-        $absents = AbsentDetail::select('absent_details.id','members.nim','members.nama')
+        $absents = AbsentDetail::select('absent_details.id','members.nim','members.name')
         ->join('members','members.id','=','absent_details.member_id')
         ->where('absent_id','=',$id)
         ->get();

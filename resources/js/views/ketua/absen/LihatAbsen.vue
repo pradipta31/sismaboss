@@ -31,7 +31,7 @@
                                                 {{item.nim}}
                                             </td>
                                             <td>
-                                                {{item.nama}}
+                                                {{item.name}}
                                             </td>
                                         </tr>
                                     </tbody>
