@@ -37,7 +37,7 @@
                                                 {{item.nim}}
                                             </td>
                                             <td>
-                                                {{item.name}}
+                                                {{item.nama}}
                                             </td>
                                             <td>
                                                 <button class="btn btn-danger btn-sm" @click="deleteForm(item.id)">
