@@ -18,6 +18,7 @@
                             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#tambahKeuangan" style="margin-bottom: 10px">
                                 <i class="fa fa-plus"></i> Keuangan
                             </button>
+                            <a :href="`ketua/keuangan/${user.periode_id}`" class="btn btn-primary" style="margin-bottom: 10px">Download .xls</a>
 
                             <!-- Modal -->
                             <div class="modal fade" id="tambahKeuangan" tabindex="-1" role="dialog" aria-labelledby="tambahKeuanganLabel" aria-hidden="true">
@@ -236,6 +237,7 @@
 
 <script>
 import moment from 'moment'
+import {mapGetters} from "vuex"
 export default {
     data(){
         return{
@@ -487,6 +489,12 @@ export default {
                 }
             })
         }
+    },
+    computed:
+    {
+        ...mapGetters([
+            'user'
+        ])
     }
 }
 </script>

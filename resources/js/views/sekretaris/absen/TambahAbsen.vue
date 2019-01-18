@@ -20,6 +20,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-2">
+                                <a :href="`sekretaris/absen/${user.periode_id}`" class="btn btn-primary btn-block">Download .xls</a>
+                            </div>
+                            <div class="col-md-1">
+                                <router-link :to="{name: 'sekretaris_absen_index'}" class="btn btn-warning">Kembali</router-link>
+                            </div>
                             <div class="col-md-12"> 
                                 <table class="table table-bordered">
                                     <thead>
@@ -57,6 +63,7 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex"
 export default {
     data(){
         return{
@@ -112,6 +119,11 @@ export default {
                 toast.error('Data anggota tidak ada')
             })
         }
+    },
+    computed:{
+        ...mapGetters([
+            'user'
+        ])
     }
 }
 </script>

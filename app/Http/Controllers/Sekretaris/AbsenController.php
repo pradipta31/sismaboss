@@ -8,6 +8,8 @@ use App\User;
 use App\Absen;
 use App\Member;
 use App\AbsentDetail;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -133,5 +135,30 @@ class AbsenController extends Controller
         return response()->json([
             'message' => 'Berhasil menghapus data absen anggota'
         ]);
+    }
+
+    public function download($periode_id){
+        $spreadsheet = new Spreadsheet();
+
+        $absents = AbsentDetail::select('absent_details.id','members.nim','members.name','members.periode_id')
+        ->join('members','members.id','=','absent_details.member_id')
+        ->where('members.periode_id','=',$periode_id)
+        ->get();
+
+        $sheet = $spreadsheet->getActiveSheet();
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'NIM');
+        $sheet->setCellValue('C1', 'NAMA');
+        $row = 2;
+        $nomor = 1;
+        foreach($absents as $absent){
+            $sheet->setCellValue('A'.$row,$nomor++);
+            $sheet->setCellValue('B'.$row,$absent->nim);
+            $sheet->setCellValue('C'.$row,$absent->name);
+            $row++;
+        }
+        $writer = new Xlsx($spreadsheet);
+        $writer->save('download.xlsx');
+        return response()->download(public_path('download.xlsx'))->deleteFileAfterSend();
     }
 }

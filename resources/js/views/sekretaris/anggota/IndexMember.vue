@@ -18,6 +18,7 @@
                             <router-link class="btn btn-primary" :to="{name: 'sekretaris_anggota_create'}" style="margin-bottom: 10px">
                                 Tambah Anggota
                             </router-link>
+                            <a :href="`sekretaris/anggota/${user.periode_id}`" class="btn btn-primary" style="margin-bottom: 10px">Download .xls</a>
                             <div class="table-responsive">
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
@@ -95,6 +96,7 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex"
 export default {
     data(){
         return {
@@ -211,6 +213,12 @@ export default {
                 }
             })
         }
+    },
+    computed:
+    {
+        ...mapGetters([
+            'user'
+        ])
     }
 }
 </script>

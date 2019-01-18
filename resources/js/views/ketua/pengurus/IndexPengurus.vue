@@ -58,15 +58,29 @@
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <h4>Jabatan : {{modal.role}}</h4>
-                                                            <h4>Nama :{{modal.name}}</h4>
-                                                            <h4>Username : {{modal.username}}</h4>
-                                                            <h4>Email : {{modal.email}}</h4>
-                                                            <h4>NIM : {{modal.nim}}</h4>
-                                                            <h4>Status : 
-                                                                <b v-if="modal.status">Aktif</b>
-                                                                <b v-else>Tidak Aktif</b>
-                                                            </h4>
+                                                            <div class="row">
+                                                                <div class="col-sm-2">
+                                                                    <h4>Jabatan </h4>
+                                                                    <h4>Nama </h4>
+                                                                    <h4>Username </h4>
+                                                                    <h4>Email </h4>
+                                                                    <h4>NIM </h4>
+                                                                    <h4>Status </h4>
+                                                                </div>
+                                                                <div class="col-sm-10">
+                                                                    <h4>: {{modal.role}}</h4>
+                                                                    <h4>: {{modal.name}}</h4>
+                                                                    <h4>: {{modal.username}}</h4>
+                                                                    <h4>: {{modal.email}}</h4>
+                                                                    <h4>: {{modal.nim}}</h4>
+                                                                    <h4 v-if="modal.status">
+                                                                        : <label class="label label-success">Aktif</label>
+                                                                    </h4>
+                                                                    <h4 v-else>
+                                                                        : <label class="label label-danger">Tidak Aktif</label>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -2,12 +2,12 @@
     <div>
         <section class="content-header">
             <h1>
-                Tambah Ketua
-                <small>tambah ketua pada periode yang sudah didaftarkan</small>
+                Tambah Data Kepengurusan
+                <small>tambah kepengurusan pada periode yang sudah didaftarkan</small>
             </h1>
             <ol class="breadcrumb">
                 <li><router-link :to="{path : '/main'}"><i class="fa fa-dashboard"></i> Dashboard</router-link></li>
-                <li class="active">Tambah Ketua</li>
+                <li class="active">Tambah Kepengurusan</li>
             </ol>
         </section>
         <section class="content">
@@ -18,7 +18,7 @@
                             <div class="box-body">
                                 <div class="box-header">
                                     <h3 class="box-ttitle">
-                                        Tambah Ketua
+                                        Tambah Kepengurusan
                                     </h3>
                                 </div>
                                 <div class="col-md-12">
@@ -114,7 +114,13 @@ export default {
             axios.post('api/ketua/tambah-ketua',this.data)
             .then(r => {
                 this.isLoading = false
-                toast.success(r.data.message)
+                if (r.data.message) {
+                    this.$router.push({name: 'admin_ketua_index'});
+                    // window.location.reload();
+                    toast.success(r.data.message)
+                }else{
+                    toast.error('Login gagal!');
+                }
             })
             .catch(e => {
                 console.log(e);

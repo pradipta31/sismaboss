@@ -149,7 +149,21 @@ export default {
             axios.post('api/surat/tambah-surat',this.form)
             .then(r => {
                 this.isLoading = false
-                toast.success(r.data.message)
+                if(this.data.jenis == 'Surat Masuk'){
+                    if (r.data.message) {
+                        this.$router.push({name: 'sekretaris_surat_masuk_index'});
+                        toast.success(r.data.message)
+                    }else{
+                        toast.error('Gagal menambah surat!');
+                    }
+                }else{
+                    if (r.data.message) {
+                        this.$router.push({name: 'sekretaris_surat_keluar_index'});
+                        toast.success(r.data.message)
+                    }else{
+                        toast.error('Gagal menambah surat!');
+                    }
+                }
             })
             .catch(e => {
                 console.log(e);

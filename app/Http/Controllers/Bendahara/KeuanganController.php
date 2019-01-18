@@ -7,6 +7,8 @@ use DB;
 use App\Fund;
 use App\User;
 use App\Periode;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -107,38 +109,6 @@ class KeuanganController extends Controller
         // }
     }
 
-    public function createSaldo(Request $r){
-        $this->validate($r,[
-            'debit' => 'required',
-            'kredit' => 'required',
-            'saldo' => 'required',
-            'keterangan' => 'required'
-        ]);
-        // $cek = Fund::where('saldo','!=',null)
-        // ->whereBetween('funds.tanggal',[Carbon::now()->format('Y').'-'.Carbon::now()->format('m').'-01',
-        // Carbon::now()])
-        // ->get();
-
-        // if(!$cek){
-            $funds = Fund::create([
-                'periode_id' => auth()->user()->periode_id,
-                'user_id' => auth()->user()->id,
-                'debit' => $r->debit,
-                'kredit' => $r->kredit,
-                'saldo' => $r->saldo,
-                'keterangan' => $r->keterangan
-            ]);
-            return response()->json([
-                'message' => 'Data saldo baru berhasil disimpan'
-            ]);
-        // }else{
-        //     return response()->json([
-        //         'error' => 'Data saldo bulan ini sudah ada'
-        //     ]);
-        // }
-        
-    }
-
     public function editKeuangan($id){
         $funds = Fund::where('funds.id','=',$id)->first();
 
@@ -172,5 +142,42 @@ class KeuanganController extends Controller
         ];
 
         return response()->json($response);
+    }
+
+    public function download($periode_id){
+        $spreadsheet = new Spreadsheet();
+
+        $funds = Fund::select('funds.*', 'periodes.periode','users.username')
+        ->join('periodes', 'periodes.id', '=', 'funds.periode_id')
+        ->join('users', 'users.id', '=', 'funds.user_id')
+        ->where('funds.periode_id', '=', $periode_id)
+        ->get();
+
+        $sheet = $spreadsheet->getActiveSheet();
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'TANGGAL');
+        $sheet->setCellValue('C1', 'KETERANGAN');
+        $sheet->setCellValue('D1', 'DEBIT');
+        $sheet->setCellValue('E1', 'KREDIT');
+        $sheet->setCellValue('F1', 'SALDO');
+        $sheet->setCellValue('G1', 'PJ');
+        $row = 2;
+        $total = 0;
+        $nomor = 1;
+        foreach($funds as $fund){
+            $total += $fund->jenis == 'Debit' ? $fund->nominal : 0;
+            $total -= $fund->jenis == 'Kredit' ? $fund->nominal : 0;
+            $sheet->setCellValue('A'.$row,$nomor++);
+            $sheet->setCellValue('B'.$row,$fund->created_at);
+            $sheet->setCellValue('C'.$row,$fund->keterangan);
+            $sheet->setCellValue('D'.$row,$fund->jenis == 'Debit' ? $fund->nominal : 0);
+            $sheet->setCellValue('E'.$row,$fund->jenis == 'Kredit' ? $fund->nominal : 0);
+            $sheet->setCellValue('F'.$row,$total);
+            $sheet->setCellValue('G'.$row,$fund->username);
+            $row++;
+        }
+        $writer = new Xlsx($spreadsheet);
+        $writer->save('download.xlsx');
+        return response()->download(public_path('download.xlsx'))->deleteFileAfterSend();
     }
 }

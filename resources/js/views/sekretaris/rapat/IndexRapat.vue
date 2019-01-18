@@ -159,12 +159,14 @@
                                                                         <input type="text" v-model="edit.moderator" rows="8" class="form-control">
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <div class="col-md-12">
-                                                                        <label for="">Hasil Rapat</label>
-                                                                    </div>
-                                                                    <div class="col-md-12">
-                                                                        <textarea v-model="edit.hasil_rapat" cols="78" rows="15" class="form-control"></textarea>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <label for="">Hasil Rapat</label>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <textarea v-model="edit.hasil_rapat" cols="78" rows="15" class="form-control"></textarea>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>

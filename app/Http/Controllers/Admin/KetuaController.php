@@ -104,14 +104,24 @@ class KetuaController extends Controller
 
     public function updateKetua(Request $r, $id){
         $getUsers = User::findOrFail($id);
-        $users = User::findOrFail($id)->update([
-            'name' => $r->name,
-            'username' => $r->username,
-            'email' => $r->email,
-            'nim' => $r->nim,
-            'password' => bcrypt($r->password),
-            'status' => $r->status
-        ]);
+        if($r->password != null){
+            $users = User::findOrFail($id)->update([
+                'name' => $r->name,
+                'username' => $r->username,
+                'email' => $r->email,
+                'nim' => $r->nim,
+                'password' => bcrypt($r->password),
+                'status' => $r->status
+            ]);
+        }else{
+            $users = User::findOrFail($id)->update([
+                'name' => $r->name,
+                'username' => $r->username,
+                'email' => $r->email,
+                'nim' => $r->nim,
+                'status' => $r->status
+            ]);
+        }
 
         if($r->status == '0'){
             $users = User::where('periode_id','=',$getUsers->periode_id)->update([

@@ -111,7 +111,8 @@ class PengurusController extends Controller
                 'name' => $r->name,
                 'username' => $r->username,
                 'email' => $r->email,
-                'nim' => $r->nim
+                'nim' => $r->nim,
+                'status' => $r->status
             ]);
         }else{
             $users = User::findOrFail($id)->update([
@@ -120,7 +121,8 @@ class PengurusController extends Controller
                 'username' => $r->username,
                 'email' => $r->email,
                 'nim' => $r->nim,
-                'password' => bcrypt($r->password)
+                'password' => bcrypt($r->password),
+                'status' => $r->status
             ]);
         }
 

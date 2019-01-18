@@ -104,7 +104,7 @@
                                                     <input type="text" v-model="edit.perihal" class="form-control" placeholder="Masukan perihal">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">Tanggal Event</label>
+                                                    <label for="">Tanggal Keluar</label>
                                                     <input type="date" v-model="edit.tanggal" class="form-control">
                                                 </div>
                                                 <div class="form-group">

@@ -81,7 +81,7 @@
                                                                 <div class="col-md-4">
                                                                     <h4>Nomor Surat </h4>
                                                                     <h4>Perihal </h4>
-                                                                    <h4>Tanggal </h4>
+                                                                    <h4>Tanggal Terima </h4>
                                                                     <h4>Penanggung Jawab </h4>
                                                                     <h4>Deskripsi </h4>
                                                                 </div>
@@ -125,7 +125,7 @@
                                                 <input type="text" v-model="edit.perihal" class="form-control" placeholder="Masukan perihal">
                                             </div>
                                             <div class="form-group">
-                                                <label for="">Tanggal Event</label>
+                                                <label for="">Tanggal Terima</label>
                                                 <input type="date" v-model="edit.tanggal" class="form-control">
                                             </div>
                                             <div class="form-group">

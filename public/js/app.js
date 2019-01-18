@@ -87517,6 +87517,16 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -87958,6 +87968,48 @@ var render = function() {
                       _c("i", { staticClass: "fa fa-money" }),
                       _vm._v(" "),
                       _c("span", [_vm._v("Keuangan")])
+                    ]
+                  )
+                ],
+                1
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.isWakil
+            ? _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dec",
+                      attrs: { to: { name: "ketua_absen_index" } }
+                    },
+                    [
+                      _c("i", { staticClass: "fa fa-address-book-o" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Absen")])
+                    ]
+                  )
+                ],
+                1
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.isWakil
+            ? _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dec",
+                      attrs: { to: { name: "ketua_inventaris_index" } }
+                    },
+                    [
+                      _c("i", { staticClass: "fa fa-gear" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Inventaris")])
                     ]
                   )
                 ],
@@ -88421,7 +88473,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -88432,7 +88484,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
 //
 //
 //
@@ -88463,17 +88514,10 @@ var staticRenderFns = [
     return _c("footer", { staticClass: "main-footer" }, [
       _c("div", { staticClass: "pull-right hidden-xs" }, [
         _c("b", [_vm._v("Version")]),
-        _vm._v(" 2.4.0\n    ")
+        _vm._v(" 1.0.1\n    ")
       ]),
       _vm._v(" "),
-      _c("strong", [
-        _vm._v("Copyright © 2014-2016 "),
-        _c("a", { attrs: { href: "https://adminlte.io" } }, [
-          _vm._v("Almsaeed Studio")
-        ]),
-        _vm._v(".")
-      ]),
-      _vm._v(" All rights\n    reserved.\n")
+      _c("strong", [_vm._v("Sistem Informasi Manajemen UKM BOSS")])
     ])
   }
 ]
@@ -90431,7 +90475,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -90560,7 +90604,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.isLoading = true;
             axios.post('api/ketua/tambah-ketua', this.data).then(function (r) {
                 _this2.isLoading = false;
-                toast.success(r.data.message);
+                if (r.data.message) {
+                    _this2.$router.push({ name: 'admin_ketua_index' });
+                    // window.location.reload();
+                    toast.success(r.data.message);
+                } else {
+                    toast.error('Login gagal!');
+                }
             }).catch(function (e) {
                 console.log(e);
             });
@@ -90592,7 +90642,7 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("li", { staticClass: "active" }, [_vm._v("Tambah Ketua")])
+        _c("li", { staticClass: "active" }, [_vm._v("Tambah Kepengurusan")])
       ])
     ]),
     _vm._v(" "),
@@ -90839,8 +90889,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h1", [
-      _vm._v("\n            Tambah Ketua\n            "),
-      _c("small", [_vm._v("tambah ketua pada periode yang sudah didaftarkan")])
+      _vm._v("\n            Tambah Data Kepengurusan\n            "),
+      _c("small", [
+        _vm._v("tambah kepengurusan pada periode yang sudah didaftarkan")
+      ])
     ])
   },
   function() {
@@ -90850,7 +90902,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "box-header" }, [
       _c("h3", { staticClass: "box-ttitle" }, [
         _vm._v(
-          "\n                                    Tambah Ketua\n                                "
+          "\n                                    Tambah Kepengurusan\n                                "
         )
       ])
     ])
@@ -91727,7 +91779,7 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("li", { staticClass: "active" }, [_vm._v("Edit Ketua")])
+        _c("li", { staticClass: "active" }, [_vm._v("Edit Kepengurusan")])
       ])
     ]),
     _vm._v(" "),
@@ -91964,9 +92016,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h1", [
-      _vm._v("\n            Edit Data Ketua\n            "),
+      _vm._v("\n            Edit Data Kepengurusan\n            "),
       _c("small", [
-        _vm._v("edit data ketua pada periode yang sudah didaftarkan")
+        _vm._v("edit data Kepengurusan pada periode yang sudah didaftarkan")
       ])
     ])
   },
@@ -91977,7 +92029,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "box-header" }, [
       _c("h3", { staticClass: "box-ttitle" }, [
         _vm._v(
-          "\n                            Edit Data Ketua\n                        "
+          "\n                            Edit Data Kepengurusan\n                        "
         )
       ])
     ])
@@ -92078,7 +92130,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -92089,6 +92141,20 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -92420,54 +92486,88 @@ var render = function() {
                                           "div",
                                           { staticClass: "modal-body" },
                                           [
-                                            _c("h4", [
-                                              _vm._v(
-                                                "Jabatan : " +
-                                                  _vm._s(_vm.modal.role)
+                                            _c("div", { staticClass: "row" }, [
+                                              _vm._m(3, true),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-sm-10" },
+                                                [
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.role)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.name)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(
+                                                          _vm.modal.username
+                                                        )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.email)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("h4", [
+                                                    _vm._v(
+                                                      ": " +
+                                                        _vm._s(_vm.modal.nim)
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _vm.modal.status
+                                                    ? _c("h4", [
+                                                        _vm._v(
+                                                          "\n                                                                    : "
+                                                        ),
+                                                        _c(
+                                                          "label",
+                                                          {
+                                                            staticClass:
+                                                              "label label-success"
+                                                          },
+                                                          [_vm._v("Aktif")]
+                                                        )
+                                                      ])
+                                                    : _c("h4", [
+                                                        _vm._v(
+                                                          "\n                                                                    : "
+                                                        ),
+                                                        _c(
+                                                          "label",
+                                                          {
+                                                            staticClass:
+                                                              "label label-danger"
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "Tidak Aktif"
+                                                            )
+                                                          ]
+                                                        )
+                                                      ])
+                                                ]
                                               )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                "Nama :" +
-                                                  _vm._s(_vm.modal.name)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                "Username : " +
-                                                  _vm._s(_vm.modal.username)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                "Email : " +
-                                                  _vm._s(_vm.modal.email)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                "NIM : " + _vm._s(_vm.modal.nim)
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("h4", [
-                                              _vm._v(
-                                                "Status : \n                                                            "
-                                              ),
-                                              _vm.modal.status
-                                                ? _c("b", [_vm._v("Aktif")])
-                                                : _c("b", [
-                                                    _vm._v("Tidak Aktif")
-                                                  ])
                                             ])
                                           ]
                                         ),
                                         _vm._v(" "),
-                                        _vm._m(3, true)
+                                        _vm._m(4, true)
                                       ]
                                     )
                                   ]
@@ -92538,6 +92638,24 @@ var staticRenderFns = [
       },
       [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-2" }, [
+      _c("h4", [_vm._v("Jabatan ")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Nama ")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Username ")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Email ")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("NIM ")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Status ")])
+    ])
   },
   function() {
     var _vm = this
@@ -93193,7 +93311,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -93287,6 +93405,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -93297,7 +93424,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 username: '',
                 email: '',
                 nim: '',
-                password: ''
+                password: '',
+                status: ''
             },
             users: [],
             isLoading: false
@@ -93592,9 +93720,58 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [_vm._v("Status")]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.data.status,
+                              expression: "data.status"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.data,
+                                "status",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("Aktif")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "0" } }, [
+                            _vm._v("Tidak Aktif")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "col-md-6" },
+                    { staticClass: "col-md-10" },
                     [
                       _c(
                         "button",
@@ -99845,7 +100022,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -99954,10 +100131,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         save: function save() {
+            var _this = this;
+
             this.isLoading = true;
             axios.post('api/anggota/tambah-anggota', { anggota: this.anggota }).then(function (r) {
                 console.log(r);
-                toast.success(r.data.message);
+                if (r.data.message) {
+                    _this.$router.push({ name: 'sekretaris_anggota_index' });
+                    toast.success(r.data.message);
+                } else {
+                    toast.error('Login gagal!');
+                }
             }).catch(function (e) {
                 console.log(e);
                 toas.error(r.data.error);
@@ -100289,6 +100473,9 @@ exports.push([module.i, "\ninput[type=\"date\"].form-control{\n    line-height: 
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 //
 //
 //
@@ -100385,6 +100572,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -100500,7 +100689,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         }
-    }
+    },
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapGetters */])(['user']))
 });
 
 /***/ }),
@@ -100551,6 +100741,16 @@ var render = function() {
                       "\n                            Tambah Anggota\n                        "
                     )
                   ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-primary",
+                    staticStyle: { "margin-bottom": "10px" },
+                    attrs: { href: "sekretaris/anggota/" + _vm.user.periode_id }
+                  },
+                  [_vm._v("Download .xls")]
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "table-responsive" }, [
@@ -101126,7 +101326,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.onChange();
             axios.post('api/surat/tambah-surat', this.form).then(function (r) {
                 _this.isLoading = false;
-                toast.success(r.data.message);
+                if (_this.data.jenis == 'Surat Masuk') {
+                    if (r.data.message) {
+                        _this.$router.push({ name: 'sekretaris_surat_masuk_index' });
+                        toast.success(r.data.message);
+                    } else {
+                        toast.error('Gagal menambah surat!');
+                    }
+                } else {
+                    if (r.data.message) {
+                        _this.$router.push({ name: 'sekretaris_surat_keluar_index' });
+                        toast.success(r.data.message);
+                    } else {
+                        toast.error('Gagal menambah surat!');
+                    }
+                }
             }).catch(function (e) {
                 console.log(e);
             });
@@ -102363,7 +102577,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("div", { staticClass: "form-group" }, [
                             _c("label", { attrs: { for: "" } }, [
-                              _vm._v("Tanggal Event")
+                              _vm._v("Tanggal Terima")
                             ]),
                             _vm._v(" "),
                             _c("input", {
@@ -102549,7 +102763,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("h4", [_vm._v("Perihal ")]),
       _vm._v(" "),
-      _c("h4", [_vm._v("Tanggal ")]),
+      _c("h4", [_vm._v("Tanggal Terima ")]),
       _vm._v(" "),
       _c("h4", [_vm._v("Penanggung Jawab ")]),
       _vm._v(" "),
@@ -103322,7 +103536,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("div", { staticClass: "form-group" }, [
                               _c("label", { attrs: { for: "" } }, [
-                                _vm._v("Tanggal Event")
+                                _vm._v("Tanggal Keluar")
                               ]),
                               _vm._v(" "),
                               _c("input", {
@@ -104534,6 +104748,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -105457,57 +105673,68 @@ var render = function() {
                                               _vm._v(" "),
                                               _c(
                                                 "div",
-                                                { staticClass: "form-group" },
+                                                { staticClass: "col-md-12" },
                                                 [
-                                                  _vm._m(8, true),
-                                                  _vm._v(" "),
                                                   _c(
                                                     "div",
                                                     {
-                                                      staticClass: "col-md-12"
+                                                      staticClass: "form-group"
                                                     },
                                                     [
-                                                      _c("textarea", {
-                                                        directives: [
-                                                          {
-                                                            name: "model",
-                                                            rawName: "v-model",
-                                                            value:
-                                                              _vm.edit
-                                                                .hasil_rapat,
-                                                            expression:
-                                                              "edit.hasil_rapat"
-                                                          }
-                                                        ],
-                                                        staticClass:
-                                                          "form-control",
-                                                        attrs: {
-                                                          cols: "78",
-                                                          rows: "15"
+                                                      _vm._m(8, true),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "col-md-12"
                                                         },
-                                                        domProps: {
-                                                          value:
-                                                            _vm.edit.hasil_rapat
-                                                        },
-                                                        on: {
-                                                          input: function(
-                                                            $event
-                                                          ) {
-                                                            if (
-                                                              $event.target
-                                                                .composing
-                                                            ) {
-                                                              return
+                                                        [
+                                                          _c("textarea", {
+                                                            directives: [
+                                                              {
+                                                                name: "model",
+                                                                rawName:
+                                                                  "v-model",
+                                                                value:
+                                                                  _vm.edit
+                                                                    .hasil_rapat,
+                                                                expression:
+                                                                  "edit.hasil_rapat"
+                                                              }
+                                                            ],
+                                                            staticClass:
+                                                              "form-control",
+                                                            attrs: {
+                                                              cols: "78",
+                                                              rows: "15"
+                                                            },
+                                                            domProps: {
+                                                              value:
+                                                                _vm.edit
+                                                                  .hasil_rapat
+                                                            },
+                                                            on: {
+                                                              input: function(
+                                                                $event
+                                                              ) {
+                                                                if (
+                                                                  $event.target
+                                                                    .composing
+                                                                ) {
+                                                                  return
+                                                                }
+                                                                _vm.$set(
+                                                                  _vm.edit,
+                                                                  "hasil_rapat",
+                                                                  $event.target
+                                                                    .value
+                                                                )
+                                                              }
                                                             }
-                                                            _vm.$set(
-                                                              _vm.edit,
-                                                              "hasil_rapat",
-                                                              $event.target
-                                                                .value
-                                                            )
-                                                          }
-                                                        }
-                                                      })
+                                                          })
+                                                        ]
+                                                      )
                                                     ]
                                                   )
                                                 ]
@@ -108372,7 +108599,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -108383,6 +108610,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 //
 //
 //
@@ -108441,6 +108671,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -108497,7 +108734,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 toast.error('Data anggota tidak ada');
             });
         }
-    }
+    },
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapGetters */])(['user']))
 });
 
 /***/ }),
@@ -108564,6 +108802,33 @@ var render = function() {
                 ])
               ])
             ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-2" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary btn-block",
+                  attrs: { href: "sekretaris/absen/" + _vm.user.periode_id }
+                },
+                [_vm._v("Download .xls")]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-1" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "btn btn-warning",
+                    attrs: { to: { name: "sekretaris_absen_index" } }
+                  },
+                  [_vm._v("Kembali")]
+                )
+              ],
+              1
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-12" }, [
               _c("table", { staticClass: "table table-bordered" }, [
@@ -110114,6 +110379,9 @@ exports.push([module.i, "\ninput[type=\"date\"].form-control[data-v-567c6c4e]{\n
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(5);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 //
 //
 //
@@ -110350,6 +110618,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -110594,7 +110864,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         }
-    }
+    },
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapGetters */])(['user']))
 });
 
 /***/ }),
@@ -110631,6 +110902,16 @@ var render = function() {
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
               _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary",
+                  staticStyle: { "margin-bottom": "10px" },
+                  attrs: { href: "ketua/keuangan/" + _vm.user.periode_id }
+                },
+                [_vm._v("Download .xls")]
+              ),
               _vm._v(" "),
               _c(
                 "div",

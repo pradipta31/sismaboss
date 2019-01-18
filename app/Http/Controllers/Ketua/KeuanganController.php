@@ -56,23 +56,26 @@ class KeuanganController extends Controller
         ->get();
 
         $sheet = $spreadsheet->getActiveSheet();
-        $sheet->setCellValue('A1', 'TANGGAL');
-        $sheet->setCellValue('B1', 'KETERANGAN');
-        $sheet->setCellValue('C1', 'DEBIT');
-        $sheet->setCellValue('D1', 'KREDIT');
-        $sheet->setCellValue('E1', 'SALDO');
-        $sheet->setCellValue('F1', 'PJ');
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'TANGGAL');
+        $sheet->setCellValue('C1', 'KETERANGAN');
+        $sheet->setCellValue('D1', 'DEBIT');
+        $sheet->setCellValue('E1', 'KREDIT');
+        $sheet->setCellValue('F1', 'SALDO');
+        $sheet->setCellValue('G1', 'PJ');
         $row = 2;
         $total = 0;
+        $nomor = 1;
         foreach($funds as $fund){
             $total += $fund->jenis == 'Debit' ? $fund->nominal : 0;
             $total -= $fund->jenis == 'Kredit' ? $fund->nominal : 0;
-            $sheet->setCellValue('A'.$row,$fund->created_at);
-            $sheet->setCellValue('B'.$row,$fund->keterangan);
-            $sheet->setCellValue('C'.$row,$fund->jenis == 'Debit' ? $fund->nominal : 0);
-            $sheet->setCellValue('D'.$row,$fund->jenis == 'Kredit' ? $fund->nominal : 0);
-            $sheet->setCellValue('E'.$row,$total);
-            $sheet->setCellValue('F'.$row,$fund->username);
+            $sheet->setCellValue('A'.$row,$nomor++);
+            $sheet->setCellValue('B'.$row,$fund->created_at);
+            $sheet->setCellValue('C'.$row,$fund->keterangan);
+            $sheet->setCellValue('D'.$row,$fund->jenis == 'Debit' ? $fund->nominal : 0);
+            $sheet->setCellValue('E'.$row,$fund->jenis == 'Kredit' ? $fund->nominal : 0);
+            $sheet->setCellValue('F'.$row,$total);
+            $sheet->setCellValue('G'.$row,$fund->username);
             $row++;
         }
         $writer = new Xlsx($spreadsheet);

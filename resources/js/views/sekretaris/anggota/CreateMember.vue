@@ -101,7 +101,12 @@ export default {
             axios.post('api/anggota/tambah-anggota', {anggota: this.anggota})
             .then(r => {
                 console.log(r);
-                toast.success(r.data.message);
+                if (r.data.message) {
+                    this.$router.push({name: 'sekretaris_anggota_index'});
+                    toast.success(r.data.message)
+                }else{
+                    toast.error('Login gagal!');
+                }
             })
             .catch(e => {
                 console.log(e);

@@ -34,14 +34,17 @@ class MemberController extends Controller
         ->get();
 
         $sheet = $spreadsheet->getActiveSheet();
-        $sheet->setCellValue('A1', 'NIM');
-        $sheet->setCellValue('B1', 'NAMA');
-        $sheet->setCellValue('C1', 'NO TELP');
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'NIM');
+        $sheet->setCellValue('C1', 'NAMA');
+        $sheet->setCellValue('D1', 'NO TELP');
         $row = 2;
+        $nomor = 1;
         foreach($members as $member){
-            $sheet->setCellValue('A'.$row,$member->nim);
-            $sheet->setCellValue('B'.$row,$member->name);
-            $sheet->setCellValue('C'.$row,$member->handphone);
+            $sheet->setCellValue('A'.$row,$nomor++);
+            $sheet->setCellValue('B'.$row,$member->nim);
+            $sheet->setCellValue('C'.$row,$member->name);
+            $sheet->setCellValue('D'.$row,$member->handphone);
             $row++;
         }
         $writer = new Xlsx($spreadsheet);

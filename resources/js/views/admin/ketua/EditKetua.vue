@@ -2,12 +2,12 @@
     <div>
         <section class="content-header">
             <h1>
-                Edit Data Ketua
-                <small>edit data ketua pada periode yang sudah didaftarkan</small>
+                Edit Data Kepengurusan
+                <small>edit data Kepengurusan pada periode yang sudah didaftarkan</small>
             </h1>
             <ol class="breadcrumb">
                 <li><router-link :to="{path : '/main'}"><i class="fa fa-dashboard"></i> Dashboard</router-link></li>
-                <li class="active">Edit Ketua</li>
+                <li class="active">Edit Kepengurusan</li>
             </ol>
         </section>
         <section class="content">
@@ -16,7 +16,7 @@
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-ttitle">
-                                Edit Data Ketua
+                                Edit Data Kepengurusan
                             </h3>
                         </div>
                         <div class="box-body">

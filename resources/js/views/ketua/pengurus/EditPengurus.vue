@@ -63,7 +63,16 @@
                                             <small>Note: Kosongkan jika tidak ingin mengubah password</small>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Status</label>
+                                            <select v-model="data.status" class="form-control">
+                                                <option value="1">Aktif</option>
+                                                <option value="0">Tidak Aktif</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
                                         <button type="submit" class="btn btn-primary" @click="saveEdit">
                                             <i class="fa fa-spin fa-spinner" v-if="isLoading"></i>
                                             <i class="fa fa-check" v-else></i>
@@ -91,7 +100,8 @@ export default {
                 username: '',
                 email: '',
                 nim: '',
-                password: ''
+                password: '',
+                status: ''
             },
             users: [],
             isLoading: false
