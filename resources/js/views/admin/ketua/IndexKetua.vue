@@ -74,10 +74,10 @@
                                                                 <h4>: {{modal.email}}</h4>
                                                                 <h4>: {{modal.nim}}</h4>
                                                                 <h4 v-if="modal.status">
-                                                                    : Aktif
+                                                                    : <span class="label label-success">Aktif</span>
                                                                 </h4>
                                                                 <h4 v-else>
-                                                                    : Tidak Aktif
+                                                                    : <span class="label label-warning">Non Aktif</span>
                                                                 </h4>
                                                             </div>
                                                         </div>

@@ -184,32 +184,24 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3 class="modal-title" id="editSaldoLabel">Edit Saldo Bulan {{sld(edit.created_at)}}</h3>
+                                            <h3 class="modal-title" id="editSaldoLabel">Edit Keuangan Bulan {{sld(edit.created_at)}}</h3>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <div class="form-group">
-                                                <span>
+                                            <span v-if="edit.jenis == 'debit'">
+                                                <div class="form-group">
                                                     <label for="">Debit</label>
-                                                    <input type="number" class="form-control" placeholder="Masukan debit (0-9999999)" v-model="edit.debit" disabled>
-                                                </span>
-                                            </div>
-                                            <div class="form-group">
-                                                <span>
+                                                    <input type="number" class="form-control" v-model="edit.nominal" disabled>
+                                                </div>
+                                            </span>
+                                            <span v-else>
+                                                <div class="form-group">
                                                     <label for="">Kredit</label>
-                                                    <input type="number" class="form-control" v-model="edit.kredit" disabled>
-                                                </span>
-                                            </div>
-                                            <div class="form-group">
-                                                <span>
-                                                    <span>
-                                                        <label for="">Saldo</label>
-                                                       <input type="number" class="form-control" v-model="edit.saldo" disabled>
-                                                    </span>
-                                                </span>
-                                            </div>
+                                                    <input type="number" class="form-control" v-model="edit.nominal" disabled>
+                                                </div>
+                                            </span>
                                             <div class="form-group">
                                                 <label for="" style="margin-top: 10px">Keterangan</label>
                                                 <textarea cols="78" rows="8" class="form-control" v-model="edit.keterangan"></textarea>

@@ -22,16 +22,21 @@
                                     </h3>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="">Jabatan</label>
-                                            <select v-model="data.role" class="form-control">
-                                                <option value="wakil">Wakil Ketua</option>
-                                                <option value="sekretaris">Sekretaris</option>
-                                                <option value="bendahara">Bendahara</option>
-                                            </select>
+                                    <span v-if="data.role != 'ketua'">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Jabatan</label>
+                                                <select v-model="data.role" class="form-control">
+                                                    <option value="wakil">Wakil Ketua</option>
+                                                    <option value="sekretaris">Sekretaris</option>
+                                                    <option value="bendahara">Bendahara</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </span>
+                                    <span v-else>
+
+                                    </span>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Nama</label>

@@ -133,59 +133,58 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="modal fade" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="editEventLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h3 class="modal-title" id="editEventLabel">Edit Event {{edit.nama_event}}</h3>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="form-group">
-                                                                <label for="">Nama Event</label>
-                                                                <input type="text" v-model="edit.nama_event" class="form-control" placeholder="Masukan nama event">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="">Ketua Panitia</label>
-                                                                <input type="text" v-model="edit.ketua_panitia" class="form-control" placeholder="Masukan nama ketua panitia">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="">Tanggal Event</label>
-                                                                <div class="col-md-12">
-                                                                    <div class="col-md-5">
-                                                                        <input type="date" v-model="edit.tgl_mulai" class="form-control" style="margin-left: -30px">
-                                                                    </div>
-                                                                    <div class="col-md-1" style="margin-left: -50px; margin-top: 5px">
-                                                                        <b>s/d</b>
-                                                                    </div>
-                                                                    <div class="col-md-5" style="margin-left: -20px">
-                                                                        <input type="date" v-model="edit.tgl_akhir" class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="" style="margin-top: 10px">Deskripsi Event</label>
-                                                                <textarea cols="78" rows="8" v-model="edit.deskripsi" class="form-control"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary" @click="saveEdit">
-                                                                <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
-                                                                <i class="fa fa-check" v-else></i>
-                                                                Simpan
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
                                 </table>
+                                <div class="modal fade" id="editEvent" tabindex="-1" role="dialog" aria-labelledby="editEventLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="editEventLabel">Edit Event {{edit.nama_event}}</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="">Nama Event</label>
+                                                    <input type="text" v-model="edit.nama_event" class="form-control" placeholder="Masukan nama event">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Ketua Panitia</label>
+                                                    <input type="text" v-model="edit.ketua_panitia" class="form-control" placeholder="Masukan nama ketua panitia">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Tanggal Event</label>
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-5">
+                                                            <input type="date" v-model="edit.tgl_mulai" class="form-control" style="margin-left: -30px">
+                                                        </div>
+                                                        <div class="col-md-1" style="margin-left: -50px; margin-top: 5px">
+                                                            <b>s/d</b>
+                                                        </div>
+                                                        <div class="col-md-5" style="margin-left: -20px">
+                                                            <input type="date" v-model="edit.tgl_akhir" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="" style="margin-top: 10px">Deskripsi Event</label>
+                                                    <textarea cols="78" rows="8" v-model="edit.deskripsi" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" @click="saveEdit">
+                                                    <i class="fa fa-spin fa-spinner" v-if="isLoadingEdit"></i>
+                                                    <i class="fa fa-check" v-else></i>
+                                                    Simpan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

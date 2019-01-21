@@ -3,11 +3,11 @@
         <section class="content-header">
             <h1>
                 Tambah Anggota
-                <small>tambah ketua UKM BOSS</small>
+                <small>tambah anggota UKM BOSS</small>
             </h1>
             <ol class="breadcrumb">
                 <li><router-link :to="{path : '/main'}"><i class="fa fa-dashboard"></i> Dashboard</router-link></li>
-                <li class="active">Tambah Ketua</li>
+                <li class="active">Tambah Anggota</li>
             </ol>
         </section>
         <section class="content">

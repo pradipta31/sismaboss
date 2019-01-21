@@ -88713,12 +88713,18 @@ var render = function() {
             { staticClass: "alert alert-success", attrs: { role: "alert" } },
             [
               _c("h4", { staticClass: "alert-heading" }, [
-                _vm._v("Well done " + _vm._s(_vm.user.name) + "!")
+                _vm._v(
+                  "Selamat datang " +
+                    _vm._s(_vm.user.name) +
+                    " di Sistem Informasi Manajemen UKM BOSS!"
+                )
               ]),
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content."
+                  "jabatan anda adalah sebagai " +
+                    _vm._s(_vm.user.role) +
+                    " hanya dapat mengakses beberapa menu saja. Sistem ini hanya digunakan untuk manajemen data-data inventaris dari UKM BOSS!"
                 )
               ]),
               _vm._v(" "),
@@ -88726,7 +88732,7 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "mb-0" }, [
                 _vm._v(
-                  "Whenever you need to, be sure to use margin utilities to keep things nice and tidy."
+                  "Mohon untuk menggunakan sistem dengan baik demi menciptakan kenyamanan bersama."
                 )
               ])
             ]
@@ -91407,12 +91413,28 @@ var render = function() {
                                                   _vm.modal.status
                                                     ? _c("h4", [
                                                         _vm._v(
-                                                          "\n                                                                : Aktif\n                                                            "
+                                                          "\n                                                                : "
+                                                        ),
+                                                        _c(
+                                                          "span",
+                                                          {
+                                                            staticClass:
+                                                              "label label-success"
+                                                          },
+                                                          [_vm._v("Aktif")]
                                                         )
                                                       ])
                                                     : _c("h4", [
                                                         _vm._v(
-                                                          "\n                                                                : Tidak Aktif\n                                                            "
+                                                          "\n                                                                : "
+                                                        ),
+                                                        _c(
+                                                          "span",
+                                                          {
+                                                            staticClass:
+                                                              "label label-warning"
+                                                          },
+                                                          [_vm._v("Non Aktif")]
                                                         )
                                                       ])
                                                 ]
@@ -91785,7 +91807,7 @@ var render = function() {
     _vm._v(" "),
     _c("section", { staticClass: "content" }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-xs-8" }, [
+        _c("div", { staticClass: "col-xs-6" }, [
           _c("div", { staticClass: "box" }, [
             _vm._m(1),
             _vm._v(" "),
@@ -92130,7 +92152,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -92141,6 +92163,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -92391,48 +92418,75 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("td", [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary btn-sm",
-                                attrs: {
-                                  "data-toggle": "modal",
-                                  "data-target": "#exampleModal"
-                                },
-                                on: {
-                                  click: function($event) {
-                                    _vm.showModal(item.id)
-                                  }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-eye" })]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-warning btn-sm",
-                                on: {
-                                  click: function($event) {
-                                    _vm.editPengurus(item.id)
-                                  }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-pencil" })]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-danger btn-sm",
-                                on: {
-                                  click: function($event) {
-                                    _vm.deletePengurus(item.id)
-                                  }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-trash" })]
-                            ),
+                            item.role != "ketua"
+                              ? _c("span", [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-primary btn-sm",
+                                      attrs: {
+                                        "data-toggle": "modal",
+                                        "data-target": "#exampleModal"
+                                      },
+                                      on: {
+                                        click: function($event) {
+                                          _vm.showModal(item.id)
+                                        }
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-eye" })]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-warning btn-sm",
+                                      on: {
+                                        click: function($event) {
+                                          _vm.editPengurus(item.id)
+                                        }
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-pencil" })]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-danger btn-sm",
+                                      on: {
+                                        click: function($event) {
+                                          _vm.deletePengurus(item.id)
+                                        }
+                                      }
+                                    },
+                                    [_c("i", { staticClass: "fa fa-trash" })]
+                                  )
+                                ])
+                              : _c(
+                                  "span",
+                                  [
+                                    _c("center", [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-primary btn-sm",
+                                          attrs: {
+                                            "data-toggle": "modal",
+                                            "data-target": "#exampleModal"
+                                          },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.showModal(item.id)
+                                            }
+                                          }
+                                        },
+                                        [_c("i", { staticClass: "fa fa-eye" })]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
                             _vm._v(" "),
                             _c(
                               "div",
@@ -93311,7 +93365,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -93322,6 +93376,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -93507,58 +93566,69 @@ var render = function() {
                 _vm._m(1),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-md-12" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "" } }, [_vm._v("Jabatan")]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.data.role,
-                              expression: "data.role"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.data,
-                                "role",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { value: "wakil" } }, [
-                            _vm._v("Wakil Ketua")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "sekretaris" } }, [
-                            _vm._v("Sekretaris")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "bendahara" } }, [
-                            _vm._v("Bendahara")
+                  _vm.data.role != "ketua"
+                    ? _c("span", [
+                        _c("div", { staticClass: "col-md-6" }, [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c("label", { attrs: { for: "" } }, [
+                              _vm._v("Jabatan")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "select",
+                              {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.data.role,
+                                    expression: "data.role"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                on: {
+                                  change: function($event) {
+                                    var $$selectedVal = Array.prototype.filter
+                                      .call($event.target.options, function(o) {
+                                        return o.selected
+                                      })
+                                      .map(function(o) {
+                                        var val =
+                                          "_value" in o ? o._value : o.value
+                                        return val
+                                      })
+                                    _vm.$set(
+                                      _vm.data,
+                                      "role",
+                                      $event.target.multiple
+                                        ? $$selectedVal
+                                        : $$selectedVal[0]
+                                    )
+                                  }
+                                }
+                              },
+                              [
+                                _c("option", { attrs: { value: "wakil" } }, [
+                                  _vm._v("Wakil Ketua")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  { attrs: { value: "sekretaris" } },
+                                  [_vm._v("Sekretaris")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "option",
+                                  { attrs: { value: "bendahara" } },
+                                  [_vm._v("Bendahara")]
+                                )
+                              ]
+                            )
                           ])
-                        ]
-                      )
-                    ])
-                  ]),
+                        ])
+                      ])
+                    : _c("span"),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
@@ -94306,8 +94376,8 @@ var render = function() {
                                                 ],
                                                 staticClass: "form-control",
                                                 attrs: {
-                                                  cols: "78",
-                                                  rows: "15",
+                                                  cols: "84",
+                                                  rows: "6",
                                                   readonly: ""
                                                 },
                                                 domProps: {
@@ -100174,7 +100244,7 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("li", { staticClass: "active" }, [_vm._v("Tambah Ketua")])
+        _c("li", { staticClass: "active" }, [_vm._v("Tambah Anggota")])
       ])
     ]),
     _vm._v(" "),
@@ -100347,7 +100417,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("h1", [
       _vm._v("\n            Tambah Anggota\n            "),
-      _c("small", [_vm._v("tambah ketua UKM BOSS")])
+      _c("small", [_vm._v("tambah anggota UKM BOSS")])
     ])
   },
   function() {
@@ -100855,7 +100925,7 @@ var render = function() {
                                 staticClass: "modal-title",
                                 attrs: { id: "editMemberLabel" }
                               },
-                              [_vm._v("Edit Anggota " + _vm._s(_vm.edit.name))]
+                              [_vm._v("Edit Anggota: " + _vm._s(_vm.edit.name))]
                             ),
                             _vm._v(" "),
                             _vm._m(2)
@@ -104419,7 +104489,7 @@ var render = function() {
                   "router-link",
                   {
                     staticClass: "btn btn-info",
-                    attrs: { to: { name: "sekretaris_surat_masuk_index" } }
+                    attrs: { to: { name: "sekretaris_surat_keluar_index" } }
                   },
                   [_vm._v("Kembali")]
                 )
@@ -106234,7 +106304,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -106927,384 +106996,269 @@ var render = function() {
                                   ]
                                 )
                               ]
-                            ),
-                            _vm._v(" "),
+                            )
+                          ])
+                        ])
+                      })
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal fade",
+                    attrs: {
+                      id: "editEvent",
+                      tabindex: "-1",
+                      role: "dialog",
+                      "aria-labelledby": "editEventLabel",
+                      "aria-hidden": "true"
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "modal-dialog",
+                        attrs: { role: "document" }
+                      },
+                      [
+                        _c("div", { staticClass: "modal-content" }, [
+                          _c("div", { staticClass: "modal-header" }, [
                             _c(
-                              "div",
+                              "h3",
                               {
-                                staticClass: "modal fade",
-                                attrs: {
-                                  id: "editEvent",
-                                  tabindex: "-1",
-                                  role: "dialog",
-                                  "aria-labelledby": "editEventLabel",
-                                  "aria-hidden": "true"
-                                }
+                                staticClass: "modal-title",
+                                attrs: { id: "editEventLabel" }
                               },
                               [
+                                _vm._v(
+                                  "Edit Event " + _vm._s(_vm.edit.nama_event)
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(7)
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "modal-body" }, [
+                            _c("div", { staticClass: "form-group" }, [
+                              _c("label", { attrs: { for: "" } }, [
+                                _vm._v("Nama Event")
+                              ]),
+                              _vm._v(" "),
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.edit.nama_event,
+                                    expression: "edit.nama_event"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  type: "text",
+                                  placeholder: "Masukan nama event"
+                                },
+                                domProps: { value: _vm.edit.nama_event },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.edit,
+                                      "nama_event",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "form-group" }, [
+                              _c("label", { attrs: { for: "" } }, [
+                                _vm._v("Ketua Panitia")
+                              ]),
+                              _vm._v(" "),
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.edit.ketua_panitia,
+                                    expression: "edit.ketua_panitia"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  type: "text",
+                                  placeholder: "Masukan nama ketua panitia"
+                                },
+                                domProps: { value: _vm.edit.ketua_panitia },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.edit,
+                                      "ketua_panitia",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "form-group" }, [
+                              _c("label", { attrs: { for: "" } }, [
+                                _vm._v("Tanggal Event")
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-md-12" }, [
+                                _c("div", { staticClass: "col-md-5" }, [
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.edit.tgl_mulai,
+                                        expression: "edit.tgl_mulai"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    staticStyle: { "margin-left": "-30px" },
+                                    attrs: { type: "date" },
+                                    domProps: { value: _vm.edit.tgl_mulai },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.edit,
+                                          "tgl_mulai",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(8),
+                                _vm._v(" "),
                                 _c(
                                   "div",
                                   {
-                                    staticClass: "modal-dialog",
-                                    attrs: { role: "document" }
+                                    staticClass: "col-md-5",
+                                    staticStyle: { "margin-left": "-20px" }
                                   },
                                   [
-                                    _c(
-                                      "div",
-                                      { staticClass: "modal-content" },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-header" },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass: "modal-title",
-                                                attrs: { id: "editEventLabel" }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "Edit Event " +
-                                                    _vm._s(_vm.edit.nama_event)
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _vm._m(7, true)
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-body" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  { attrs: { for: "" } },
-                                                  [_vm._v("Nama Event")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.edit.nama_event,
-                                                      expression:
-                                                        "edit.nama_event"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    type: "text",
-                                                    placeholder:
-                                                      "Masukan nama event"
-                                                  },
-                                                  domProps: {
-                                                    value: _vm.edit.nama_event
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.edit,
-                                                        "nama_event",
-                                                        $event.target.value
-                                                      )
-                                                    }
-                                                  }
-                                                })
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  { attrs: { for: "" } },
-                                                  [_vm._v("Ketua Panitia")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.edit.ketua_panitia,
-                                                      expression:
-                                                        "edit.ketua_panitia"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    type: "text",
-                                                    placeholder:
-                                                      "Masukan nama ketua panitia"
-                                                  },
-                                                  domProps: {
-                                                    value:
-                                                      _vm.edit.ketua_panitia
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.edit,
-                                                        "ketua_panitia",
-                                                        $event.target.value
-                                                      )
-                                                    }
-                                                  }
-                                                })
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  { attrs: { for: "" } },
-                                                  [_vm._v("Tanggal Event")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "col-md-12" },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass: "col-md-5"
-                                                      },
-                                                      [
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.edit
-                                                                  .tgl_mulai,
-                                                              expression:
-                                                                "edit.tgl_mulai"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          staticStyle: {
-                                                            "margin-left":
-                                                              "-30px"
-                                                          },
-                                                          attrs: {
-                                                            type: "date"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.edit.tgl_mulai
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.$set(
-                                                                _vm.edit,
-                                                                "tgl_mulai",
-                                                                $event.target
-                                                                  .value
-                                                              )
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _vm._m(8, true),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass: "col-md-5",
-                                                        staticStyle: {
-                                                          "margin-left": "-20px"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c("input", {
-                                                          directives: [
-                                                            {
-                                                              name: "model",
-                                                              rawName:
-                                                                "v-model",
-                                                              value:
-                                                                _vm.edit
-                                                                  .tgl_akhir,
-                                                              expression:
-                                                                "edit.tgl_akhir"
-                                                            }
-                                                          ],
-                                                          staticClass:
-                                                            "form-control",
-                                                          attrs: {
-                                                            type: "date"
-                                                          },
-                                                          domProps: {
-                                                            value:
-                                                              _vm.edit.tgl_akhir
-                                                          },
-                                                          on: {
-                                                            input: function(
-                                                              $event
-                                                            ) {
-                                                              if (
-                                                                $event.target
-                                                                  .composing
-                                                              ) {
-                                                                return
-                                                              }
-                                                              _vm.$set(
-                                                                _vm.edit,
-                                                                "tgl_akhir",
-                                                                $event.target
-                                                                  .value
-                                                              )
-                                                            }
-                                                          }
-                                                        })
-                                                      ]
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "form-group" },
-                                              [
-                                                _c(
-                                                  "label",
-                                                  {
-                                                    staticStyle: {
-                                                      "margin-top": "10px"
-                                                    },
-                                                    attrs: { for: "" }
-                                                  },
-                                                  [_vm._v("Deskripsi Event")]
-                                                ),
-                                                _vm._v(" "),
-                                                _c("textarea", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value: _vm.edit.deskripsi,
-                                                      expression:
-                                                        "edit.deskripsi"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: {
-                                                    cols: "78",
-                                                    rows: "8"
-                                                  },
-                                                  domProps: {
-                                                    value: _vm.edit.deskripsi
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.edit,
-                                                        "deskripsi",
-                                                        $event.target.value
-                                                      )
-                                                    }
-                                                  }
-                                                })
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "modal-footer" },
-                                          [
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "btn btn-secondary",
-                                                attrs: {
-                                                  type: "button",
-                                                  "data-dismiss": "modal"
-                                                }
-                                              },
-                                              [_vm._v("Close")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass: "btn btn-primary",
-                                                attrs: { type: "button" },
-                                                on: { click: _vm.saveEdit }
-                                              },
-                                              [
-                                                _vm.isLoadingEdit
-                                                  ? _c("i", {
-                                                      staticClass:
-                                                        "fa fa-spin fa-spinner"
-                                                    })
-                                                  : _c("i", {
-                                                      staticClass: "fa fa-check"
-                                                    }),
-                                                _vm._v(
-                                                  "\n                                                            Simpan\n                                                        "
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.edit.tgl_akhir,
+                                          expression: "edit.tgl_akhir"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: { type: "date" },
+                                      domProps: { value: _vm.edit.tgl_akhir },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.edit,
+                                            "tgl_akhir",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
                                   ]
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "form-group" }, [
+                              _c(
+                                "label",
+                                {
+                                  staticStyle: { "margin-top": "10px" },
+                                  attrs: { for: "" }
+                                },
+                                [_vm._v("Deskripsi Event")]
+                              ),
+                              _vm._v(" "),
+                              _c("textarea", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.edit.deskripsi,
+                                    expression: "edit.deskripsi"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: { cols: "78", rows: "8" },
+                                domProps: { value: _vm.edit.deskripsi },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.edit,
+                                      "deskripsi",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              })
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "modal-footer" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-secondary",
+                                attrs: {
+                                  type: "button",
+                                  "data-dismiss": "modal"
+                                }
+                              },
+                              [_vm._v("Close")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary",
+                                attrs: { type: "button" },
+                                on: { click: _vm.saveEdit }
+                              },
+                              [
+                                _vm.isLoadingEdit
+                                  ? _c("i", {
+                                      staticClass: "fa fa-spin fa-spinner"
+                                    })
+                                  : _c("i", { staticClass: "fa fa-check" }),
+                                _vm._v(
+                                  "\n                                                Simpan\n                                            "
                                 )
                               ]
                             )
                           ])
                         ])
-                      })
+                      ]
                     )
                   ]
                 )
@@ -110611,14 +110565,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -111599,7 +111545,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "Edit Saldo Bulan " +
+                                "Edit Keuangan Bulan " +
                                   _vm._s(_vm.sld(_vm.edit.created_at))
                               )
                             ]
@@ -111609,113 +111555,73 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "modal-body" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("span", [
-                              _c("label", { attrs: { for: "" } }, [
-                                _vm._v("Debit")
-                              ]),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.edit.debit,
-                                    expression: "edit.debit"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "number",
-                                  placeholder: "Masukan debit (0-9999999)",
-                                  disabled: ""
-                                },
-                                domProps: { value: _vm.edit.debit },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.edit,
-                                      "debit",
-                                      $event.target.value
-                                    )
-                                  }
-                                }
-                              })
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("span", [
-                              _c("label", { attrs: { for: "" } }, [
-                                _vm._v("Kredit")
-                              ]),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.edit.kredit,
-                                    expression: "edit.kredit"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: { type: "number", disabled: "" },
-                                domProps: { value: _vm.edit.kredit },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.edit,
-                                      "kredit",
-                                      $event.target.value
-                                    )
-                                  }
-                                }
-                              })
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("span", [
-                              _c("span", [
-                                _c("label", { attrs: { for: "" } }, [
-                                  _vm._v("Saldo")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.edit.saldo,
-                                      expression: "edit.saldo"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: { type: "number", disabled: "" },
-                                  domProps: { value: _vm.edit.saldo },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
+                          _vm.edit.jenis == "debit"
+                            ? _c("span", [
+                                _c("div", { staticClass: "form-group" }, [
+                                  _c("label", { attrs: { for: "" } }, [
+                                    _vm._v("Debit")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.edit.nominal,
+                                        expression: "edit.nominal"
                                       }
-                                      _vm.$set(
-                                        _vm.edit,
-                                        "saldo",
-                                        $event.target.value
-                                      )
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: { type: "number", disabled: "" },
+                                    domProps: { value: _vm.edit.nominal },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.edit,
+                                          "nominal",
+                                          $event.target.value
+                                        )
+                                      }
                                     }
-                                  }
-                                })
+                                  })
+                                ])
                               ])
-                            ])
-                          ]),
+                            : _c("span", [
+                                _c("div", { staticClass: "form-group" }, [
+                                  _c("label", { attrs: { for: "" } }, [
+                                    _vm._v("Kredit")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.edit.nominal,
+                                        expression: "edit.nominal"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: { type: "number", disabled: "" },
+                                    domProps: { value: _vm.edit.nominal },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.edit,
+                                          "nominal",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  })
+                                ])
+                              ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "form-group" }, [
                             _c(

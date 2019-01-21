@@ -72,7 +72,7 @@
                                                                 </h4>
                                                                 <h4>: {{show.ketua_panitia}}</h4>
                                                             </div>
-                                                            <textarea v-model="show.deskripsi" cols="78" rows="15" class="form-control" readonly></textarea>
+                                                            <textarea v-model="show.deskripsi" cols="84" rows="6" class="form-control" readonly></textarea>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class ="alert alert-success" role="alert">
-                        <h4 class="alert-heading">Well done {{user.name}}!</h4>
-                        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                        <h4 class="alert-heading">Selamat datang {{user.name}} di Sistem Informasi Manajemen UKM BOSS!</h4>
+                        <p>jabatan anda adalah sebagai {{user.role}} hanya dapat mengakses beberapa menu saja. Sistem ini hanya digunakan untuk manajemen data-data inventaris dari UKM BOSS!</p>
                         <hr>
-                        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                        <p class="mb-0">Mohon untuk menggunakan sistem dengan baik demi menciptakan kenyamanan bersama.</p>
                     </div>
                 </div>
             </div>

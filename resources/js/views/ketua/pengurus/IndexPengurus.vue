@@ -42,11 +42,16 @@
                                                 <span class="label label-warning" v-else>Non Aktif</span>
                                             </td>
                                             <td>
-                                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
-                                                <button class="btn btn-warning btn-sm" @click="editPengurus(item.id)"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-sm" @click="deletePengurus(item.id)">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
+                                                <span v-if="item.role != 'ketua'">
+                                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
+                                                    <button class="btn btn-warning btn-sm" @click="editPengurus(item.id)"><i class="fa fa-pencil"></i></button>
+                                                    <button class="btn btn-danger btn-sm" @click="deletePengurus(item.id)">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                                <span v-else>
+                                                    <center><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button></center>
+                                                </span>
 
                                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">

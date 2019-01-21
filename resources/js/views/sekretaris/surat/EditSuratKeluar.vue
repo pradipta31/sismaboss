@@ -37,7 +37,7 @@
                                 <i class="fa fa-check" v-else></i>
                                 Simpan
                             </button>
-                            <router-link :to="{name:'sekretaris_surat_masuk_index'}" class="btn btn-info">Kembali</router-link>
+                            <router-link :to="{name:'sekretaris_surat_keluar_index'}" class="btn btn-info">Kembali</router-link>
                         </div>
                     </div>
                 </div>
