@@ -26,7 +26,7 @@
                                         <th>Email</th>
                                         <th>Jabatan</th>
                                         <th width="15px">Status</th>
-                                        <th width="100px">Opsi</th>
+                                        <th width="100px"><center>Opsi</center></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -43,11 +43,13 @@
                                             </td>
                                             <td>
                                                 <span v-if="item.role != 'ketua'">
-                                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
-                                                    <button class="btn btn-warning btn-sm" @click="editPengurus(item.id)"><i class="fa fa-pencil"></i></button>
-                                                    <button class="btn btn-danger btn-sm" @click="deletePengurus(item.id)">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
+                                                    <center>
+                                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
+                                                        <button class="btn btn-warning btn-sm" @click="editPengurus(item.id)"><i class="fa fa-pencil"></i></button>
+                                                        <!-- <button class="btn btn-danger btn-sm" @click="deletePengurus(item.id)">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button> -->
+                                                    </center>
                                                 </span>
                                                 <span v-else>
                                                     <center><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button></center>
@@ -143,27 +145,27 @@ export default {
                 }
             })
         },
-        deletePengurus(id){
-            swal({
-                title: 'Apakah anda yakin ingin menghapus data pengurus ini ?',
-                buttons: true,
-                icon: 'info',
-                dangerMode: true
-            })
-            .then(yes => {
-                if(yes){
-                    axios.delete(`api/pengurus/${id}`)
-                    .then(r => {
-                        this.getData();
-                        swal(r.data.message, {icon: "success"});
-                    })
-                    .catch(e => {
-                        console.log(e);
-                        toast.error('Gagal menghapus data pengurus yang dipilih');
-                    })
-                }
-            })
-        },
+        // deletePengurus(id){
+        //     swal({
+        //         title: 'Apakah anda yakin ingin menghapus data pengurus ini ?',
+        //         buttons: true,
+        //         icon: 'info',
+        //         dangerMode: true
+        //     })
+        //     .then(yes => {
+        //         if(yes){
+        //             axios.delete(`api/pengurus/${id}`)
+        //             .then(r => {
+        //                 this.getData();
+        //                 swal(r.data.message, {icon: "success"});
+        //             })
+        //             .catch(e => {
+        //                 console.log(e);
+        //                 toast.error('Gagal menghapus data pengurus yang dipilih');
+        //             })
+        //         }
+        //     })
+        // },
         showModal(id){
             axios.get(`api/pengurus/show/${id}`)
             .then(r => {

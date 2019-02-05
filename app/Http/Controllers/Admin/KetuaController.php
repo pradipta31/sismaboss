@@ -51,7 +51,7 @@ class KetuaController extends Controller
         ]);
 
         return response()->json([
-            'message' => 'Data Ketua baru berhasil disimpan'
+            'message' => 'Data kepengurusan baru berhasil disimpan'
         ]);
     }
 
@@ -134,7 +134,7 @@ class KetuaController extends Controller
         }
 
         return response()->json([
-            'message' => 'Update data ketua berhasil'
+            'message' => 'Update data kepengurusan berhasil'
         ]);
     }
 }

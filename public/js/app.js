@@ -91159,32 +91159,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         },
-        deleteKetua: function deleteKetua(id) {
-            var _this2 = this;
 
-            swal({
-                title: 'Apakah anda yakin ingin menghapus data ketua ini ?',
-                buttons: true,
-                icon: 'info',
-                dangerMode: true
-            }).then(function (yes) {
-                if (yes) {
-                    axios.delete('api/ketua/' + id).then(function (r) {
-                        _this2.getData();
-                        swal(r.data.message, { icon: "success" });
-                    }).catch(function (e) {
-                        console.log(e);
-                        toast.error('Gagal menghapus data Ketua yang dipilih');
-                    });
-                }
-            });
-        },
+        // deleteKetua(id){
+        //     swal({
+        //         title: 'Apakah anda yakin ingin menghapus data ketua ini ?',
+        //         buttons: true,
+        //         icon: 'info',
+        //         dangerMode: true
+        //     })
+        //     .then(yes => {
+        //         if(yes){
+        //             axios.delete(`api/ketua/${id}`)
+        //             .then(r => {
+        //                 this.getData();
+        //                 swal(r.data.message, {icon: "success"});
+        //             })
+        //             .catch(e => {
+        //                 console.log(e);
+        //                 toast.error('Gagal menghapus data Ketua yang dipilih');
+        //             })
+        //         }
+        //     })
+        // },
         showModal: function showModal(id) {
-            var _this3 = this;
+            var _this2 = this;
 
             axios.get('api/ketua/show/' + id).then(function (r) {
                 console.log(r);
-                _this3.modal = r.data.user;
+                _this2.modal = r.data.user;
             }).catch(function (e) {
                 console.log(e);
             });
@@ -91297,19 +91299,6 @@ var render = function() {
                                 }
                               },
                               [_c("i", { staticClass: "fa fa-pencil" })]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-danger btn-sm",
-                                on: {
-                                  click: function($event) {
-                                    _vm.deleteKetua(item.id)
-                                  }
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-trash" })]
                             ),
                             _vm._v(" "),
                             _c(
@@ -92152,7 +92141,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -92163,6 +92152,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -92308,32 +92299,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             });
         },
-        deletePengurus: function deletePengurus(id) {
-            var _this2 = this;
 
-            swal({
-                title: 'Apakah anda yakin ingin menghapus data pengurus ini ?',
-                buttons: true,
-                icon: 'info',
-                dangerMode: true
-            }).then(function (yes) {
-                if (yes) {
-                    axios.delete('api/pengurus/' + id).then(function (r) {
-                        _this2.getData();
-                        swal(r.data.message, { icon: "success" });
-                    }).catch(function (e) {
-                        console.log(e);
-                        toast.error('Gagal menghapus data pengurus yang dipilih');
-                    });
-                }
-            });
-        },
+        // deletePengurus(id){
+        //     swal({
+        //         title: 'Apakah anda yakin ingin menghapus data pengurus ini ?',
+        //         buttons: true,
+        //         icon: 'info',
+        //         dangerMode: true
+        //     })
+        //     .then(yes => {
+        //         if(yes){
+        //             axios.delete(`api/pengurus/${id}`)
+        //             .then(r => {
+        //                 this.getData();
+        //                 swal(r.data.message, {icon: "success"});
+        //             })
+        //             .catch(e => {
+        //                 console.log(e);
+        //                 toast.error('Gagal menghapus data pengurus yang dipilih');
+        //             })
+        //         }
+        //     })
+        // },
         showModal: function showModal(id) {
-            var _this3 = this;
+            var _this2 = this;
 
             axios.get('api/pengurus/show/' + id).then(function (r) {
                 console.log(r);
-                _this3.modal = r.data.admins;
+                _this2.modal = r.data.admins;
             }).catch(function (e) {
                 console.log(e);
             });
@@ -92385,7 +92378,32 @@ var render = function() {
                     attrs: { id: "example1" }
                   },
                   [
-                    _vm._m(1),
+                    _c("thead", [
+                      _c("tr", [
+                        _c("th", { attrs: { width: "5px" } }, [_vm._v("No")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Nama")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Username")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("NIM")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Email")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Jabatan")]),
+                        _vm._v(" "),
+                        _c("th", { attrs: { width: "15px" } }, [
+                          _vm._v("Status")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "th",
+                          { attrs: { width: "100px" } },
+                          [_c("center", [_vm._v("Opsi")])],
+                          1
+                        )
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c(
                       "tbody",
@@ -92419,50 +92437,47 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [
                             item.role != "ketua"
-                              ? _c("span", [
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "btn btn-primary btn-sm",
-                                      attrs: {
-                                        "data-toggle": "modal",
-                                        "data-target": "#exampleModal"
-                                      },
-                                      on: {
-                                        click: function($event) {
-                                          _vm.showModal(item.id)
-                                        }
-                                      }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-eye" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "btn btn-warning btn-sm",
-                                      on: {
-                                        click: function($event) {
-                                          _vm.editPengurus(item.id)
-                                        }
-                                      }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-pencil" })]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass: "btn btn-danger btn-sm",
-                                      on: {
-                                        click: function($event) {
-                                          _vm.deletePengurus(item.id)
-                                        }
-                                      }
-                                    },
-                                    [_c("i", { staticClass: "fa fa-trash" })]
-                                  )
-                                ])
+                              ? _c(
+                                  "span",
+                                  [
+                                    _c("center", [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-primary btn-sm",
+                                          attrs: {
+                                            "data-toggle": "modal",
+                                            "data-target": "#exampleModal"
+                                          },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.showModal(item.id)
+                                            }
+                                          }
+                                        },
+                                        [_c("i", { staticClass: "fa fa-eye" })]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-warning btn-sm",
+                                          on: {
+                                            click: function($event) {
+                                              _vm.editPengurus(item.id)
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-pencil"
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                )
                               : _c(
                                   "span",
                                   [
@@ -92532,7 +92547,7 @@ var render = function() {
                                               ]
                                             ),
                                             _vm._v(" "),
-                                            _vm._m(2, true)
+                                            _vm._m(1, true)
                                           ]
                                         ),
                                         _vm._v(" "),
@@ -92541,7 +92556,7 @@ var render = function() {
                                           { staticClass: "modal-body" },
                                           [
                                             _c("div", { staticClass: "row" }, [
-                                              _vm._m(3, true),
+                                              _vm._m(2, true),
                                               _vm._v(" "),
                                               _c(
                                                 "div",
@@ -92621,7 +92636,7 @@ var render = function() {
                                           ]
                                         ),
                                         _vm._v(" "),
-                                        _vm._m(4, true)
+                                        _vm._m(3, true)
                                       ]
                                     )
                                   ]
@@ -92650,30 +92665,6 @@ var staticRenderFns = [
     return _c("h1", [
       _vm._v("\n            Data Pengurus UKM BOSS\n            "),
       _c("small", [_vm._v("data-data pengurus UKM BOSS")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", { attrs: { width: "5px" } }, [_vm._v("No")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Nama")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Username")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("NIM")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Email")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Jabatan")]),
-        _vm._v(" "),
-        _c("th", { attrs: { width: "15px" } }, [_vm._v("Status")]),
-        _vm._v(" "),
-        _c("th", { attrs: { width: "100px" } }, [_vm._v("Opsi")])
-      ])
     ])
   },
   function() {

@@ -214,7 +214,7 @@ class LetterController extends Controller
             ]);
         }
         return response()->json([
-            'message' => 'Foto surat berhasil diubah'
+            'message' => 'File surat berhasil diubah'
         ]);
     }
 

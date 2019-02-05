@@ -44,9 +44,9 @@
                                         <td>
                                             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" @click="showModal(item.id)"><i class="fa fa-eye"></i></button>
                                             <button class="btn btn-warning btn-sm" @click="editKetua(item.id)"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" @click="deleteKetua(item.id)">
+                                            <!-- <button class="btn btn-danger btn-sm" @click="deleteKetua(item.id)">
                                                 <i class="fa fa-trash"></i>
-                                            </button>
+                                            </button> -->
 
                                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
@@ -137,27 +137,27 @@ export default {
                 }
             })
         },
-        deleteKetua(id){
-            swal({
-                title: 'Apakah anda yakin ingin menghapus data ketua ini ?',
-                buttons: true,
-                icon: 'info',
-                dangerMode: true
-            })
-            .then(yes => {
-                if(yes){
-                    axios.delete(`api/ketua/${id}`)
-                    .then(r => {
-                        this.getData();
-                        swal(r.data.message, {icon: "success"});
-                    })
-                    .catch(e => {
-                        console.log(e);
-                        toast.error('Gagal menghapus data Ketua yang dipilih');
-                    })
-                }
-            })
-        },
+        // deleteKetua(id){
+        //     swal({
+        //         title: 'Apakah anda yakin ingin menghapus data ketua ini ?',
+        //         buttons: true,
+        //         icon: 'info',
+        //         dangerMode: true
+        //     })
+        //     .then(yes => {
+        //         if(yes){
+        //             axios.delete(`api/ketua/${id}`)
+        //             .then(r => {
+        //                 this.getData();
+        //                 swal(r.data.message, {icon: "success"});
+        //             })
+        //             .catch(e => {
+        //                 console.log(e);
+        //                 toast.error('Gagal menghapus data Ketua yang dipilih');
+        //             })
+        //         }
+        //     })
+        // },
         showModal(id){
             axios.get(`api/ketua/show/${id}`)
             .then(r => {
