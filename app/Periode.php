@@ -36,7 +36,6 @@ class Periode extends Model
 
     public static function boot() {
         parent::boot();
-
         static::deleting(function($periode) {
              $periode->User()->delete();
         });

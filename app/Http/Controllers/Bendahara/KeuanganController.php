@@ -95,8 +95,8 @@ class KeuanganController extends Controller
             Carbon::now()])
             ->first();
 
-            $results = $debits->debit - $kredits->kredit; 
-            
+            $results = $debits->debit - $kredits->kredit;
+
             return response()->json([
                 'debits' => $debits,
                 'kredits' => $kredits,

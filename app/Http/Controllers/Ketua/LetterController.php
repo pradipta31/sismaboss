@@ -15,6 +15,7 @@ class LetterController extends Controller
         $letters = Letter::select('letters.*','periodes.periode','users.username')
         ->join('periodes','periodes.id','=','letters.periode_id')
         ->join('users','users.id','=','letters.user_id')
+        ->where('users.periode_id','=',auth()->user()->periode_id)
         ->get();
 
         return response()->json([

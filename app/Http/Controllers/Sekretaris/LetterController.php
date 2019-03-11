@@ -87,6 +87,7 @@ class LetterController extends Controller
         ->join('periodes','periodes.id','=','letters.periode_id')
         ->join('users','users.id','=','letters.user_id')
         ->where('letters.jenis','=','Surat Masuk')
+        ->where('letters.periode_id','=',auth()->user()->periode_id)
         ->get();
 
         return response()->json([
@@ -109,7 +110,7 @@ class LetterController extends Controller
             'tanggal' => 'required',
             'deskripsi' => 'required'
         ]);
-        
+
         $letters = Letter::findOrFail($id)->update([
             'nomor_surat' => $r->nomor_surat,
             'perihal' => $r->perihal,
@@ -137,7 +138,7 @@ class LetterController extends Controller
             'tanggal' => 'required',
             'deskripsi' => 'required'
         ]);
-        
+
         $letters = Letter::findOrFail($id)->update([
             'nomor_surat' => $r->nomor_surat,
             'perihal' => $r->perihal,
@@ -155,6 +156,7 @@ class LetterController extends Controller
         ->join('periodes','periodes.id','=','letters.periode_id')
         ->join('users','users.id','=','letters.user_id')
         ->where('letters.jenis','=','Surat Keluar')
+        ->where('letters.periode_id','=',auth()->user()->periode_id)
         ->get();
 
         return response()->json([
