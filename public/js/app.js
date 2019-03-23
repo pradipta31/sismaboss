@@ -86986,7 +86986,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
             var _this = this;
 
             axios.post('api/auth/logout').then(function (r) {
-                toast.success('Sukses Logout');
+                toast.success('Logout berhasil!');
                 _this.$localStorage.remove('access_token');
                 _this.$cookies.remove('sismaboss_auth_data');
                 _this.$cookies.remove('sismaboss_token');

@@ -64,7 +64,7 @@ export default {
         logout(){
             axios.post('api/auth/logout')
             .then(r => {
-                toast.success('Sukses Logout');
+                toast.success('Logout berhasil!');
                 this.$localStorage.remove('access_token');
                 this.$cookies.remove('sismaboss_auth_data');
                 this.$cookies.remove('sismaboss_token');
