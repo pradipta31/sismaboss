@@ -105005,7 +105005,7 @@ var render = function() {
     _vm._v(" "),
     _c("section", { staticClass: "content" }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-xs-12" }, [
+        _c("div", { staticClass: "col-md-12" }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box-body" }, [
               _vm._m(1),
