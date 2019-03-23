@@ -101,13 +101,13 @@
                                         </td>
                                         <td>{{f.keterangan}}</td>
                                         <td>
-                                            {{f.debit}}
+                                            Rp. {{f.debit}}
                                         </td>
                                         <td>
-                                            {{f.kredit}}
+                                            Rp. {{f.kredit}}
                                         </td>
                                         <td>
-                                            {{f.saldo}}
+                                            Rp. {{f.saldo}}
                                         </td>
                                         <td>{{f.username}}</td>
                                         <td>
@@ -409,7 +409,7 @@ export default {
                                 this.getData(true);
                             }
                         })
-                        
+
                     })
                     .catch(e => {
                         this.isLoadingKeuangan = false;
@@ -442,7 +442,7 @@ export default {
                                 this.getData(true);
                             }
                         })
-                        
+
                     })
                     .catch(e => {
                         this.isLoadingSaldoEdit = false;

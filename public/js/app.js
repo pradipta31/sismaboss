@@ -111151,7 +111151,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(
-                              "\n                                        " +
+                              "\n                                        Rp. " +
                                 _vm._s(f.debit) +
                                 "\n                                    "
                             )
@@ -111159,7 +111159,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(
-                              "\n                                        " +
+                              "\n                                        Rp. " +
                                 _vm._s(f.kredit) +
                                 "\n                                    "
                             )
@@ -111167,7 +111167,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(
-                              "\n                                        " +
+                              "\n                                        Rp. " +
                                 _vm._s(f.saldo) +
                                 "\n                                    "
                             )
