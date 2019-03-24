@@ -28,9 +28,8 @@ class MemberController extends Controller
         $this->validate($r,[
             'anggota.*.nim' => 'required',
             'anggota.*.name' => 'required',
-            'anggota.*.handphone' => 'required'
         ]);
-        
+
         DB::transaction(function() use($r){
             foreach ($r->anggota as $anggota) {
                 $members = Member::create([
@@ -42,7 +41,7 @@ class MemberController extends Controller
                 ]);
             }
         });
-        
+
         return response()->json([
             'message' => 'Data anggota baru berhasil di tambahkan'
         ]);
